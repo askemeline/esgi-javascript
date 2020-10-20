@@ -1,6 +1,6 @@
 Loading script...
 
-Tue Oct 20 2020 17:48:00 GMT+0200 (GMT+02:00) - Starting tests...
+Tue Oct 20 2020 17:48:01 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -11,28 +11,33 @@ ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.toLowerCase is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
-camelCase - 'null' OK
-camelCase - 'Object' OK
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
@@ -54,43 +59,53 @@ snake_case - 'Object' KO
 
 Checking leet
 leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "anaconda"
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "anacoNDa"
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'leet' KO
-	expected : "l33t" - got "leet"
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'yoda' KO
-	expected : "70d4" - got "yoda"
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "evaluation"
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "mon travail"
-leet - ' ' OK
-leet - 'null' OK
-leet - 'Object' OK
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - ' ' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'null' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "ekuL m adoy"
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
-verlan - ' ' OK
-verlan - 'null' OK
-verlan - 'Object' OK
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
 
 Checking yoda
 yoda - 'anaconda' KO
-	expected : "anaconda" - got " anaconda"
+	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got " m Luke yoda  Luke"
+	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got " la position des mots d’une phrase Inverser  position des mots d’une phrase"
+	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - ' ' KO
-	expected : " " - got "   "
-yoda - 'null' OK
-yoda - 'Object' OK
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
