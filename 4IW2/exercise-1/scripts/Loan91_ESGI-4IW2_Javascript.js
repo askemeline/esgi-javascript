@@ -38,7 +38,7 @@ function verlan(chaine) {
 		}
 		chaine += temp + " ";
 	})
-	return chaine.trimEnd();
+	return chaine.trim();
 }
 
 function yoda(chaine) {
@@ -49,7 +49,7 @@ function yoda(chaine) {
 	for (let i = count; i>=0; i--) {
 		chaine += liste[i] + " ";
 	}
-	return chaine.trimEnd();
+	return chaine.trim();
 }
 
 
