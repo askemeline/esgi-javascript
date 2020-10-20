@@ -17,7 +17,7 @@ function capitalize(string) {
 
 
 function camelCase(string) {
-    return capitalize(string).replace(/[^a-a-A-Z0-9]+/g, "");
+    return capitalize(string).replace(/[^a-z-A-Z0-9]+/g, "");
 }
 
 
