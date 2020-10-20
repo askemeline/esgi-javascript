@@ -12,50 +12,53 @@ ucfirst - 'Object' OK
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - str.toLowerCase is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
-camelCase - 'null' OK
-camelCase - 'Object' OK
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "toggle_case is the coolest"
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase_is the coolest"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "togglecase_is the 3oolest"
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
 snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase_is_the coolest"
+snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' OK
 snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "4n4c0nd4"
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
+leet - 'anacoNDa' OK
+leet - 'leet' KO
+	expected : "l33t" - got "l337"
+leet - 'yoda' KO
+	expected : "70d4" - got "y0d4"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "3v4l(_)4710n"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "m0n 7r4v41l"
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
@@ -79,13 +82,12 @@ yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "RN"
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "anticonstitutionnellement"
 vig - 'antiConstiTutioNnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "RN"
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "antiConstiTutioNnellement"
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "TZM@LWHOLUYSDME"
-vig - ' - test' KO
-	expected : " " - got "SDR"
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "test un juste est c car dire rien absolument veut ne qui mais longue tres tres phrase une"
+vig - ' - test' OK
 vig - 'null - test' OK
 vig - 'Object - test' OK
 
@@ -95,8 +97,7 @@ prop_access - 'path exist - value object' OK
 prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
-prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got "[object Object] don't exist"
+prop_access - 'path empty' OK
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' OK
