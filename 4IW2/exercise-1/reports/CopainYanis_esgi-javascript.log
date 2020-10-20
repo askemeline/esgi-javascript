@@ -12,59 +12,48 @@ ucfirst - 'Object' OK
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggle case is the coolest' KO
+	expected : "ToggleCaseIsTheCoolest" - got "TCaITC"
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TaITC"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	expected : "TogglecaseIsThe3oolest" - got "TaIT3"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	expected : "Togglecaseisthecoolest" - got "Ta"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TaIC"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
+	expected : "Togglecase" - got "Ta"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "anaconda"
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "anacoNDa"
-leet - 'leet' KO
-	expected : "l33t" - got "leet"
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
 leet - 'yoda' KO
-	expected : "70d4" - got "yoda"
+	expected : "70d4" - got "y0d4"
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "evaluation"
+	expected : "3v4l(_)4t10n" - got "3v4l(_)4tundefined0n"
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "mon travail"
+	expected : "m0n tr4v41l" - got "m0n tr4v4undefinedl"
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
@@ -73,22 +62,22 @@ Checking verlan
 verlan - 'anaconda' OK
 verlan - 'kayak' OK
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "ekuL m adoy"
+	expected : "adoy m ekuL" - got "adoymekuL"
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
-verlan - ' ' OK
+	expected : "ad07 m 3k)_(L" - got "ad07m3k)_(L"
+verlan - ' ' KO
+	expected : " " - got ""
 verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' KO
-	expected : "anaconda" - got " anaconda"
+	expected : "anaconda" - got "a d n o c a n a"
 yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got " m Luke yoda  Luke"
+	expected : "Luke m yoda" - got "e k u L   m   a d o y"
 yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got " la position des mots d’une phrase Inverser  position des mots d’une phrase"
-yoda - ' ' KO
-	expected : " " - got "   "
+	expected : "phrase d’une mots des position la Inverser" - got "e s a r h p   e n u ’ d   s t o m   s e d   n o i t i s o p   a l   r e s r e v n I"
+yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
 
