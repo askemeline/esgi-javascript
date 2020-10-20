@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 01:16:26 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 01:16:55 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -51,28 +51,21 @@ leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	expected : "adnocana" - got "adnocana "
-verlan - 'kayak' KO
-	expected : "kayak" - got "kayak "
-verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "adoy m ekuL "
-verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "ad07 m 3k)_(L "
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
 verlan - ' ' KO
-	expected : " " - got "  "
+	expected : " " - got ""
 verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' KO
-	expected : "anaconda" - got "anaconda "
-yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got "Luke m yoda "
-yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got "phrase d’une mots des position la Inverser "
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' KO
-	expected : " " - got "  "
+	expected : " " - got ""
 yoda - 'null' OK
 yoda - 'Object' OK
 
