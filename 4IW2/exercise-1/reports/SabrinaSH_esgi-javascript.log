@@ -45,20 +45,24 @@ snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' KO
 	expected : "togglecase_is_the_coolest" - got "togglecase_is_the coolest"
 snake_case - ' toggleCase' OK
-snake_case - 'null' OK
-snake_case - 'Object' OK
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - str.toLowerCase is not a function
 
 Checking leet
 leet - 'anaconda' OK
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "4n4c0nd4"
+leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
-leet - 'evaluation' OK
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "3v4l_4t10n"
 leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' OK
-leet - 'Object' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+leet - 'Object' KO
+	expected : "" - got {"foo":"data"}
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -66,38 +70,52 @@ verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
-verlan - 'null' OK
-verlan - 'Object' OK
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
-yoda - 'null' OK
-yoda - 'Object' OK
+yoda - 'anaconda' KO
+	expected : "anaconda" - got " anaconda"
+yoda - 'yoda m Luke' KO
+	expected : "Luke m yoda" - got " Luke m yoda"
+yoda - 'Inverser la position des mots d’une phrase' KO
+	expected : "phrase d’une mots des position la Inverser" - got " phrase d’une mots des position la Inverser"
+yoda - ' ' KO
+	expected : " " - got "  "
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "RN"
+	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'antiConstiTutioNnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "RN"
+	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "TZM@LWHOLUYSDME"
+	Unexpected behaviour : TypeError - "vig" not implemented
 vig - ' - test' KO
-	expected : " " - got "SDR"
-vig - 'null - test' OK
-vig - 'Object - test' OK
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
-prop_access - 'path exist - value array' OK
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got "[object Object] don't exist"
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
-prop_access - 'path null' OK
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 
