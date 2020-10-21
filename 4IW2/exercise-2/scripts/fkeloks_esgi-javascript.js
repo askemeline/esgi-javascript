@@ -23,25 +23,31 @@ console.info("\n========== type_check_v1 ==========");
 console.log(type_check_v1(1, 'number'));
 console.log(type_check_v1(undefined, 'undefined'));
 
-function type_check_v2(value, object) {
-    if (!object.type && !object.value && !object.enum) {
-        return false;
-    }
+function type_check_v2(val, conf) {
+    for (let check in conf) {
+        switch (check) {
+            case 'type':
+                if (type_check_v1(val, conf.type) === false) {
+                    return false;
+                }
+                break;
+            case 'value':
+                if (JSON.stringify(val) !== JSON.stringify(conf.value)) {
+                    return false;
+                }
+                break;
+            case 'enum':
+                let found = false;
+                for (let subValue of conf.enum) {
+                    if (!found) {
+                        found = type_check_v2(val, {value: subValue});
+                    }
+                }
 
-    if (object.enum) {
-        return object.enum.indexOf(value) !== -1;
-    }
-
-    if (object.type && !object.value) {
-        return object.type === typeof value;
-    }
-
-    if (!object.type && object.value) {
-        return object.value === value;
-    }
-
-    if (object.type && object.value) {
-        return object.type === typeof value && object.value === value;
+                if (!found) {
+                    return false;
+                }
+        }
     }
 }
 
