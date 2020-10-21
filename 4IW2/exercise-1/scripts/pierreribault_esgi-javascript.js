@@ -1,5 +1,5 @@
 function camelCase(string) {
-    if(typeof(string) === 'null' || typeof(string) === 'object') {
+    if(typeof(string) !== 'string') {
         return ""
     }
 
@@ -9,7 +9,7 @@ function camelCase(string) {
 function prop_access(object, path) {
     let result = object
 
-    if(typeof(object) === 'null' || typeof(object) === 'undefined') {
+    if(object === null || typeof(object) === 'undefined') {
         return path + " not exist"
     }
 
@@ -31,7 +31,6 @@ function prop_access(object, path) {
 function toUpperCase(string) {
     return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase()
 }
-
 
 module.exports.camelCase = camelCase;
 module.exports.prop_access = prop_access;
