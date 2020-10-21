@@ -69,6 +69,72 @@ function yoda(string) {
 }
 
 
+function prop_access(value, string) {
+   if (!value) return {};
+   if(!string) return value;
+   
+   let stringArray = string.split(".");
+   
+   for (let i = 0; i < stringArray.length; i++) {
+      value = value[stringArray[i]];
+      if(value === undefined) {
+        console.log(stringArray.slice(0, i+1).join('.') + " not exist ");
+        return null; 
+      }
+   } 
+
+   return value;
+} 
+
+
+
+
+console.log(prop_access({
+    "animal":{
+        "type":{
+            "name": "dog"
+        }
+    }
+}, 
+"animal.type.name"));
+console.log(prop_access({
+    "animal":
+    {
+        "type":{
+            "name": "dog"
+        }
+    }
+}, "animal.type"
+));
+console.log(prop_access({
+    "animals":[
+    {
+        "type":{
+            "name": "dog"
+        }
+    },
+    {
+        "type":{
+            "name": "cat"
+        }
+    }
+   ]
+}, "animals.1.type"
+));
+console.log(prop_access(
+    {"animal":{"type":{"name": "dog"}}}, "animal.gender"
+));
+console.log(prop_access(
+    {"animal":{"type":{"name": "dog"}}}, ""
+));
+console.log(prop_access(
+    null, "test"
+));
+console.log(prop_access(
+    {"animal":{"type":{"name": "dog"}}}, null
+));
+
+
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
@@ -76,3 +142,4 @@ module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.prop_access = prop_access;
