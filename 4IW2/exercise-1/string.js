@@ -3,4 +3,4 @@ function ucfirst(chaine) {​​​​​
     return chaine.charAt(0).toUpperCase() + chaine.slice(1);
 }​​​​​
 
-
+function capitalize
