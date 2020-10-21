@@ -26,5 +26,7 @@ function snake_case(chaine) {
 console.log(snake_case("bonjour LA 'FraNce"));
 
 function leet(chaine) {
-    chaine.replace(/[]/gi, )
+    chaine.replace(/[AEIOUY]/gi, function(e) {
+
+    })
 }
