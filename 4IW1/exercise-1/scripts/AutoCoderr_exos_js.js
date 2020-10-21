@@ -1,6 +1,6 @@
 function ucfirst(chaine) {
     if (typeof(chaine) != "string" || chaine === "") return "";
-    return chaine.charAt(0).toUpperCase()+chaine.slice(1);
+    return chaine.charAt(0).toUpperCase()+chaine.slice(1).toLowerCase();
 }
 
 function capitalize(chaine) {
@@ -23,7 +23,7 @@ function camelCase(chaine) {
     let str = "";
     let words = chaine.split(" ");
     for(let i=0;i<words.length;i++) {
-        str += ucfirst(words[i].toLowerCase());
+        str += ucfirst(words[i]);
     }
     return str;
 }
@@ -107,7 +107,7 @@ function verlan(chaine) {
 console.log(prop_access(prairie, "machin.fefe.name"));*/
 
 //console.log(leet("anacOnda"))
-console.log(camelCase(""));
+//console.log(camelCase("j'AIME les spagetti"));
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
