@@ -5,7 +5,7 @@ function ucfirst(chaine) {
 
 function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
-    return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1).toLowerCase()).join(' ');
+    return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1)).join(' ');
 }
 
 function camelCase(chaine) {
