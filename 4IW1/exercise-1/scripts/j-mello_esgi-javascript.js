@@ -22,7 +22,7 @@ function camelCase(chaine) {
     let str = "";
     let words = chaine.split(" ");
     for (let i = 0; i<words.length; ++i) {
-        str += ucfirst(words[i])
+        str += ucfirst(words[i].toLowerCase());
     }
     return str;
 }
@@ -52,6 +52,7 @@ function replaceAll(str,A,B) {
 }
 
 function leet(chaine) {
+    if (typeof chaine !== "string" || chaine ==="") return "";
     const toCrypt = {
         A : 4,
         E : 3,
@@ -92,9 +93,24 @@ let prairie = {
 
 console.log(prop_access(prairie, "animal.type.name"));
 
+function verlan(chaine) {
+    if (typeof chaine !== "string" || chaine ==="") return "";
+}
+
+function yoda (chaine) {
+    if (typeof chaine !== "string" || chaine ==="") return "";
+}
+
+function vig (chaine) {
+    if (typeof chaine !== "string" || chaine ==="") return "";
+}
+
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
+module.exports.verlan = verlan;
+module.exports.yoda = yoda;
+module.exports.vig = vig;
 module.exports.prop_access = prop_access;

@@ -6,3 +6,7 @@ function ucfirst(chaine) {
 console.log(ucfirst("Bonjour"));
 console.log(ucfirst("bonjour"));
 console.log(ucfirst("bonJOur"));
+
+function capitalize(chaine) {
+    
+}
