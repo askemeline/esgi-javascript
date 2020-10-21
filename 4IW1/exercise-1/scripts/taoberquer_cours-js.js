@@ -19,7 +19,7 @@ function camelCase(chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
 
   toRetrun = "";
-  for (value of chaine.split(' ')) {
+  for (value of chaine.split('/[ _]+/')) {
       toRetrun += capitalize(value);
   }
 
