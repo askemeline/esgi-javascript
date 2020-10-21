@@ -17,7 +17,7 @@ function capitalize(string) {
 function camelCase(string) {
     if (typeof string !== "string" && string !== "") return "";
 
-    return capitalize(string).split(" ").join("")
+    return capitalize(string.toLowerCase()).split(" ").join("")
 }
 
 function snake_case(string) {
@@ -70,7 +70,7 @@ function prop_access(obj, props) {
         propPath += `.${access[i]}`
 
         if (!value[access[i]]) {
-            return `${obj} don't exist`
+            return `${propPath} don't exist`
         }
         value = value[access[i]]
     }
