@@ -83,7 +83,7 @@ function prop_access(object, key) {
         object = object ? object[key[p]] : undefined;
     }
 
-    return object === undefined ? key + ' not found' : object;
+    return object === undefined ? (key + ' not found') : object;
 }
 
 console.info("\n========== prop_access ==========");
