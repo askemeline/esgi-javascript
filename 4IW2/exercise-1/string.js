@@ -31,7 +31,12 @@ function leet(chaine) {
             case 'a':
                 return 4;
                 case 'e':
-                case 'E':
+                    return 3;
+                    case 'i':
+                        return 1;
+                        case 'o':
+                            return 0;
+                            case ''
         }
     })
 }
