@@ -8,7 +8,7 @@ function capitalize(chaine) {
     let str = "";
     let words = chaine.split(" ");
     for(let i=0;i<words.length;i++) {
-        if (i > 0) {
+        if (i >= 0) {
             str += " ";
         }
         str += ucfirst(words[i]);
@@ -17,11 +17,11 @@ function capitalize(chaine) {
 }
 
 function camelCase(chaine){
-    if (typeof chaine !== "string" || chaine === "") return ""; 
+    if (typeof chaine !== "string" || chaine === "") return "";
     return capitalize(chaine).split(' ').join('');
 }
 
-
+console.log(camelCase('coucou bien ou quoi'));
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
