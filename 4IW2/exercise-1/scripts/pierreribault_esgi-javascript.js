@@ -1,6 +1,6 @@
 function camelCase(string) {
-    if(typeof(string) === 'null' || typeof(string) === 'object') {
-        return ""
+    if(string == null || string === 'object') {
+        return string
     }
 
     return string.replace('_', ' ').split(' ').map(word => toUpperCase(word)).join('')
@@ -9,12 +9,12 @@ function camelCase(string) {
 function prop_access(object, path) {
     let result = object
 
-    if(typeof(object) === 'null') {
-        return "test not exist"
+    if(path == null || path == "") {
+        return object
     }
 
-    if(typeof(path) === 'null' || path == "") {
-        return ""
+    if(object == null) {
+        return "test not exist"
     }
 
     path.split('.').forEach(element => {
@@ -32,6 +32,20 @@ function toUpperCase(string) {
     return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase()
 }
 
+const prairie = {
+    'animal' : {
+        'region': "france",
+        'couleur': ["bleu", "blanc", "rouge"],
+        'type' : {
+            'name': 'chien'
+        }
+    }
+}
+
+
+console.log(toUpperCase('un test'))
+console.log(camelCase('un test'))
+console.log(prop_access(prairie, "animal.test"))
 
 module.exports.camelCase = camelCase;
 module.exports.prop_access = prop_access;
