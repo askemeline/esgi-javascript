@@ -17,4 +17,4 @@ function camelCase(chaine) {
   return capitalize(chaine).replace(/\W/g, "");
 }
 
-console.log(camelCase("bonjour LA FraNce"));
+console.log(camelCase("bonjour LA 'FraNce"));
