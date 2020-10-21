@@ -1,13 +1,8 @@
 function type_check_v1(val, type) {
     let valType
-
-    if (val === null) {
-        valType = 'null'
-    } else if (typeof val === 'object' && val.length !== undefined) {
-        valType = 'array'
-    } else {
-        valType = typeof val
-    }
+    if (val === null) valType = 'null';
+    else if (typeof val === 'object' && val.length !== undefined) valType = 'array';
+    else valType = typeof val;
 
     return valType === type;
 }
