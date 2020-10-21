@@ -27,12 +27,11 @@ function snake_case(string){
 }
 
 function leet(string){
-    string.forEach(char => {
-        switch
-    })
 }
 
-leet('Cbueiaze ezabeia e zae iuzae zae azu ');
+// leet('Cbueiaze ezabeia e zae iuzae zae azu ');
+
+console.log(camelCase("toggle case is the coolest")); 
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
