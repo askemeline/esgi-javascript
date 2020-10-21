@@ -4,12 +4,15 @@ function ucfirst(chaine) {
 }
 
 function capitalize(chaine) {
-    if(typeof chaine !== "string" || chaine === "") return "";
-    const words = chaine.split(" ");
+    if (typeof(chaine) != "string" || chaine === "") return "";
+
     let str = "";
-    for(value of words) {
-        if(str.length > 0)
-            str += " " + ucfirst(value);
+    let words = chaine.split(" ");
+    for(let i=0;i<words.length;i++) {
+        if (i > 0) {
+            str += " ";
+        }
+        str += ucfirst(words[i]);
     }
     return str;
 }
