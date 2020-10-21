@@ -19,23 +19,26 @@ function type_check_v1(variable , type){
 	}
 }
 
-function type_check_v2(arg1 , arg2= null , arg3=null){
-	if (arg3 === ""){
-		if (typeof(agr1) === arg2){
-			return true;
+function type_check_v2(variable , conf){
+	for(toCheck in conf){
+		switch(toCheck){
+			case "type":
+				if(type_check_v1(variable , conf.type) === false) return false;
+				break;
+			case"value":
+				if(JSON.stringify(variable) !== JSON.stringify(conf.value);
+				break;
+			case"enum":
+			let found = false;
+				for(subValue of conf.enum){
+					if(!found) found = type_check_v2(variable,{value: subValue});	
+					if(found)break;	
+				}
+				if(!found) return false;
+				break;
 		}
 	}
-	if (arg2 === ""){
-		if (arg3.indexOf(arg1) != ""){
-			return true;
-		}
-	}
-	if (arg2 != ""  || arg3 != ""){
-		if (typeof(agr1) === arg2 || arg3.indexOf(arg1) != ""){
-			return true;
-		}
-	}
-	return false;
+	return true;
 }
 
 module.exports.type_check_v1 = type_check_v1;
