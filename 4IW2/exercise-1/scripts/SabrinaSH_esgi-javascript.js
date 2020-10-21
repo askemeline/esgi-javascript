@@ -17,7 +17,15 @@ function capitalize(str, join = " ") {
 }
 
 let camelCase = (str) => capitalize(str, "");
-let snake_case = (str) => str.toLowerCase().replace(" ", "_");
+function snake_case(str) {
+  if (str === "" || typeof str !== "string") {
+    return "";
+  }
+  str = str.toLowerCase();
+  let words = str.split(" ");
+  words = words.join("_");
+  return words;
+}
 function leet(str) {
   for (i in str) {
     switch (str[i]) {
