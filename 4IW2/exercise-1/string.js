@@ -11,3 +11,5 @@ function capitalize(chaine) {
         .map(word => ucfirst(word.toLowerCase()))
         .join(" ");
 }
+
+console.log(capitalize("bonjour LA FraNce"))
