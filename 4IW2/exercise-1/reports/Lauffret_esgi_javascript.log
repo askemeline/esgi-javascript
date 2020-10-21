@@ -4,7 +4,7 @@ ReferenceError: text is not defined
     at ucfirst (/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:13:3)
     at Array.forEach (<anonymous>)
     at capitalize (/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:9:7)
-    at Object.<anonymous> (/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:28:13)
+    at Object.<anonymous> (/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:54:13)
     at Module._compile (internal/modules/cjs/loader.js:1133:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)
     at Module.load (internal/modules/cjs/loader.js:977:32)
