@@ -72,26 +72,8 @@ function prop_access(object, path) {
 
 }
 
-function vig(string, key) {
-    if (typeof string !== "string" || string === '') {
-        return '';
-    }
-    const UpperLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    const LowerLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+function vig(string) {
 
-    let res = "";
-    for (let i = 0; i<string.length; i++) {
-        let keyNb;
-        if (UpperLetters.includes(key)) {
-            keyNb = UpperLetters.indexOf(key);
-        }else keyNb = LowerLetters.indexOf(key);
-        if (UpperLetters.includes(string[i])) {
-            res += UpperLetters[((UpperLetters.indexOf(string[i]))+keyNb)%26];
-        }else if (LowerLetters.includes(string[i])) {
-            res += LowerLetters[((LowerLetters.indexOf(string[i]))+keyNb)%26];
-        }
-    }
-    return res;
 }
 
 

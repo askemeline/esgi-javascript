@@ -19,4 +19,6 @@ function camelCase(chaine) {
   return capitalize(chaine).replace(/\W/g, "");
 }
 
-function snake_case
+function snake_case(chaine) {
+    return chaine.toLowerCase().replace(/\W/g)
+}
