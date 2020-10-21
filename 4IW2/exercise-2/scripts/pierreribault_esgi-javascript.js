@@ -18,8 +18,6 @@ function type_check_v2(arg, object) {
     return true
 }
 
-function type_check()
-
 console.log(type_check_v1(1, "number"))
 console.log(type_check_v2(1, {type: "string"}))
 console.log(type_check_v2(1, {type: "number", value: 1}))
@@ -30,4 +28,3 @@ console.log(type_check_v2(1, {type: "number", value: 1, enum: [3,4]}))
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
-module.exports.type_check = type_check;

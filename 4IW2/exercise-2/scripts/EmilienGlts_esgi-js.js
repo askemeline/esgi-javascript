@@ -1,14 +1,12 @@
 function type_check_v1(input, type) {
-    if(Array.isArray(input)) {
-        return true;
+    if (input === null) {
+        type = "null";
+    } else if (typeof input === "object" && input.length !== undefined) {
+        type = "array";
+    } else {
+        type = typeof input;
     }
-    if (input === null && type === 'object') {
-        return false;
-    } else if (type === 'null') {
-        return input === null;
-    }
-    return typeof input === type;
-
+    return type === type;
 }
 
 

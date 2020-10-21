@@ -1,19 +1,20 @@
 Loading script...
 
-Wed Oct 21 2020 18:42:57 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 18:43:32 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
-type_check_v1 - 'StringNotNumber' OK
-type_check_v1 - 'BooleanNotNumber' OK
+type_check_v1 - 'StringNotNumber' KO
+	expected : false - got true
+type_check_v1 - 'BooleanNotNumber' KO
+	expected : false - got true
 type_check_v1 - 'object' OK
 type_check_v1 - 'null' OK
-type_check_v1 - 'nullNotObject' OK
-type_check_v1 - 'undefined' KO
-	expected : true - got false
+type_check_v1 - 'nullNotObject' KO
+	expected : false - got true
+type_check_v1 - 'undefined' OK
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' OK
-type_check_v1 - 'function' KO
-	expected : true - got false
+type_check_v1 - 'function' OK
 type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
