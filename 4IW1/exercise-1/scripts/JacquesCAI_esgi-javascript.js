@@ -3,25 +3,22 @@ function ucfirst(chaine) {
     return chaine.charAt(0).toUpperCase() + chaine.slice(1);
 }
 
-function capitalize(chaine) {
-    if (typeof (chaine) != "string" || chaine === "") return "";
+function capitalize(string) {
+    if (typeof string !== "string" && string !== "") return "";
 
-    let str = "";
-    let words = chaine.split(" ");
-    for (let i = 0; i < words.length; i++) {
-        if (i > 0) {
-            str += " ";
-        }
-        str += ucfirst(words[i]);
-    }
-    return str;
+    return string
+        .split(" ")
+        .map((string) => {
+            return ucfirst(string)
+        }).join(" ")
 }
+
 
 function camelCase(chaine) {
     if (typeof(chaine) != "string" || chaine === "") return "";
 
     let str = "";
-    let words = chaine.split(" ");
+    let words = chaine.split(" ").replace("_"," ");
     for(let i=0;i<words.length;i++) {
         str += ucfirst(words[i].toLowerCase());
     }
@@ -66,19 +63,25 @@ function leet(string) {
     return string;
 }
 
-function prop_access(obj, path) {
-    if (typeof(obj) != "object") return path;
-    if (typeof(path) != "string" || path === "") return obj;
-    let pathSplitted = path.split(".");
-    for (let elem of pathSplitted) {
-        if (typeof(obj[elem]) == "undefined") {
-            return path;
-        }
-        obj = obj[elem]
-    }
-    return obj
-}
+function prop_access(obj, props) {
+    if (obj === "undefined") return obj
+    if (typeof props !== "string" && props !== "") return obj
 
+    let access = props.split(".")
+    let propPath = access[0]
+    let value = obj
+
+    for (let i = 0; i < access.length; i++) {
+        propPath += `.${access[i]}`
+
+        if (!value[access[i]]) {
+            return `${obj} don't exist`
+        }
+        value = value[access[i]]
+    }
+
+    return value
+}
 
 let prairie = {
     animal : {
@@ -88,9 +91,17 @@ let prairie = {
     }
 }
 
+function yoda(string) {
+    if (typeof string !== "string" && string !== "") return ""
+
+    return string.split(" ").reverse().join(" ")
+}
+
+
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
+module.exports.yoda = yoda;
 module.exports.prop_access = prop_access;
