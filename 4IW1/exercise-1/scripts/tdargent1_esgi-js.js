@@ -86,7 +86,7 @@ function verlan(text){
 
     return text.split(" ").map(word => word.split("").reverse().join("")).join(" ");
 }
-console.log(verlan("Hello World"));
+verlan("Hello World");
 
 function yoda(text){
     if(typeof text !== "string" || text === "")
@@ -96,12 +96,6 @@ function yoda(text){
 }
 yoda("Hello world");
 
-/*function vig(text){
-    if(typeof text !== "string" || text === "")
-        return "";
-    
-}*/
-
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
@@ -109,5 +103,4 @@ module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
-module.exports.vig = vig;
 module.exports.prop_access = prop_access;
