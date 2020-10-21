@@ -45,22 +45,27 @@ function snake_case(chaine) {
     return str;
 }
 
-function leet(chaine) {
-    if (typeof(chaine) != "string" || chaine === "") return ""
-    const toCrypt = {
-        A: 4,
-        E: 3,
-        I: 1,
-        O: "0",
-        U: "(_)",
-        Y: 7
+function leet(string) {
+    if (typeof string !== "string" && string !== "") return "";
+
+    const cryptage = {
+        "a": 4,
+        "e": 3,
+        "i": 1,
+        "o": 0,
+        "u": "(_)",
+        "y": 7
     }
 
-    for (let key in toCrypt) {
-        chaine = chaine.replace(new RegExp(key, 'g'), toCrypt[key]);
-        chaine = chaine.replace(new RegExp(key.toLowerCase(), 'g'), toCrypt[key]);
+    string = string.toLowerCase()
+
+    for (const cryptageKey in cryptage) {
+        if (string.indexOf(cryptageKey) !== -1) {
+            string = string.replace(new RegExp(cryptageKey, 'g'), cryptage[cryptageKey])
+        }
     }
-    return chaine;
+
+    return string;
 }
 
 function prop_access(obj, props) {
