@@ -5,12 +5,14 @@ function camelCase(string) {
 function prop_access(object, path) {
     let result = object
     path.split('.').forEach(element => {
-        if(result[element]) {
-            return `${path} not exist`
+        if(result[element] == undefined) {
+            result = `${path} not found`;
+            return
         }
 
         if(result[element] === null || result[element] === "") {
-            return object
+            result = object
+            return
         }
 
         result = result[element]
@@ -20,9 +22,8 @@ function prop_access(object, path) {
 }
 
 function toUpperCase(string) {
-    return string.substring(0, 1).toUpperCase() + string.substring(1)
+    return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase()
 }
-
 
 module.exports.camelCase = camelCase;
 module.exports.prop_access = prop_access;

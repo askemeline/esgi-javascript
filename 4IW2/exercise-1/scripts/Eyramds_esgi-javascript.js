@@ -20,14 +20,13 @@ function capitalize(chaine) {
 
     for(word of (chaine.split(' ')) )
     {
-        chaineCapitalized.push(ucfirst(word)) ;
-
+        chaineCapitalized.push(ucfirst(word.toLowerCase())) ;
     }
 
     return chaineCapitalized.join(" ");
 }
 
-function camelease(chaine) {
+function camelCase(chaine) {
 
   if (typeof chaine !== "string" || chaine === "" )
     {
@@ -52,7 +51,7 @@ function snake_case(chaine) {
           return "";
       }
     
-      return (chaine.split(' ')).join("_").toLocaleLowerCase();
+      return (chaine.split(' ')).join("_").toLowerCase();
 }
 
 function leet(chaine) {
@@ -109,9 +108,12 @@ function yoda(chaine) {
     return chaine.split(' ').reverse().join(" ");
 }
 
+console.log(capitalize(' test'));
+
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
+module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;

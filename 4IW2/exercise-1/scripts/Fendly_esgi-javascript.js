@@ -22,7 +22,8 @@ function camelCase(chaine) {
     return chaine.split(' ').join('');
 }
 
-console.log(camelcase("hello world slt"));
+console.log(camelCase("hello world slt"));
+console.log(camelCase("hello world slt"));
 
 function snakecase(chaine) {
     return chaine.split(' ').join('_').toLowerCase();
