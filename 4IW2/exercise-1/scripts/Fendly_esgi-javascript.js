@@ -23,7 +23,6 @@ function camelCase(chaine) {
 }
 
 console.log(camelCase("hello world slt"));
-console.log(camelCase("hello world slt"));
 
 function snakecase(chaine) {
     return chaine.split(' ').join('_').toLowerCase();
