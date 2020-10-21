@@ -42,14 +42,19 @@ function snake_case(chaine) {
 }
 
 function leet(chaine) {
-    if(typeof chaine !== "string" || chaine === "") return "";
+    if (typeof(chaine) != "string" || chaine === "") return ""
+    const toCrypt = {
+        A: 4,
+        E: 3,
+        I: 1,
+        O: "0",
+        U: "(_)",
+        Y: 7
+    }
 
-    const characterMap = { "A": "4", "E": "3", "I": "1", "O": "0", "U": "(_)", "Y": "7" };
-
-    for(i = 0; i < chaine.length; i++) {
-        if(chaine.charAt(i) in characterMap) {
-            chaine = chaine.substr(0, i) + characterMap[chaine.charAt(i)] +  chaine.slice(i + 1);
-        }
+    for (let key in toCrypt) {
+        chaine = chaine.replace(new RegExp(key, 'g'), toCrypt[key]);
+        chaine = chaine.replace(new RegExp(key.toLowerCase(), 'g'), toCrypt[key]);
     }
     return chaine;
 }

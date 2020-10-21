@@ -74,6 +74,7 @@ function prop_access(obj, path) {
 }
 
 function verlan(chaine) {
+    if (typeof(chaine) != "string" && chaine === "") return ""
     let words = chaine.split(" ");
 
     let str = "";
@@ -92,7 +93,13 @@ function verlan(chaine) {
     return str;
 }
 
-//console.log(verlan("J'aime les pâtes"));
+function yoda(string) {
+    if (typeof string !== "string" && string !== "") return ""
+
+    return string.split(" ").reverse().join(" ")
+}
+
+//console.log(yoda("J'aime les pâtes"));
 //console.log(capitalize("ipsum DOLOR"));
 
 
@@ -115,4 +122,5 @@ module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
+module.exports.yoda = yoda;
 module.exports.prop_access = prop_access;

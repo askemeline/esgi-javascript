@@ -10,5 +10,5 @@ console.log(ucfirst("bonJOur"));
 function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
 
-    return 
+    return chaine.split(' ')
 }
