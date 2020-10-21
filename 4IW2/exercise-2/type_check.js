@@ -3,7 +3,8 @@ function type_check_v1(variable, type) {
         case "number":
         case "string":
         case "boolean":
-        case "number":
-        case "number":
+        case "undefined":
+        case "function":
+            return type === typeof variable;
     }
 }
