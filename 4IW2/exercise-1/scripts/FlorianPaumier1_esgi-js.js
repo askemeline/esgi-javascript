@@ -8,6 +8,7 @@ function capitalize(string) {
     if (typeof string !== "string" && string !== "") return "";
 
     return string
+        .toLowerCase()
         .split(" ")
         .map((string) => {
             return ucfirst(string)
@@ -17,13 +18,13 @@ function capitalize(string) {
 function camelCase(string) {
     if (typeof string !== "string" && string !== "") return "";
 
-    return capitalize(string.toLowerCase()).split(" ").join("")
+    return capitalize(string).split(/ -_,/).join("")
 }
 
 function snake_case(string) {
     if (typeof string !== "string" && string !== "") return "";
 
-    return string.toLowerCase().replace(" ", "_")
+    return string.toLowerCase().replace(/ /g, "_")
 }
 
 function leet(string) {
@@ -38,11 +39,9 @@ function leet(string) {
         "y": 7
     }
 
-    string = string.toLowerCase()
-
     for (const cryptageKey in cryptage) {
         if (string.indexOf(cryptageKey) !== -1) {
-            string = string.replace(new RegExp(cryptageKey, 'g'), cryptage[cryptageKey])
+            string = string.replace(new RegExp(cryptageKey, 'g'), cryptage[cryptageKey].toLowerCase())
         }
     }
 

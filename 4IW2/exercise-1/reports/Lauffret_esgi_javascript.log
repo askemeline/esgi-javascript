@@ -1,10 +1,10 @@
 Loading script...
-Invalid script: SyntaxError: missing ) after argument list
-/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:32
-	}
-	^
+Invalid script: SyntaxError: Unexpected token 'return'
+/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:41
+	return chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" ");
+	                                     ^^^^^^
 
-SyntaxError: missing ) after argument list
+SyntaxError: Unexpected token 'return'
     at wrapSafe (internal/modules/cjs/loader.js:1047:16)
     at Module._compile (internal/modules/cjs/loader.js:1097:27)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)

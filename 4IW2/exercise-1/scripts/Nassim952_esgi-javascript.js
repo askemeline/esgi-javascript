@@ -7,7 +7,7 @@ function ucfirst(chaine){
 console.log(ucfirst("nassim"));
 
 // Capitalize Function
-const chaine = "hello world";
+const chaine = "sit 8met consectetur";
 
 function capitalize(chaine){
     if (typeof chaine !== "string" || chaine === "" ) return "";
@@ -19,7 +19,7 @@ const caps = chaine.split(' ').map(capitalize).join(' ');
 console.log(caps);
 
 // camelCase function
-const chaine2 = "hello world";
+const chaine2 = "hello world bien";
 
 function camelCase(chaine2){
     if (typeof chaine2 !== "string" || chaine2 === "" ) return "";
@@ -164,27 +164,27 @@ var VigenereCipher = {
       z: "zabcdefghijklmnopqrstuvwxy"
     },
   
-    encrypt: function(plainText, keyword){
-      if( typeof(plainText) !== "string" ){
-        return "invalid plainText. Must be string, not " + typeof(plainText);
+    encrypt: function(text, crypto){
+      if( typeof(text) !== "string" ){
+        return "invalid text. Must be string not " + typeof(text);
       }
-      if( typeof(keyword) !== "string" ){
-        return "invalid keyword. Must be string, not " + typeof(keyword);
+      if( typeof(crypto) !== "string" ){
+        return "invalid crypto. Must be string not " + typeof(crypto);
       }
   
-      plainText = plainText.toLowerCase();
-      keyword = keyword.match(/[a-z]/gi).join("").toLowerCase();
+      text = text.toLowerCase();
+      crypto = crypto.match(/[a-z]/gi).join("").toLowerCase();
       var encryptedText = "";
       var specialCharacterCount = 0;
   
-      for( var i = 0; i < plainText.length; i++ ){
-        var keyLetter = (i - specialCharacterCount) % keyword.length;
-        var keywordIndex = VigenereCipher._tabCipher.a.indexOf(keyword[keyLetter]);
+      for( var i = 0; i < text.length; i++ ){
+        var keyLetter = (i - specialCharacterCount) % crypto.length;
+        var cryptoIndex = VigenereCipher._tabCipher.a.indexOf(crypto[keyLetter]);
   
-        if( VigenereCipher._tabCipher[plainText[i]] ){
-          encryptedText += VigenereCipher._tabCipher[plainText[i]][keywordIndex];
+        if( VigenereCipher._tabCipher[text[i]] ){
+          encryptedText += VigenereCipher._tabCipher[text[i]][cryptoIndex];
         }else{
-          encryptedText += plainText[i];
+          encryptedText += text[i];
           specialCharacterCount++;
         }
       }

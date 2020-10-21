@@ -20,7 +20,7 @@ function snake_case(chaine){
 
 function leet(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	chaine.replace(/[AEUIOY]/gi,function(e){
+	chaine.replace(/[AEUIOY]/gi),function(e){
 		switch(e.toLowerCase()){
 			case"a":return 4;
 			case"e":return 3;
@@ -46,8 +46,29 @@ function yoda(chaine){
 	return chaine.split("").reverse().join("").join(" ");
 }
 
-function vig(chaine){
+function vig(chaine , code){
 	if(typeof chaine !== "string" || chaine === "") return "";
+	while (code.length < chaine.length) {
+	code += code;
+	}
+	code = code.substr(0, chaine.length);
+	let codeIndex = 0;
+
+	return chaine
+	.split("")
+	.map((letter, index) => {
+	  letter = letter.toLowerCase();
+	  const aCode = "a".charCodeAt(0);
+	  const letterNumber = letter.charCodeAt(0) - aCode; // [0-25]
+
+	  if (letterNumber < 0 || letterNumber > 25) return letter;
+
+	  const codeNumber = code.charCodeAt(codeIndex) - aCode; // [0-25]
+	  codeIndex++;
+
+	  return String.fromCharCode(((letterNumber + codeNumber) % 26) + aCode);
+	})
+	.join("");
 }
 
 module.exports.ucfirst = ucfirst;

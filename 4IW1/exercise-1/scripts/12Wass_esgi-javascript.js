@@ -34,12 +34,42 @@ function leet(string){
 
 function verlan(string){
     if (typeof string !== "string" || string === "") return "";
-    
+
     return chaine
     .split(" ")
     .map((word) => word.split("").reverse().join(""))
     .join(" ");
 }
+
+function yoda(string){
+    if (typeof string !== "string" || string === "") return "";
+    return chaine.split(" ").reverse().join(" "); 
+}
+
+function vig(string, code){
+    if (typeof string !== "string") return ""; 
+    if (string.length === 0) return string;
+
+    while (code.length < string.length){
+        code += code;
+    };
+    code = code.substr(0, string.length); 
+    let codeIndex = 0; 
+
+    return string.split("").map((letter, index) => {
+        letter = letter.toLowerCase(); 
+        const aCode = "a".charCodeAt(0);
+        const letterNumber = letter.charCodeAt(0) - aCode; // [0 - 25]
+        
+        if (letterNumber < 0 || letterNumber > 25) return letter;
+        const codeNumber = code.charCodeAt(codeIndex) - aCode;
+        codeIndex++; 
+
+        return String.fromCharCode(((letterNimber + codeNumber) % 26) + aCode);
+    }).join(""); 
+}
+
+
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
@@ -47,3 +77,5 @@ module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
+module.exports.yoda = yoda;
+module.exports.vig = vig;

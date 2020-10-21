@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 18:03:40 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 18:03:42 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -24,7 +24,7 @@ camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -43,38 +43,36 @@ Checking leet
 leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
-leet - 'yoda' KO
-	expected : "70d4" - got "y0d4"
+leet - 'yoda' OK
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l(_)4tundefined0n"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n tr4v4undefinedl"
+	expected : "3v4l(_)4t10n" - got "3v4l(...)4t10n"
+leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' OK
-leet - 'Object' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.replace is not a function
 
 Checking verlan
 verlan - 'anaconda' OK
 verlan - 'kayak' OK
-verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "adoymekuL"
-verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "ad07m3k)_(L"
-verlan - ' ' KO
-	expected : " " - got ""
-verlan - 'null' OK
-verlan - 'Object' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
+verlan - ' ' OK
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.split is not a function
 
 Checking yoda
-yoda - 'anaconda' KO
-	expected : "anaconda" - got "a d n o c a n a"
-yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got "e k u L   m   a d o y"
-yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got "e s a r h p   e n u ’ d   s t o m   s e d   n o i t i s o p   a l   r e s r e v n I"
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' OK
-yoda - 'Object' OK
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.split is not a function
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
@@ -91,13 +89,18 @@ vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
-prop_access - 'path exist - value array' OK
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got animal.gender not exist 
-prop_access - 'path empty' OK
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 prop_access - 'object null' KO
-	expected : test not exist - got null
-prop_access - 'path null' OK
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
 

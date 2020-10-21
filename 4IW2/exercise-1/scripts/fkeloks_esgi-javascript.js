@@ -72,18 +72,33 @@ console.log(leet('Mon texte'));
 console.log(leet('mOn Super Texte'));
 console.log(leet('anaconda'));
 
-function prop_access(object, key) {
-    if (typeof object !== 'object' || typeof key !== 'string' || key === '') {
-        return '';
+function prop_access(obj, str) {
+    if (typeof str != "string") {
+        return obj;
     }
 
-    key = key.split ? key.split('.') : key;
-
-    for (let p = 0; p < key.length; p++) {
-        object = object ? object[key[p]] : undefined;
+    if (typeof obj != 'object' || obj == null) {
+        console.log(str + ' not exist');
+        return;
     }
 
-    return object === undefined ? (key + ' not found') : object;
+    if (str === '') {
+        return obj;
+    }
+
+    const props = str.split('.');
+    let property = obj;
+
+    props.forEach(function (prop) {
+        if (!property.hasOwnProperty(prop)) {
+            console.log(str + ' not exist');
+            return;
+        }
+
+        property = property[prop];
+    });
+
+    return property;
 }
 
 console.info("\n========== prop_access ==========");
