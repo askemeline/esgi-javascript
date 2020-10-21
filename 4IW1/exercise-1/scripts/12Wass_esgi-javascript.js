@@ -1,4 +1,4 @@
-function ucFirst(string) {
+function ucfirst(string) {
     if (typeof string !== "string" || string === "") return ""; 
     return string.charAt(0).toUpperCase() + string.slice(1); 
 }
@@ -15,11 +15,27 @@ function capitalize(string){
 function camelCase(string){
     if (typeof string !== "string" || string === "") return ""; 
     string = capitalize(string);
-    spacedString = capitalize(string.split(' ')); 
+    const spacedString = string.split(' '); 
     return spacedString.join(''); 
 }
 
+function snake_case(string){
+    if (typeof string !== "string" || string === "") return ""; 
+    string = string.toLowerCase(); 
+    spacedString = string.split(' ');
+    return spacedString.join('_'); 
+}
 
+function leet(string){
+    string.forEach(char => {
+        switch
+    })
+}
 
+leet('Cbueiaze ezabeia e zae iuzae zae azu ');
+
+module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
+module.exports.snake_case = snake_case;
+module.exports.leet = leet;

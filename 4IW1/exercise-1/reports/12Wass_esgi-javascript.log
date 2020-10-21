@@ -1,140 +1,17 @@
 Loading script...
+Invalid script: SyntaxError: Unexpected token '}'
+/Users/karl/projects/2020-2021/esgi-javascript/4IW1/exercise-1/scripts/12Wass_esgi-javascript.js:32
+    })
+    ^
 
-Wed Oct 21 2020 15:44:11 GMT+0200 (GMT+02:00) - Starting tests...
-Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-
-Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
-
-Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - spacedString.join is not a function
-camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - spacedString.join is not a function
-camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - spacedString.join is not a function
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - spacedString.join is not a function
-camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - spacedString.join is not a function
-camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - spacedString.join is not a function
-camelCase - 'null' OK
-camelCase - 'Object' OK
-
-Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-
-Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-
-Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-
-Checking yoda
-yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - ' ' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-
-Checking vig
-vig - 'anticonstitutionnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'antiConstiTutioNnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-
-Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-
+SyntaxError: Unexpected token '}'
+    at wrapSafe (internal/modules/cjs/loader.js:1047:16)
+    at Module._compile (internal/modules/cjs/loader.js:1097:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)
+    at Module.load (internal/modules/cjs/loader.js:977:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:877:14)
+    at Module.require (internal/modules/cjs/loader.js:1019:19)
+    at require (internal/modules/cjs/helpers.js:77:18)
+    at startTest (/executor.js:43:21)
+    at process.<anonymous> (/executor.js:120:9)
+    at process.emit (events.js:310:20)
