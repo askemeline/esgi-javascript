@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 10:14:18 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 10:14:48 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -34,10 +34,6 @@ camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-
-
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 camelCase - 'Object' KO
