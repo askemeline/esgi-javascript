@@ -1,8 +1,11 @@
-function ucfirst(message){
-	if(typeof message !== "string" || message !== "")
+function ucfirst(string){
+	if (typeof string !== "string" && string !== "")
 		return "";
-	return message.charAt(0).toUpperCase() + message.slice(1);
+	return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+
+console.log(ucfirst("bonJOUR"));
 
 function capitalize(string) {
     if (typeof string !== "string" && string !== "")
