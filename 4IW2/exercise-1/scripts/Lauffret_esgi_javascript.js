@@ -42,9 +42,9 @@ function prop_access(chaine){
 
 function verlan(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	console.log(chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" "));
+	chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" ");
 }
-s
+
 function yoda(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 	return chaine.split("").reverse().join("").join(" ");

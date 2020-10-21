@@ -1,8 +1,8 @@
 Loading script...
 Invalid script: SyntaxError: Unexpected token 'return'
 /Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:45
-	console.log(chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" "));
-	                                          ^^^^^^
+	chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" ");
+	                              ^^^^^^
 
 SyntaxError: Unexpected token 'return'
     at wrapSafe (internal/modules/cjs/loader.js:1047:16)
