@@ -3,7 +3,7 @@ function ucfirst(text) {
         return '';
     }
 
-    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+    return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 
@@ -26,13 +26,14 @@ console.log(capitalize('Mon texte'));
 console.log(capitalize('mOn Super Texte'));
 
 function camelCase(text) {
-    return capitalize(text).replace(/\s+/g, '');
+    return capitalize(text).replace(/[\s+_-]/g, '');
 }
 
 console.info("\n========== camelCase ==========");
 console.log(camelCase('mon texte'));
 console.log(camelCase('Mon texte'));
 console.log(camelCase('mOn Super Texte'));
+console.log(camelCase('ToggleCase is_the coolest'));
 
 function snake_case(text) {
     if (typeof text !== 'string' || text === '') {
@@ -67,30 +68,31 @@ console.log(leet('Mon texte'));
 console.log(leet('mOn Super Texte'));
 console.log(leet('anaconda'));
 
-function prop_access(obj, props) {
-    if (obj === 'undefined') return obj
-    if (typeof props !== "string" && props !== '') return obj
-
-    let access = props.split('.')
-    let propPath = access[0]
-    let value = obj
-
-    for (let i = 0; i < access.length; i++) {
-        propPath += `.${access[i]}`
-
-        if (!value[access[i]]) {
-            return `${obj} not found`
+function prop_access(object, path) {
+    let result = object
+    path.split('.').forEach(element => {
+        if (result[element]) {
+            return `${path} not exist`
         }
-        value = value[access[i]]
-    }
 
-    return value
+        if (result[element] === null || result[element] === '') {
+            return object
+        }
+
+        result = result[element]
+    })
+
+    return result
 }
 
 console.info("\n========== prop_access ==========");
-console.log(prop_access('xxx'));
+console.log('xxx');
 
 function verlan(text) {
+    if (typeof text !== 'string' || text === '') {
+        return '';
+    }
+
     return text.split(' ').map(word => word.split('').reverse().join('')).join(' ');
 }
 
