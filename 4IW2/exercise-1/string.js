@@ -54,3 +54,5 @@ function verlan(chaine) {
     })
     .join(" ");
 }
+
+console.log(verlan("bonjour la france"));
