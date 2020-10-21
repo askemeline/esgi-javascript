@@ -25,3 +25,6 @@ function snake_case(chaine) {
   return chaine.toLowerCase().replace(/\W/g, "_");
 }
 
+function leet(chaine) {
+    
+}
