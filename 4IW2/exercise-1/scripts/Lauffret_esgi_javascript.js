@@ -7,6 +7,7 @@ function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 		var res = chaine.split(" ");
 		rLen = res.length;
+		var text;
 		for (i = 0; i < rLen; i++) {
 		  text += ucfirst(res[i]);
 		}
@@ -14,12 +15,19 @@ function capitalize(chaine){
 
 function camelCase(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
+		var res = chaine.split(" ");
+		rLen = res.length;
+		var text;
+		for (i = 0; i < rLen; i++) {
+		  text += ucfirst(res[i]);
+		}
 }
 
 function snake_case(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";	
 		var res = chaine.split(" ");
 		rLen = res.length;
+		var text;
 		for (i = 0; i < rLen; i++) {
 		  text += res[i].toLowerCase();
 		  if(i != rLen-1){

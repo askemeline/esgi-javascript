@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 09:00:58 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:01:27 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -21,22 +21,15 @@ capitalize - 'Object' KO
 	Unexpected behaviour : TypeError - str.toLowerCase is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -82,13 +75,13 @@ yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
-	Unexpected behaviour : ReferenceError - str is not defined
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "\u000004.(?3=/.(.-793=4=?6=>=4"
 vig - 'antiConstiTutioNnellement - foo' KO
-	Unexpected behaviour : ReferenceError - str is not defined
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "\u000004.(?3=/.(.-793=4=?6=>=4"
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	Unexpected behaviour : ReferenceError - str is not defined
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "\u0000.(5B6+:36-)/>5=8/>5=8A=@(725)9-35??-8?-@3-</B9434*?)A?8@7)25B6-4>B754?/@*9=5,?=2>B?(89-;"
 vig - ' - test' KO
-	Unexpected behaviour : ReferenceError - str is not defined
+	expected : " " - got "\u0000"
 vig - 'null - test' OK
 vig - 'Object - test' OK
 
