@@ -1,14 +1,16 @@
 
 function type_check_v1(val, type) {
-    if (typeof(val) === type) {
+    if ((typeof (val) === type) ||
+        (value === undefined && type === "undefined")||
+        (value === null && type === "object")) {
         return true
     }
+    return false
 }
 
 console.log(type_check_v1(1, 'number'));
 console.log(type_check_v1('edd', 'string'));
 console.log(type_check_v1(['sa'], 'array'));
-console.log(type_check_v1(function(){} , 'function'));
 
 
 

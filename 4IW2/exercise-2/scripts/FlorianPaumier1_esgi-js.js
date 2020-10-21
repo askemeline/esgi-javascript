@@ -1,5 +1,5 @@
 function type_check_v1(arg, type) {
-    if(arg === type) return true;
+    if(typeof arg === type) return true;
     if(Array.isArray(arg)) return true;
     if(type === "undefined") return arg === undefined
 
@@ -15,12 +15,12 @@ function type_check_v2(arg, type) {
 }
 
 function type_check(arg, types) {
-    return arg.map((ele) => {
-        return type_check_v2(ele, types[ele])
-    })
+    return type_check_v2(arg, types) && Object.keys(types.properties.map((key => {
+        return type_check(arg[key], types.properties[key])
+    })))
 }
 
-console.log(type_check_v1(() => {}, 'function'))
+console.log(type_check_v1(1, 'number'))
 
 
 module.exports.type_check_v1 = type_check_v1;
