@@ -5,41 +5,17 @@ function ucfirst(chaine) {
 
 function capitalize(chaine) {
     if (typeof(chaine) != "string" || chaine === "") return "";
-
-    let str = "";
-    let words = chaine.split(" ");
-    for(let i=0;i<words.length;i++) {
-        if (i > 0) {
-            str += " ";
-        }
-        str += ucfirst(words[i].toLowerCase());
-    }
-    return str;
+    return chaine.split(' ').map(word => ucfirst(chaine.toLowerCase)).join(" ");
 }
 
 function camelCase(chaine) {
     if (typeof(chaine) != "string" || chaine === "") return "";
-
-    let str = "";
-    let string = chaine.replace('_',' ');
-    let words = string.split(" ");
-    for(let i=0;i<words.length;i++) {
-        str += ucfirst(words[i].toLowerCase());
-    }
-    return str;
+    return capitalize(chaine).replace(/\W/g, "");
 }
 
 function snake_case(chaine) {
-    if(typeof chaine !== "string" || chaine === "") return "";
-    const words = chaine.split(" ");
-    let str = "";
-    for(value of words) {
-        if(str.length > 0)
-            str += "_" + value.toLowerCase();
-        else
-            str +=  value.toLowerCase();
-    }
-    return str;
+    if (typeof(chaine) != "string" || chaine === "") return "";
+    return chaine.toLowerCase().replace(/\W/g, "_");
 }
 
 function leet(chaine) {

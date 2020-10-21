@@ -26,20 +26,21 @@ function snake_case(chaine) {
 }
 
 function leet(chaine) {
-    return chaine.replace(/[aeiouy]/gi, function(e) {
-        switch(e.toLowerCase()){
-            case 'a':
-                return 4;
-            case 'e':
-                return 3;
-            case 'i':
-                return 1;
-            case 'o':
-                return 0;
-            case 'u':
-                return '(';
-            case 'y':
-                return 4;
-        }
-    })
+  return chaine.replace(/[aeiouy]/gi, function (e) {
+    switch (e.toLowerCase()) {
+      case "a":
+        return 4;
+      case "e":
+        return 3;
+      case "i":
+        return 1;
+      case "o":
+        return 0;
+      case "u":
+        return "(_)";
+      case "y":
+        return 7;
+    }
+  });
 }
+
