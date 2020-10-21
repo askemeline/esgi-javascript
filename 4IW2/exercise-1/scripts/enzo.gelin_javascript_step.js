@@ -8,6 +8,7 @@ function ucfirst(chaine) {
 console.log('ucfirst =>');
 console.log(ucfirst('extraordinaire'));
 
+
 function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
         return "";
@@ -22,6 +23,7 @@ function capitalize(chaine) {
 console.log('capitalize =>');
 console.log(capitalize('tu est extraordinaire'));
 
+
 function camelCase(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
         return "";
@@ -33,6 +35,7 @@ function camelCase(chaine) {
 }
 console.log('camelcase =>');
 console.log(camelCase('tu est extraordinaire'));
+
 
 function snake_case(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
@@ -46,7 +49,6 @@ function snake_case(chaine) {
 }
 console.log('snakecase =>');
 console.log(snake_case('tu est extraordinaire'));
-
 
 
 const person = {
@@ -63,12 +65,17 @@ function prop_access(obj, chaine) {
     if (typeof chaine !== "string" || chaine === "" || typeof obj === 'undefined') {
         return "";
     } else {
-        let access = chaine.split(".")
-        let chainePath = access[0]
-        let value = obj
-
+        let access = chaine.split(".") /* [[0 => person],[1 => address],[2 => country]] */
+        let chaineBase = access[0] /*person*/
+        let value = obj /*person*/
+        console.log(access);
+        console.log(chaineBase);
+        console.log(value);
         for (let i = 0; i < access.length; i++) {
-            chainePath += `.${access[i]}`
+            if (i !== 0) {
+                chaineBase += `.${access[i]}`
+            }
+            console.log(chaineBase);
             if (!value[access[i]]) {
                 return `${obj} don't exist`
             }
@@ -91,6 +98,7 @@ function verlanBis(chaine) {
 console.log('verlan =>');
 console.log(verlanBis('tu est extraordinaire'));
 
+
 function verlan(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
         return "";
@@ -105,6 +113,7 @@ function verlan(chaine) {
 console.log('verlan =>');
 console.log(verlan('tu est extraordinaire'));
 
+
 function yoda(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
         return "";
@@ -116,13 +125,56 @@ console.log('yoda  =>');
 console.log(yoda('tu est extraordinaire'));
 
 
+function leet(chaine) {
+    if (typeof chaine !== "string" || chaine === "") {
+        return "";
+    } else {
+        for (i in chaine) {
+            switch (chaine[i]) {
+                case ('A', 'a'):
+                    chaine = chaine.replace(chaine[i], '4');
+                    break;
+                case ('E', 'e'):
+                    chaine = chaine.replace(chaine[i], '3');
+                    break;
+                case ('I', 'i'):
+                    chaine = chaine.replace(chaine[i], '1');
+                    break;
+                case ('O', 'o'):
+                    chaine = chaine.replace(chaine[i], '0');
+                    break;
+                case ('U', 'u'):
+                    chaine = chaine.replace(chaine[i], '(_)');
+                    break;
+                case ('Y', 'y'):
+                    chaine = chaine.replace(chaine[i], '7');
+                    break;
+                default:
+                    break;
+            }
+        }
+        return chaine;
+    }
+}
+console.log('leet  =>');
+console.log(leet('tu est extraordinaire'));
 
 
+// function vig(chaine) {
+//     if (typeof chaine !== "string" || chaine === "") {
+//         return "";
+//     } else {
+//     }
+// }
+// console.log('vig');
+// console.log(vig('tu est extraordinaire'));
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
+module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.vig = vig;
 module.exports.prop_access = prop_access;

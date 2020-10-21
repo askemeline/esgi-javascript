@@ -68,7 +68,10 @@ function prop_access(obj, path) {
     result = result[args[i]];
     if(i > 0) p += ".";
     p += args[i];
-    if(result === undefined || result === null) return `${p} not exist`;
+    if(result === undefined || result === null) {
+      console.log(`${p} not exist`);
+      return false;
+    }
   }
   if(result === undefined) return `${path} does not exist`;
   return result;
