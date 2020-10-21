@@ -6,12 +6,6 @@ function ucfirst(chaine){
 function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 		var res = chaine.split(" ");
-		res.forEach(ucfirst);
-		return text
-	
-	function ucfirst(chaine){	
-		text += chaine.charAt(0).toUpperCase() + chaine.slice(1);
-	}
 }
 
 function camelCase(chaine){
