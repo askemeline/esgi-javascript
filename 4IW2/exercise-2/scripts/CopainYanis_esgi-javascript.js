@@ -21,8 +21,27 @@ function type_check_v1(value, type) {
 }
 
 
-
+function type_check_v2(value, object) {
+   for (let key of  Object.keys(object)) {
+       switch(key) {
+          case 'type': 
+            if (!type_check_v1(value, object[key])) return false;
+            break;
+          case 'value':
+             if (JSON.stringigy(value) !== JSON.stringify(object[key])) return false;
+            break;
+          case 'enum':
+             let check = false;
+             for (let val of object[key]) {
+                check = type_check_v2(value, {val});
+                if (check) break;
+             }
+             if(!check) return false;
+        }
+    }
+}
 
 
 
 module.exports.type_check_v1 = type_check_v1;
+module.exports.type_check_v2 = type_check_v2;
