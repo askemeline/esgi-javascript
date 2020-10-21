@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 09:09:47 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:10:23 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -10,15 +10,16 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' OK
+capitalize - 'test' KO
+	expected : "Test" - got "Test "
 capitalize - ' test' KO
-	expected : " Test" - got "Test"
+	expected : " Test" - got " Test "
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "IpsumDOLOR"
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR "
 capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "Sit8metConsectetur"
+	expected : "Sit 8met Consectetur" - got "Sit 8met Consectetur "
 capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscingElit"
+	expected : "_dipiscing Elit" - got "_dipiscing Elit "
 capitalize - 'null' OK
 capitalize - 'Object' OK
 

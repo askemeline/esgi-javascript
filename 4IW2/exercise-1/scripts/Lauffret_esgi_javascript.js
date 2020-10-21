@@ -9,7 +9,7 @@ function capitalize(chaine){
 		rLen = res.length;
 		text ="";
 		for (i = 0; i < rLen; i++) {
-		  text += ucfirst(res[i]);
+		  text += ucfirst(res[i]) + " ";
 		}
 	return text;
 }
