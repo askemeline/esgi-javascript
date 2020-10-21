@@ -10,7 +10,7 @@ function capitalize(chaine) {
 
 function camelCase(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
-    return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1)).join('');
+    return chaine.split(' ').map(c => c.charAt(0).toUpperCase() + c.slice(1).toLowerCase()).join('');
 }
 
 function snake_case(chaine) {
@@ -25,10 +25,12 @@ function leet(chaine) {
 }
 
 function verlan(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(' ').map(w => w.split('').reverse().join('')).join(' ');
 }
 
 function yoda(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(' ').reverse().join(' ');
 }
 

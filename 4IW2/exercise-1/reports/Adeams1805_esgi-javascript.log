@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 15:49:53 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 15:54:26 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -45,3 +45,62 @@ leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
+
+Checking verlan
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+
+Checking yoda
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'anticonstitutionnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'antiConstiTutioNnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' OK
+prop_access - 'path empty' OK
+prop_access - 'object null' OK
+prop_access - 'path null' OK
+
