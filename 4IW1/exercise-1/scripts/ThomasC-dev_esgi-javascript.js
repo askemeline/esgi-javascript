@@ -8,7 +8,8 @@ function capitalize(chaine) {
     const words = chaine.split(" ");
     let str = "";
     for(value of words) {
-        str += ucfirst(value) + " ";
+        if(str.length > 0)
+            str += " " + ucfirst(value);
     }
     return str;
 }
