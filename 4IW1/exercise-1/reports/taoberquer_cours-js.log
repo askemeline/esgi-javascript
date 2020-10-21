@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 17:14:34 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 17:15:08 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -66,14 +66,10 @@ verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' KO
-	Unexpected behaviour : ReferenceError - str is not defined
-yoda - 'yoda m Luke' KO
-	Unexpected behaviour : ReferenceError - str is not defined
-yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : ReferenceError - str is not defined
-yoda - ' ' KO
-	Unexpected behaviour : ReferenceError - str is not defined
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
 
