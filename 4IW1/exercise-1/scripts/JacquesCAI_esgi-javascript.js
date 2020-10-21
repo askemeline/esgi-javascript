@@ -22,7 +22,7 @@ function camelCase(chaine) {
     if (typeof(chaine) != "string" || chaine === "") return "";
 
     let str = "";
-    let string = chaine.replace('_','');
+    let string = chaine.replace('_',' ');
     let words = string.split(" ");
     for(let i=0;i<words.length;i++) {
         str += ucfirst(words[i].toLowerCase());
@@ -97,11 +97,31 @@ function yoda(string) {
     return string.split(" ").reverse().join(" ")
 }
 
+function verlan(chaine) {
+    if (typeof(chaine) != "string" && chaine === "") return ""
+    let words = chaine.split(" ");
+
+    let str = "";
+    for (let i=0;i<words.length;i++) {
+        if (i>0) {
+            str += " ";
+        }
+
+        let verlanWord = "";
+        for (let j=words[i].length-1;j>=0;j--) {
+            verlanWord += words[i].charAt(j);
+        }
+        str += verlanWord;
+    }
+
+    return str;
+}
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
+module.exports.verlan = verlan;
 module.exports.yoda = yoda;
 module.exports.prop_access = prop_access;
