@@ -4,7 +4,6 @@ let type_check_v1 = (value, type) =>
     : typeof value === type
     ? true
     : false;
-console.log(type_check_v1(null, "object"));
 
 function type_check_v2(arg1, arg2) {
   if (arg2 === null) {
