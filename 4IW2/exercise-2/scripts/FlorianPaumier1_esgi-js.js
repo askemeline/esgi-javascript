@@ -20,7 +20,6 @@ function type_check(arg, types) {
     })))
 }
 
-console.log(type_check_v1(1, 'number'))
 
 
 module.exports.type_check_v1 = type_check_v1;
