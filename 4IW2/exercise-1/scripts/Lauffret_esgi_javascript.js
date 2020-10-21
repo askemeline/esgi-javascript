@@ -5,24 +5,12 @@ function ucfirst(chaine){
 
 function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-		var res = chaine.split(" ");
-		rLen = res.length;
-		text ="";
-		for (i = 0; i < rLen; i++) {
-		  text += ucfirst(res[i]) + " ";
-		}
-	return text;
+	return chaine.split(" ").map(word=>ucfirst(word.toLowerCase())).join(" ");
 }
 
 function camelCase(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-		var res = chaine.split(" ");
-		rLen = res.length;
-		text="";
-		for (i = 0; i < rLen; i++) {
-		  text += res[i].charAt(0).toUpperCase() + res[i].slice(1);;
-		}
-	return text;
+	return chaine.split(" ").map(word=>ucfirst(word.toLowerCase()));
 }
 
 function snake_case(chaine){

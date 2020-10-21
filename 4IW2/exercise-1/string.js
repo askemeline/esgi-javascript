@@ -12,4 +12,4 @@ function capitalize(chaine) {
         .join(" ");
 }
 
-console.log(capitalize("bonjour LA FraNce"))
+console.log(capitalize("bonjour LA FraNce"));
