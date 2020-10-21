@@ -21,4 +21,5 @@ function type_check_v1(variable, type) {
 
 console.log(type_check_v1(null, "null") === true);
 console.log(type_check_v1(null, "object") === false);
+console.log(type_check_v1({}, "null") === false);
 console.log(type_check_v1(undefined, "undefined") === true);

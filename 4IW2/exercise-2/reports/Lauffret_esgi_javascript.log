@@ -1,38 +1,34 @@
 Loading script...
 
-Wed Oct 21 2020 18:56:13 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 18:56:45 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
-type_check_v1 - 'number' KO
-	expected : true - got false
+type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
 type_check_v1 - 'BooleanNotNumber' OK
-type_check_v1 - 'object' KO
-	expected : true - got false
-type_check_v1 - 'null' KO
-	expected : true - got false
+type_check_v1 - 'object' OK
+type_check_v1 - 'null' OK
 type_check_v1 - 'nullNotObject' OK
-type_check_v1 - 'undefined' OK
-type_check_v1 - 'string' KO
+type_check_v1 - 'undefined' KO
 	expected : true - got false
-type_check_v1 - 'array' KO
-	expected : true - got false
+type_check_v1 - 'string' OK
+type_check_v1 - 'array' OK
 type_check_v1 - 'function' KO
 	expected : true - got false
 type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
-	Unexpected behaviour : ReferenceError - rg3 is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'indexOf' of null
 type_check_v2 - 'numberNotValue' KO
-	Unexpected behaviour : ReferenceError - rg3 is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'indexOf' of null
 type_check_v2 - 'numberNotObject' KO
-	Unexpected behaviour : ReferenceError - rg3 is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'indexOf' of null
 type_check_v2 - 'stringEnum' KO
-	Unexpected behaviour : ReferenceError - rg3 is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'indexOf' of null
 type_check_v2 - 'objectMatch' KO
-	Unexpected behaviour : ReferenceError - rg3 is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'indexOf' of null
 type_check_v2 - 'objectNotMatch' KO
-	Unexpected behaviour : ReferenceError - rg3 is not defined
+	Unexpected behaviour : TypeError - Cannot read property 'indexOf' of null
 
 Checking type_check
 type_check - 'number' KO
