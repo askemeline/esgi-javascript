@@ -8,10 +8,14 @@ console.log(ucfirst("bonjour"));
 console.log(ucfirst("bonJOur"));
 
 function capitalize(chaine) {
-    if (typeof chaine !== "string" || chaine === "") return "";
-    return chaine.split(' ').map(word => ucfirst(word.toLowerCase())).join(' ');
+  if (typeof chaine !== "string" || chaine === "") return "";
+  return chaine
+    .split(" ")
+    .map((word) => ucfirst(word.toLowerCase()))
+    .join(" ");
 }
 
 function camelCase(chaine) {
-    return capitalize(chaine).replace(/\W/g, '')
+  return capitalize(chaine).replace(/\W/g, "");
 }
+

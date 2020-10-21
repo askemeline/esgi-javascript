@@ -91,31 +91,41 @@ let prairie = {
     }
 }
 
-function yoda(string) {
-    if (typeof string !== "string" && string !== "") return ""
+function verlan(chaine) {
+    if (typeof (chaine) != "string" || chaine === "") return "";
 
-    return string.split(" ").reverse().join(" ")
+    return chaine.split(" ").map((word) => {
+        return word.split("").reverse().join("")
+    }).join(" ")
 }
 
-function verlan(chaine) {
-    if (typeof(chaine) != "string" && chaine === "") return ""
-    let words = chaine.split(" ");
+function yoda(chaine) {
+    if (typeof (chaine) != "string" || chaine === "") return "";
 
-    let str = "";
-    for (let i=0;i<words.length;i++) {
-        if (i>0) {
-            str += " ";
-        }
+    return chaine.split(" ").reverse().join(" ")
+}
 
-        let verlanWord = "";
-        for (let j=words[i].length-1;j>=0;j--) {
-            verlanWord += words[i].charAt(j);
-        }
-        str += verlanWord;
+function vig(key, chaine) {
+    if (typeof key !== "string" && key !== "") return ""
+    if (typeof (chaine) != "string" || chaine === "") return "";
+
+    const msgLength = chaine.length
+    const keyLength = key.length
+
+    let cryptage = "";
+
+    for (let i = 1; i < msgLength; i++) {
+        let charCode = chaine.charCodeAt(i-1)-65
+        let decalage = key.charCodeAt((i-1)%keyLength)-65
+        let char = String.fromCharCode(65+(charCode+decalage)%26)
+
+        cryptage += char
     }
 
-    return str;
+    return cryptage
 }
+
+
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
@@ -124,4 +134,5 @@ module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.vig = vig;
 module.exports.prop_access = prop_access;

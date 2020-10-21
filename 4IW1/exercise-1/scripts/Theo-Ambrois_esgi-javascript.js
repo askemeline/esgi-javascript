@@ -1,30 +1,26 @@
 function ucfirst(string){
-	if (typeof string !== "string" && string !== "")
+	if (typeof string !== "string" || string === "")
 		return "";
 	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 
 function capitalize(string) {
-    if (typeof string !== "string" && string !== "")
+    if (typeof string !== "string" || string === "")
     	return "";	
 
-    string = string.toLowerCase;
-    return string.split(" ").map((string) => {
-    	return ucfirst(string)
-    }
-    ).join(" ");
+    return string.split(" ").map((word) => ucfirst(word.toLowerCase())).join(' ');
 }
 
 function camelCase(string) {
-    if (typeof string !== "string" && string !== "")
+    if (typeof string !== "string" || string === "")
     	return "";
 
     return capitalize(string).split(" ").join("");
 }
 
 function snake_case(string) {
-    if (typeof string !== "string" && string !== "")
+    if (typeof string !== "string" || string === "")
     	return "";
 
     string = string.toLowerCase();
@@ -33,7 +29,7 @@ function snake_case(string) {
 }
 
 function leet(string) {
-    if (typeof string !== "string" && string !== "") return "";
+    if (typeof string !== "string" || string === "")
 
     const leet = {
         "a": 4,
@@ -56,7 +52,7 @@ function leet(string) {
 }
 
 function verlan(string){
-    if (typeof string !== "string" || string === "") return "";
+    if (typeof string !== "string" || string === "")
 
     return string.split(' ').reverse().join(' ')
 }	
