@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 09:34:03 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:34:30 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -106,6 +106,6 @@ prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' OK
 prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	expected : test not exist - got null not exist
+	expected : test not exist - got null
 prop_access - 'path null' OK
 

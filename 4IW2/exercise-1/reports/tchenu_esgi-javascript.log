@@ -1,35 +1,7 @@
-Loading script...
 
-Wed Oct 21 2020 09:34:00 GMT+0200 (GMT+02:00) - Starting tests...
-Checking ucfirst
-ucfirst - 'test' OK
-ucfirst - ' test' OK
-ucfirst - 'Test' OK
-ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-
-Checking capitalize
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - ' test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-
-Checking camelCase
 camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
+camelCase - 'toggleCase is the coolest' OKLoading script...
+
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' OK
@@ -39,9 +11,11 @@ camelCase - 'null' KO
 camelCase - 'Object' KO
 	Unexpected behaviour : TypeError - string.replace is not a function
 
+
+Wed Oct 21 2020 09:34:28 GMT+0200 (GMT+02:00) - Starting tests...
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	Unexpected behaviour : TypeError - "snake_case" not implementedChecking ucfirst
 snake_case - 'toggleCase is the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCase is the 3oolest' KO
@@ -66,14 +40,18 @@ leet - 'leet' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'yoda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
 leet - 'evaluation' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'mon travail' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
+ucfirst - 'Test' OK
 leet - ' ' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'null' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
+ucfirst - 'TEST' OK
 leet - 'Object' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 
@@ -94,54 +72,82 @@ verlan - 'Object' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 
 Checking yoda
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 yoda - 'anaconda' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 yoda - 'Inverser la position des mots d’une phrase' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
+
+
 yoda - ' ' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	Unexpected behaviour : TypeError - "yoda" not implementedChecking capitalize
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 yoda - 'Object' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 
 Checking vig
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 vig - 'anticonstitutionnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 vig - 'antiConstiTutioNnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 vig - ' - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 vig - 'null - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
+
+Checking camelCase
 prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
+camelCase - 'toggle case is the coolest' OK
 prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got undefined
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'ToggleCase is_the coolest' OK
 prop_access - 'path exist - value array' KO
 	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
+camelCase - ' toggleCase' OK
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
 
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
