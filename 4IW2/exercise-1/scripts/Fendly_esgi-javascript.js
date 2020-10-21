@@ -31,6 +31,12 @@ function snakecase(chaine) {
 
 console.log(snakecase("hello world slt"));
 
+function verlan(chaine){
+    return chaine.split('').reverse().join('');
+}
+console.log(verlan("hello world"));
+
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
+module.exports.verlan = verlan;
