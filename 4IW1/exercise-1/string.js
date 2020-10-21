@@ -20,5 +20,5 @@ function camelCase(chaine) {
 }
 
 function snake_case(chaine) {
-    return chaine.toLowerCase().replace(/\W/g)
+  return chaine.toLowerCase().replace(/\W/g, "_");
 }
