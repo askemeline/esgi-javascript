@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 08:57:02 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 08:57:31 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
@@ -39,7 +39,7 @@ camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 camelCase - 'Object' KO
 	Unexpected behaviour : TypeError - string.replace is not a function
 
