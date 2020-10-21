@@ -52,7 +52,7 @@ function verlan (chaine) {
 function yoda(chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
   
-  return chaine.split(' ').reverse().join(' ');
+  return str.split(' ').reverse().join(' ');
 }
 
 function prop_access (obj, path) {
