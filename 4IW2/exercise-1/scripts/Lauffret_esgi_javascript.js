@@ -6,6 +6,10 @@ function ucfirst(chaine){
 function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 		var res = chaine.split(" ");
+		rLen = res.length;
+		for (i = 0; i < rLen; i++) {
+		  text += ucfirst(res[i]);
+		}
 }
 
 function camelCase(chaine){
@@ -17,7 +21,7 @@ function snake_case(chaine){
 		var res = chaine.split(" ");
 		rLen = res.length;
 		for (i = 0; i < rLen; i++) {
-		  text += res[i];
+		  text += res[i].toLowerCase();
 		  if(i != rLen-1){
 			  text += "_";
 		  }
