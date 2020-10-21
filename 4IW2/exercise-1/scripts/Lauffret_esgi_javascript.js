@@ -41,9 +41,10 @@ function prop_access(chaine){
 }
 
 function verlan(chaine){
-	chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" ");
+	if(typeof chaine !== "string" || chaine === "") return "";
+	return chaine.split(" ").map(word => word.split("").reverse().join("")).join(" ");
 }
-
+s
 function yoda(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 	return chaine.split("").reverse().join("").join(" ");
