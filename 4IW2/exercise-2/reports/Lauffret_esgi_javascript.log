@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 18:40:57 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 18:41:43 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' KO
 	expected : true - got false
@@ -22,13 +22,17 @@ type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
-	expected : true - got false
-type_check_v2 - 'numberNotValue' OK
-type_check_v2 - 'numberNotObject' OK
-type_check_v2 - 'stringEnum' OK
+	Unexpected behaviour : ReferenceError - rg3 is not defined
+type_check_v2 - 'numberNotValue' KO
+	Unexpected behaviour : ReferenceError - rg3 is not defined
+type_check_v2 - 'numberNotObject' KO
+	Unexpected behaviour : ReferenceError - rg3 is not defined
+type_check_v2 - 'stringEnum' KO
+	Unexpected behaviour : ReferenceError - rg3 is not defined
 type_check_v2 - 'objectMatch' KO
-	expected : true - got false
-type_check_v2 - 'objectNotMatch' OK
+	Unexpected behaviour : ReferenceError - rg3 is not defined
+type_check_v2 - 'objectNotMatch' KO
+	Unexpected behaviour : ReferenceError - rg3 is not defined
 
 Checking type_check
 type_check - 'number' KO
