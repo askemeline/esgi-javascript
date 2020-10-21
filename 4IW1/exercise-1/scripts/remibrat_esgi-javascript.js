@@ -68,7 +68,7 @@ function yoda(text){
     return text.split(" ").reverse().join(" ");
 }
 
-function vig(string, key) {
+function vig(key, string) {
     if (typeof key !== "string" && key !== "") return ""
     if (typeof string !== "string" && string !== "") return ""
 
