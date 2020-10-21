@@ -1,15 +1,41 @@
 Loading script...
 
-Wed Oct 21 2020 09:59:35 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 10:00:04 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
+ucfirst - 'Test' OK
+Wed Oct 21 2020 10:00:04 GMT+0200 (GMT+02:00) - Starting tests...
+Checking ucfirst
+ucfirst - 'TEST' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 
 Checking capitalize
 capitalize - 'test' KO
@@ -39,19 +65,19 @@ camelCase - 'null' KO
 camelCase - 'Object' KO
 	Unexpected behaviour : TypeError - string.replace is not a function
 
-Checking snake_case
+
+
+Checking snake_caseChecking camelCase
 snake_case - 'toggle case is the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'toggleCase is the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCase is the 3oolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
-
-
 snake_case - 'ToggleCaseIsTheCool3st' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implementedChecking capitalize
+	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - ' toggleCase' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'null' KO
@@ -64,8 +90,6 @@ leet - 'anaconda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'anacoNDa' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 leet - 'leet' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'yoda' KO
@@ -96,8 +120,6 @@ verlan - 'null' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'Object' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-capitalize - ' test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 
 Checking yoda
 yoda - 'anaconda' KO
@@ -128,14 +150,10 @@ vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
 prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got undefined
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 prop_access - 'path exist - value array' KO
 	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
 prop_access - 'path not exist' KO
@@ -148,14 +166,6 @@ prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
 
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-
-Checking camelCase
 camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
