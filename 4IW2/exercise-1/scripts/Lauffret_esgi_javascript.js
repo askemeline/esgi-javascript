@@ -5,12 +5,12 @@ function ucfirst(chaine){
 
 function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return chaine.split(" ").map(word=>ucfirst(word.toLowerCase())).join(" ");
+	return chaine.split(" ").map(word s=> ucfirst(word.toLowerCase())).join(" ");
 }
 
 function camelCase(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return chaine.split(" ").map(word=>ucfirst(word.toLowerCase()));
+	return chaine.split(" ").map(word => ucfirst(word.toLowerCase())).join("");
 }
 
 function snake_case(chaine){
@@ -25,7 +25,7 @@ function snake_case(chaine){
 		  }
 		}
 	return text;
-}
+
 
 function leet(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";

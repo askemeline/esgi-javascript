@@ -60,14 +60,18 @@ function leet(str) {
 }
 
 function prop_access(obj, path) {
-    if(typeof path !== "string" || path === "" || typeof obj !== "object") return obj;
-    let args = path.split(".");
-    let result = obj;
-    for(i in args) {
-      result = result[args[i]];
-    }
-    if(result === undefined) return `${path} does not exist`;
-    return result;
+  if(typeof path !== "string" || path === "" || typeof obj !== "object" || obj === null) return obj;
+  let args = path.split(".");
+  let result = obj;
+  let p = "";
+  for(i in args) {
+    result = result[args[i]];
+    if(i > 0) p += ".";
+    p += args[i];
+    if(result === undefined || result === null) return `${p} not exist`;
+  }
+  if(result === undefined) return `${path} does not exist`;
+  return result;
 }
 
 const prairie = {
