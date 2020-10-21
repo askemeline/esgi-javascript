@@ -30,9 +30,13 @@ function type_check_v2(variable, conf) {
       case "type":
         if (type_check_v1(variable, conf.type) === false) return false;
         break;
-    case 'value':
-        if(JSON.stringify(variable) !== JSON.stringify conf.value)
+      case "value":
+        if (JSON.stringify(variable) !== JSON.stringify(conf.value))
+          return false;
         break;
+        case "enum":
+            for()
+            break;
     }
   }
   return true;
