@@ -1,19 +1,35 @@
 Loading script...
 
-Wed Oct 21 2020 17:15:44 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 17:16:16 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
 ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got undefined
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
 ucfirst - 'TEST' OK
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 
 Checking capitalize
 capitalize - 'test' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+
+
 capitalize - ' test' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - 'ipsum DOLOR' KO
