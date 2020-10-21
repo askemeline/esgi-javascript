@@ -6,16 +6,22 @@ function ucfirst(chaine){
 function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 		var res = chaine.split(" ");
-		res.forEach(test);
+		res.forEach(ucfirst);
 		return text
 	
-	function test(chaine){	
+	function ucfirst(chaine){	
 		text += chaine.charAt(0).toUpperCase() + chaine.slice(1);
 	}
 }
 
-function snake_Case(chaine){
-
+function snake_case(chaine){
+	if(typeof chaine !== "string" || chaine === "") return "";	
+		var res = chaine.split(" ");
+		res.forEach(snake);
+		return text
+	function snake(chaine){
+		text 
+	}
 }
 
 
@@ -24,3 +30,4 @@ console.log(capitalize("hello world"));
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
+module.exports.snake_case = snake_case;
