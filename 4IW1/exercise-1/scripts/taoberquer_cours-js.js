@@ -19,7 +19,7 @@ function camelCase(chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
 
   toRetrun = "";
-  for (value of chaine.split('/[ _]+/')) {
+  for (value of chaine.split(/[\s\_]+/)) {
       toRetrun += capitalize(value);
   }
 
@@ -57,10 +57,6 @@ function leet(chaine) {
   return toRetrun;
 }
 
-function prop_access (obj, path) {
-
-}
-
 function verlan (chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
 
@@ -87,6 +83,14 @@ function yoda(chaine) {
   return toRetrun.slice(0, -1);
 }
 
+function prop_access (obj, path) {
+
+}
+
+function vig() {
+
+}
+
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
@@ -94,4 +98,5 @@ module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.vig = vig;
 module.exports.prop_access = prop_access;
