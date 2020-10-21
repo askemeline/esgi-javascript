@@ -44,7 +44,7 @@ function leet(chaine) {
   });
 }
 
-console.log(leet("anaconda"));
+console.log(`${chaine} => $}leet("anaconda"));
 
 function verlan(chaine) {
   return chaine
