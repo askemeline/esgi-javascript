@@ -53,8 +53,8 @@ function leet(chaine) {
 }
 
 function prop_access(obj, path) {
-    if (obj === null || typeof obj !== 'object') return path;
-    if (typeof path != "string" || path === "") return obj;
+    if (typeof(obj) != "object") return path;
+    if (typeof(path) != "string" || path === "") return obj;
     let pathSplitted = path.split(".");
     for (let elem of pathSplitted) {
         if (typeof(obj[elem]) == "undefined") {
@@ -65,7 +65,6 @@ function prop_access(obj, path) {
     return obj;
 }
 
-console.log(prop_access(null, "animal.type.name"));
 function verlan(chaine) {
     if (typeof (chaine) != "string" || chaine === "") return "";
 
