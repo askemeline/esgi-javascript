@@ -40,7 +40,6 @@ function leet(chaine) {
 }
 
 function prop_access(obj, path) {
-    if (obj === null) return "";
     if (typeof path !== 'string' || path === "" || path === null ) return obj;
 
     path = path.split('.');
@@ -69,9 +68,24 @@ function yoda(text){
     return text.split(" ").reverse().join(" ");
 }
 
-function vig(chaine) {
-    if (typeof chaine !== "string" || chaine === "") return "";
+function vig(string, key) {
+    if (typeof key !== "string" && key !== "") return ""
+    if (typeof string !== "string" && string !== "") return ""
 
+    const msgLength = string.length
+    const keyLength = key.length
+
+    let cryptage = "";
+
+    for (let i = 1; i < msgLength; i++) {
+        let charCode = string.charCodeAt(i-1)-65
+        let decalage = key.charCodeAt((i-1)%keyLength)-65
+        let char = String.fromCharCode(65+(charCode+decalage)%26)
+
+        cryptage += char
+    }
+
+    return cryptage
 }
 
 module.exports.ucfirst = ucfirst;
