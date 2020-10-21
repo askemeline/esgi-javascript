@@ -38,6 +38,7 @@ function type_check_v2(variable, conf) {
         let found = false;
         for (subValue of conf.enum) {
           if (!found) found = type_check_v2(variable, { value: subValue });
+          if (found) break;
         }
         if (!found) return false;
         break;
