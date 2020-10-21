@@ -6,16 +6,22 @@ function ucfirst(chaine){
 function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 		var res = chaine.split(" ");
-		res.forEach(ucfirst) ;
+		res.forEach(ucfirst);
 		return text
 	
 	function ucfirst(chaine){	
 		text += chaine.charAt(0).toUpperCase() + chaine.slice(1);
+	}
 }
 
-function snakeCase(chaine){
+function snake_Case(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";	
-	return chaine.charAt(0).toUpperCase() + chaine.slice(1);
+		var res = chaine.split(" ");
+		res.forEach(ucfirst);
+		return text
+	function snake(chaine){
+		text 
+	}
 }
 
 
