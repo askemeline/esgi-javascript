@@ -52,3 +52,5 @@ function verlan(chaine) {
     .map((word) => word.split("").reverse().join(""))
     .join(" ");
 }
+
+function yoda()
