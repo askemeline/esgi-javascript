@@ -16,9 +16,12 @@ function capitalize(chaine) {
 }
 
 function camelCase(chaine) {
+  if (typeof chaine !== "string" || chaine === "") return "";
   return capitalize(chaine).replace(/\W/g, "");
 }
 
 function snake_case(chaine) {
+  if (typeof chaine !== "string" || chaine === "") return "";
   return chaine.toLowerCase().replace(/\W/g, "_");
 }
+
