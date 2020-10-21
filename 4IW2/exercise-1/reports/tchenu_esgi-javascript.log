@@ -1,8 +1,20 @@
-Loading script...
 
-Wed Oct 21 2020 08:42:43 GMT+0200 (GMT+02:00) - Starting tests...
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - Cannot read property 'type' of undefinedLoading script...
+
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+Wed Oct 21 2020 08:43:12 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 ucfirst - 'test' OK
+
+
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
