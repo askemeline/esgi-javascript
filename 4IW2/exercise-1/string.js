@@ -14,5 +14,7 @@ function capitalize(chaine) {
 console.log(capitalize("bonjour LA FraNce"));
 
 function camelCase(chaine) {
-  return capitalize(chaine).replace(" ", "");
+  return capitalize(chaine).replace(/ /g, "");
 }
+
+console.log(camelCase("bonjour LA FraNce"));
