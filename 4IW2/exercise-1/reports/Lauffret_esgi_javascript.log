@@ -1,8 +1,8 @@
 Loading script...
 Invalid script: SyntaxError: missing ) after argument list
-/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:8
-	return chaine.split(" ").map(word s=> ucfirst(word.toLowerCase())).join(" ");
-	                             ^^^^
+/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:32
+	}
+	^
 
 SyntaxError: missing ) after argument list
     at wrapSafe (internal/modules/cjs/loader.js:1047:16)

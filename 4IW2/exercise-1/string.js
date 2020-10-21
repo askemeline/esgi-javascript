@@ -60,3 +60,5 @@ console.log(verlan("bonjour la france"));
 function yoda(chaine) {
   return chaine.split(" ").reverse().join(" ");
 }
+
+console.log(yoda("bonjour la france"));

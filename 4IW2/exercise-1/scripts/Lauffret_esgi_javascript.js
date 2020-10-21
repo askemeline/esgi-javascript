@@ -5,7 +5,7 @@ function ucfirst(chaine){
 
 function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return chaine.split(" ").map(word s=> ucfirst(word.toLowerCase())).join(" ");
+	return chaine.split(" ").map(word => ucfirst(word.toLowerCase())).join(" ");
 }
 
 function camelCase(chaine){
@@ -38,10 +38,12 @@ function prop_access(chaine){
 
 function verlan(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
+	return chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" ");
 }
 
 function yoda(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
+	return chaine.split("").reverse().join("").join(" ");
 }
 
 function vig(chaine){

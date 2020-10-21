@@ -60,7 +60,11 @@ function leet(str) {
 }
 
 function prop_access(obj, path) {
-  if(typeof path !== "string" || path === "" || typeof obj !== "object" || obj === null) return obj;
+  if(typeof path !== "string" || path === "" || typeof obj !== "object") return obj;
+  if(obj === null) {
+    console.log(`${obj} not exist`);
+    return false;
+  }
   let args = path.split(".");
   let result = obj;
   let p = "";
@@ -73,7 +77,6 @@ function prop_access(obj, path) {
       return false;
     }
   }
-  if(result === undefined) return `${path} does not exist`;
   return result;
 }
 
