@@ -1,9 +1,13 @@
-let type_check_v1 = (value, type) =>
-  value === null || value === undefined
-    ? true
-    : typeof value === type
-    ? true
-    : false;
+function type_check_v1(value, type) {
+  if (
+    (value === undefined && type === "undefined") ||
+    (value === null && type === "object") ||
+    typeof value === type
+  ) {
+    return true;
+  }
+  return false;
+}
 
 function type_check_v2(arg1, arg2) {
   if (arg2 === null) {
@@ -20,6 +24,8 @@ function type_check_v2(arg1, arg2) {
     }
   }
 }
+
+console.log(type_check_v1(1, "number"));
 
 
 module.exports.type_check_v1 = type_check_v1;
