@@ -73,6 +73,10 @@ console.log(leet('mOn Super Texte'));
 console.log(leet('anaconda'));
 
 function prop_access(object, path) {
+    if (typeof path !== 'string' || path === '') {
+        return '';
+    }
+
     let result = object
     path.split('.').forEach(element => {
         if (result[element]) {
@@ -104,6 +108,10 @@ console.info("\n========== verlan ==========");
 console.log(verlan('Hello world'));
 
 function yoda(text) {
+    if (typeof text !== 'string' || text === '') {
+        return '';
+    }
+
     return text.split(' ').reverse().join(' ');
 }
 
