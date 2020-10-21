@@ -1,9 +1,20 @@
-function type_check_v1(input, type) {
-    return typeof input === type;
+function type_check_v1(val, type) {
+    let valType
+
+    if (val === null) {
+        valType = 'null'
+    } else if (typeof val === 'object' && val.length !== undefined) {
+        valType = 'array'
+    } else {
+        valType = typeof val
+    }
+
+    return valType === type;
 }
 
 console.info("\n========== type_check_v1 ==========");
 console.log(type_check_v1(1, 'number'));
+console.log(type_check_v1(undefined, 'undefined'));
 
 function type_check_v2(value, object) {
     if (!object.type && !object.value && !object.enum) {
