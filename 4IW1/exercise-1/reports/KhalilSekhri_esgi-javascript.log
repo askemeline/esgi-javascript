@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 17:03:41 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 17:04:14 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -10,28 +10,32 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
+capitalize - 'test' KO
+	expected : "Test" - got "TEST"
+capitalize - ' test' KO
+	expected : " Test" - got " TEST"
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+	expected : "Ipsum Dolor" - got "IPSUM DOLOR"
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got "SIT 8MET CONSECTETUR"
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got "_DIPISCING ELIT"
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
+	expected : "ToggleCaseIsTheCoolest" - got "TOGGLECASEISTHECOOLEST"
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "toggleCaseIsTheCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TOGGLECASEISTHECOOLEST"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	expected : "TogglecaseIsThe3oolest" - got "TOGGLECASEISTHE3OOLEST"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	expected : "Togglecaseisthecoolest" - got "TOGGLECASEISTHECOOLEST"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TOGGLECASEIS_THECOOLEST"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
+	expected : "Togglecase" - got "TOGGLECASE"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -42,44 +46,39 @@ snake_case - 'ToggleCase is the 3oolest' OK
 snake_case - 'ToggleCaseIsTheCool3st' OK
 snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' OK
-snake_case - 'null' OK
-snake_case - 'Object' OK
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.toLowerCase is not a function
 
 Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	Unexpected behaviour : TypeError - chaine.replace is not a function
 
 Checking verlan
 verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - chaine.spilt is not a function
 verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - chaine.spilt is not a function
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - chaine.spilt is not a function
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - chaine.spilt is not a function
 verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - chaine.spilt is not a function
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'spilt' of null
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	Unexpected behaviour : TypeError - chaine.spilt is not a function
 
 Checking yoda
 yoda - 'anaconda' KO
