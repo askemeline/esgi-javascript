@@ -9,7 +9,9 @@ function type_check_v1(variable, type) {
             return type === typeof variable;
         case "object":
             switch(type) {
-                case "null"
+                case "null":
+                    return variable === null;
+                
             }
     }
 }
