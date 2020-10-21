@@ -3,7 +3,7 @@
 function ucfirst(chaine) {
     if (typeof chaine !== "string" || chaine === "")
     {
-        return "";
+        return "f";
     }
 
     return chaine.charAt(0).toUpperCase() + chaine.slice(1);
@@ -27,7 +27,7 @@ function capitalize(chaine) {
     return chaineCapitalized.join(" ");
 }
 
-function camelease(chaine) {
+function cameleCase(chaine) {
 
   if (typeof chaine !== "string" || chaine === "" )
     {
@@ -52,7 +52,7 @@ function snake_case(chaine) {
           return "";
       }
     
-      return (chaine.split(' ')).join("_").toLocaleLowerCase();
+      return (chaine.split(' ')).join("_");
 }
 
 function leet(chaine) {
