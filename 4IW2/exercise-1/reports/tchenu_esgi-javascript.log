@@ -1,33 +1,28 @@
 
-Wed Oct 21 2020 09:32:59 GMT+0200 (GMT+02:00) - Starting tests...
-Loading script...
-Checking ucfirst
 ucfirst - 'test' OK
-ucfirst - ' test' OK
-Wed Oct 21 2020 09:32:59 GMT+0200 (GMT+02:00) - Starting tests...
+ucfirst - ' test' OKLoading script...
 
-ucfirst - 'Test' OKChecking ucfirst
+ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'test' OK
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 
-Checking capitalize
+
+Wed Oct 21 2020 09:33:30 GMT+0200 (GMT+02:00) - Starting tests...
+Checking ucfirstChecking capitalize
 capitalize - 'test' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
-ucfirst - ' test' OK
 capitalize - ' test' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
+ucfirst - 'test' OK
 capitalize - 'ipsum DOLOR' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - 'sit 8met consectetur' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
-ucfirst - 'Test' OK
 capitalize - '_dipiscing elit' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
-ucfirst - 'TEST' OK
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - 'Object' KO
@@ -37,137 +32,96 @@ Checking camelCase
 camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
-
-Checking capitalize
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 camelCase - 'ToggleCaseIsTheCoolest' OK
-capitalize - ' test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 camelCase - 'ToggleCase is_the coolest' OK
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 camelCase - ' toggleCase' OK
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-
-Checking camelCase
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
 camelCase - 'Object' KO
 	Unexpected behaviour : TypeError - string.replace is not a function
-camelCase - 'toggle case is the coolest' OK
+ucfirst - 'TEST' OK
 
-Checking snake_case
-camelCase - 'toggleCase is the coolest' OK
+
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - "capitalize" not implementedChecking snake_case
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 snake_case - 'toggle case is the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
-camelCase - 'ToggleCase is the 3oolest' OK
 snake_case - 'toggleCase is the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
-camelCase - 'ToggleCaseIsTheCoolest' OK
 snake_case - 'ToggleCase is the 3oolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 snake_case - 'ToggleCaseIsTheCool3st' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCase is_the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
-camelCase - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
-camelCase - ' toggleCase' OK
+
+
 snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
-Checking leet
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+Checking leetChecking camelCase
 leet - 'anaconda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'anacoNDa' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-
-Checking snake_case
 leet - 'leet' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
 leet - 'yoda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'evaluation' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
 leet - 'mon travail' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
 leet - ' ' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
 leet - 'null' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
 leet - 'Object' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 
-
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implementedChecking verlan
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-
-Checking leet
+Checking verlan
 verlan - 'anaconda' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'kayak' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
 verlan - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - '70da m L(_)k3' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
 verlan - ' ' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
 verlan - 'null' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'Object' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
 
 Checking yoda
-leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
 yoda - 'anaconda' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
-leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
 yoda - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Inverser la position des mots d’une phrase' KO
@@ -190,60 +144,104 @@ vig - ' - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'null - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
 vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got undefined
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+
+
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'ToggleCase is_the coolest' OK
+camelCase - ' toggleCase' OK
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - ' toggleCase' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+
+Checking leet
+leet - 'anaconda' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'anacoNDa' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'leet' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'yoda' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'evaluation' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'mon travail' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - ' ' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'null' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'Object' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 
-
-
-Checking verlanChecking prop_access
+Checking verlan
 verlan - 'anaconda' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'kayak' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
 verlan - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - '70da m L(_)k3' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - ' ' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got undefined
 verlan - 'null' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'Object' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 
-
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - Cannot read property 'type' of undefinedChecking yoda
+Checking yoda
 yoda - 'anaconda' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
 yoda - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Inverser la position des mots d’une phrase' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - ' ' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
-prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Object' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
-prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
-
-
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
