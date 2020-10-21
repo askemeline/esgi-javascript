@@ -24,13 +24,14 @@ console.log(type_check_v1(null, "object") === false);
 console.log(type_check_v1({}, "null") === false);
 console.log(type_check_v1(undefined, "undefined") === true);
 
-
 function type_check_v2(variable, conf) {
-    for(toCheck in conf) {
-        switch(toCheck) {
-        case 'type':
-            if(type_check_v1(variable, conf.type) === false) return false;
-            break;
-        }
+  for (toCheck in conf) {
+    switch (toCheck) {
+      case "type":
+        if (type_check_v1(variable, conf.type) === false) return false;
+        break;
+    case 'value'
     }
+  }
+  return true;
 }
