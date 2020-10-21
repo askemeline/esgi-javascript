@@ -27,10 +27,11 @@ console.log(snake_case("bonjour LA 'FraNce"));
 
 function leet(chaine) {
     chaine.replace(/[AEIOUY]/gi, function(e) {
-        switch(e) {
+        switch(e.toLowerCase()) {
             case 'a':
-            case 'A':
-                
+                return 4;
+                case 'e':
+                case 'E':
         }
     })
 }
