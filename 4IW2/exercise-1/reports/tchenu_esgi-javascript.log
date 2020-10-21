@@ -1,19 +1,59 @@
+Loading script...
 
+Wed Oct 21 2020 10:53:45 GMT+0200 (GMT+02:00) - Starting tests...
+
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to objectChecking ucfirst
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - 'null' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - 'Object' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 
-Checking camelCaseLoading script...
+Checking camelCase
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+
+Checking camelCase
 camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
-Wed Oct 21 2020 10:53:16 GMT+0200 (GMT+02:00) - Starting tests...
-Checking ucfirst
 camelCase - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 camelCase - 'Object' KO
@@ -44,12 +84,10 @@ leet - 'anacoNDa' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'leet' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-ucfirst - 'test' OK
 leet - 'yoda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'evaluation' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-ucfirst - ' test' OK
 leet - 'mon travail' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - ' ' KO
@@ -76,8 +114,6 @@ verlan - 'Object' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 
 Checking yoda
-ucfirst - 'Test' OK
-ucfirst - 'TEST' OK
 yoda - 'anaconda' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'yoda m Luke' KO
@@ -86,8 +122,6 @@ yoda - 'Inverser la position des mots d’une phrase' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - ' ' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Object' KO
@@ -96,55 +130,35 @@ yoda - 'Object' KO
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 vig - 'antiConstiTutioNnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - ' - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-
-
 vig - 'null - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'Object - test' KO
-	Unexpected behaviour : TypeError - "vig" not implementedChecking capitalize
+	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
-capitalize - ' test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got undefined
 prop_access - 'path exist - value array' KO
 	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-
-Checking camelCase
 prop_access - 'path empty' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
-camelCase - 'toggle case is the coolest' OK
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
 
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
