@@ -10,21 +10,13 @@ function capitalize(chaine){
 
 function camelCase(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return chaine.split(" ").map(word => ucfirst(word.toLowerCase())).join("");
+	return capitalize(chaine).replace(/\W/g,"");
 }
 
 function snake_case(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";	
-		var res = chaine.split(" ");
-		rLen = res.length;
-		text="";
-		for (i = 0; i < rLen; i++) {
-		  text += res[i].toLowerCase();
-		  if(i != rLen-1){
-			  text += "_";
-		  }
-		}
-	return text;
+	return capitalize(chaine).replace(/\W/g,"_");
+}
 
 
 function leet(chaine){

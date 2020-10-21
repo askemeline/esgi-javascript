@@ -20,5 +20,5 @@ function camelCase(chaine) {
 console.log(camelCase("bonjour LA 'FraNce"));
 
 function snake(chaine) {
-    return chaine.toLowerCase().replace(//g);
-  }
+  return chaine.toLowerCase().replace(/(\W)+/g, "-");
+}
