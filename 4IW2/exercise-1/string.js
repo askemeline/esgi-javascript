@@ -3,6 +3,11 @@ function ucfirst(chaine) {​​​​​
     return chaine.charAt(0).toUpperCase() + chaine.slice(1);
 }​​​​​
 
+
+function ucfirst(chaine) {
+    if(typeof chaine !== "string" || chaine === "") return "";
+    
+}
 function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
 
