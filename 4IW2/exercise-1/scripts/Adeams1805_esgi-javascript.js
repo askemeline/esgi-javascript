@@ -16,7 +16,7 @@ function capitalize(str) {
 
 function camelCase(str) {
     if(typeof str !== "string" || str === "") return "";
-    let words = str.split(' ');
+    let words = str.toLowerCase().split(' ');
     let newStr = "";
     for(let i in words) {
         newStr += ucfirst(words[i]);

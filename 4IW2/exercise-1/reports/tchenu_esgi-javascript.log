@@ -1,12 +1,6 @@
+Loading script...
 
-prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of nullLoading script...
-
-
-
-Wed Oct 21 2020 09:35:28 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:35:57 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
