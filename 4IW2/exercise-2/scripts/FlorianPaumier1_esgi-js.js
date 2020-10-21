@@ -1,14 +1,14 @@
 function type_check_v1(arg, type) {
     if(arg === type) return true;
     if(Array.isArray(arg)) return true;
+    if(type === "undefined") return arg === undefined
+
     return arg === null;
-
-
 }
 
 function type_check_v2(arg, type) {
     const correctType = type.type ? type_check_v1(arg, type.type) : true
-    const correctValue = type.value ? arg === type.value : true
+    const correctValue = type.value ? JSON.stringify(arg) === JSON.stringify(type.value) : true
     const correctEnum = type.enum ? type.enum.includes(arg) : true
 
     return correctEnum && correctType && correctValue
