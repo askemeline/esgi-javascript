@@ -18,7 +18,7 @@ function capitalize(string) {
 function camelCase(string) {
     if (typeof string !== "string" && string !== "") return "";
 
-    return capitalize(string).split(/ -_,/).join("")
+    return capitalize(string.replace(/-_,/, " ").trim()).split(" ").join("")
 }
 
 function snake_case(string) {
@@ -41,7 +41,7 @@ function leet(string) {
 
     for (const cryptageKey in cryptage) {
         if (string.indexOf(cryptageKey) !== -1) {
-            string = string.replace(new RegExp(cryptageKey, 'g'), cryptage[cryptageKey].toLowerCase())
+            string = string.replace(new RegExp(cryptageKey, 'g'), cryptage[cryptageKey])
         }
     }
 
@@ -59,7 +59,7 @@ function leet(string) {
  */
 function prop_access(obj, props) {
     if (obj === "undefined") return obj
-    if (typeof props !== "string" && props !== "") return obj
+    if (typeof props !== "string" && props === "") return obj
 
     let access = props.split(".")
     let propPath = access[0]
@@ -91,19 +91,21 @@ function yoda(string) {
     return string.split(" ").reverse().join(" ")
 }
 
-function vig(key, string) {
+function vig(string,key) {
     if (typeof key !== "string" && key !== "") return ""
     if (typeof string !== "string" && string !== "") return ""
+
+    string = string.toLowerCase()
 
     const msgLength = string.length
     const keyLength = key.length
 
     let cryptage = "";
 
-    for (let i = 1; i < msgLength; i++) {
-        let charCode = string.charCodeAt(i-1)-65
-        let decalage = key.charCodeAt((i-1)%keyLength)-65
-        let char = String.fromCharCode(65+(charCode+decalage)%26)
+    for (let i = 1; i <= msgLength; i++) {
+        let charCode = string.toLowerCase().charCodeAt(i-1)-96
+        let decalage = key.toLowerCase().charCodeAt((i-1)%keyLength)-96
+        let char = String.fromCharCode((charCode+decalage)%26+96)
 
         cryptage += char
     }
@@ -117,15 +119,15 @@ const animal = {
     }
 }
 
-// console.log("ucfirst", ucfirst("annaconda"))
-// console.log("capitalize", capitalize("hello world"))
-// console.log("camel Case", camelCase("hello world"))
-// console.log("snake Case", snake_case("hello world"))
-// console.log("leet", leet("annaconda"))
-// console.log("prop_access", prop_access(animal, "annaconda.color"))
-// console.log("verlan", verlan("grand mère"))
-// console.log("yoda", yoda("grand mère"))
-// console.log("vig", vig("123aze", "hello World"))
+console.log("ucfirst", ucfirst("annaconda"))
+console.log("capitalize", capitalize("hello world"))
+console.log("camel Case", camelCase("hello world"))
+console.log("snake Case", snake_case("hello world"))
+console.log("leet", leet("annaconda"))
+console.log("prop_access", prop_access(animal, "annaconda.color"))
+console.log("verlan", verlan("grand mère"))
+console.log("yoda", yoda("grand mère"))
+console.log("vig", vig("anticonstitutionnellement", "foo"))
 
 
 module.exports.ucfirst = ucfirst;
