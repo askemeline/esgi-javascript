@@ -14,7 +14,7 @@ function type_check_v1(val, type) {
                 case 'array':
                     return Array.isArray(val);
                 default:
-                    return val !== null && Array.isArray(val);
+                    return val !== null && !Array.isArray(val);
             }
     }
 }
