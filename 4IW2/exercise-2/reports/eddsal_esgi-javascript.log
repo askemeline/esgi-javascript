@@ -1,12 +1,8 @@
 Loading script...
-Invalid script: SyntaxError: Unexpected token 'return'
-/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-1/scripts/Lauffret_esgi_javascript.js:45
-	return chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" ");
-	                                     ^^^^^^
-
-SyntaxError: Unexpected token 'return'
-    at wrapSafe (internal/modules/cjs/loader.js:1047:16)
-    at Module._compile (internal/modules/cjs/loader.js:1097:27)
+Invalid script: ReferenceError: type_check_v2 is not defined
+ReferenceError: type_check_v2 is not defined
+    at Object.<anonymous> (/Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-2/scripts/eddsal_esgi-javascript.js:7:9)
+    at Module._compile (internal/modules/cjs/loader.js:1133:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)
     at Module.load (internal/modules/cjs/loader.js:977:32)
     at Function.Module._load (internal/modules/cjs/loader.js:877:14)

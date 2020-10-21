@@ -34,6 +34,10 @@ function leet(chaine){
 
 function prop_access(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
+
+	for (key in myArr) {
+	  return key;
+	}
 }
 
 function verlan(chaine){
