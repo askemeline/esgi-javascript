@@ -13,5 +13,5 @@ function capitalize(chaine) {
 }
 
 function camelCase(chaine) {
-    return capitalize(chaine).replace()
+    return capitalize(chaine).replace(/\W/g, '')
 }
