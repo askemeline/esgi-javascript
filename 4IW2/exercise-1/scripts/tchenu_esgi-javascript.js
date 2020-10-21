@@ -4,7 +4,7 @@
  */
 function ucfirst(word)
 {
-    return word.charAt(0).toUpperCase() + word.slice(1)
+    return typeof word === "string" ? word.charAt(0).toUpperCase() + word.slice(1) : null;
 }
 
 /**
@@ -33,23 +33,6 @@ function prop_access(object, path) {
     return result
 }
 
-/**
- * @param {*} characterString 
- */
-function camelCase(characterString)
-{
-    let words = characterString.split(' ')
-
-    for (index in words) {
-        words[index] = ucfirst(words[index])
-    }
-
-    words[0] = lcfirst(words[0])
-
-    return words.join('')
-}
-
 
 module.exports.ucfirst = ucfirst;
-module.exports.camelCase = camelCase;
 module.exports.prop_access = prop_access;
