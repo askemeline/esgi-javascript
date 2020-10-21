@@ -24,7 +24,7 @@ function camelCase(str) {
     return newStr;
 }
 
-function snakeCase(str) {
+function snake_case(str) {
     if(typeof str !== "string" || str === "") return "";
     return str.toLowerCase().replace(/\s/g, "_");
 }
@@ -59,7 +59,7 @@ function leet(str) {
     return newStr;
 }
 
-function propAccess(obj, path) {
+function prop_access(obj, path) {
     if(typeof path !== "string" || path === "" || typeof obj !== "object") return obj;
     let args = path.split(".");
     let result = obj;
@@ -81,12 +81,14 @@ const prairie = {
 console.log("ucfirst : ", ucfirst("hello world"));
 console.log("capitalize : ", capitalize("hello world"));
 console.log("camelCase : ", camelCase("hello world"));
-console.log("snakeCase : ", snakeCase("hello world"));
+console.log("snake_case : ", snake_case("hello world"));
 console.log("leet : ", leet("Anaconda"));
-console.log("propAccess : ", propAccess(prairie, "animal.type.name"));
-console.log("propAccess : ", propAccess(prairie, "animal.type.gender"));
+console.log("prop_access : ", prop_access(prairie, "animal.type.name"));
+console.log("prop_access : ", prop_access(prairie, "animal.type.gender"));
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
+module.exports.snake_case = snake_case;
 module.exports.leet = leet;
+module.exports.prop_access = prop_access;
