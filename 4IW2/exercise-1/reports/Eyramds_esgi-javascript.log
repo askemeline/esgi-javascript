@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 09:02:24 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:02:54 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -23,8 +23,7 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -41,19 +40,18 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - chaine.replaceAll is not a function
+	expected : "4n4c0nd4" - got "anaconda"
 leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - chaine.replaceAll is not a function
+	expected : "4n4c0ND4" - got "anacoNDa"
 leet - 'leet' KO
-	Unexpected behaviour : TypeError - chaine.replaceAll is not a function
+	expected : "l33t" - got "l3et"
 leet - 'yoda' KO
-	Unexpected behaviour : TypeError - chaine.replaceAll is not a function
+	expected : "70d4" - got "yoda"
 leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - chaine.replaceAll is not a function
+	expected : "3v4l(_)4t10n" - got "3valuation"
 leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - chaine.replaceAll is not a function
-leet - ' ' KO
-	Unexpected behaviour : TypeError - chaine.replaceAll is not a function
+	expected : "m0n tr4v41l" - got "mon travail"
+leet - ' ' OK
 leet - 'null' KO
 	expected : "" - got " "
 leet - 'Object' KO
