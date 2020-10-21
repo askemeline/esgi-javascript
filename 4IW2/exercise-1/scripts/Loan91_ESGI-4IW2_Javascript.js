@@ -26,36 +26,48 @@ function snake_case(chaine) {
 
 function leet(chaine) {
 	if (typeof chaine !== "string" || chaine === "") return "";
-	return chaine.split('A').join('4').split('a').join('4').split('E').join('3').split('e').join('3').split('I').join('1').split('i').join('1').split('O').join('0').split('o').join('0').split('U').join('(_)').split('u').join('(_)').split('Y').join('7').split('y').join('7');
+	return chaine.replace(/[AEIOUY]/gi, function (e) {
+		switch (e.toLowerCase()){
+			case 'a':
+				return 4;
+			case 'e':
+				return 3;
+			case 'i' :
+				return 1;
+			case 'o':
+				return 0;
+			case 'u':
+				return '(_)';
+			case 'y':
+				return 7;
+		}
+	});
 }
 
 function verlan(chaine) {
 	if (typeof chaine !== "string" || chaine === "") return "";
 	if (chaine === " ") return chaine;
-	let mots = chaine.split(' ');
-	chaine = "";
-	mots.forEach(function (mot){
-		let temp = ""
-		for (let i = mot.length-1; i>=0; i--){
-			temp += mot.charAt(i);
-		}
-		chaine += temp + " ";
-	})
-	return chaine.trim();
+	return chaine
+		.split(" ")
+		.map((word) => {
+			return word.split("").reverse().join("");
+		})
+		.join(" ");
 }
 
 function yoda(chaine) {
 	if (typeof chaine !== "string" || chaine === "") return "";
 	if (chaine === " ") return chaine;
-	var liste = chaine.split(' ');
-	var count = liste.length-1;
-	chaine = "";
-	for (let i = count; i>=0; i--) {
-		chaine += liste[i] + " ";
-	}
-	return chaine.trim();
+	return chaine.split(" ").reverse().join(" ");
 }
 
+function prop_access(object, string) {
+	if (typeof object !== "object" || object === "") return "";
+	let recherche = ""
+	string.split('.').forEach(attribute, function (){
+
+	});
+}
 
 // hello world -> Hello world
 console.log(ucfirst("hello world"));
@@ -79,3 +91,4 @@ module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.prop_access = prop_access;
