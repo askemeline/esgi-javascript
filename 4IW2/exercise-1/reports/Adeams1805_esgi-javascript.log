@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 08:34:02 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 08:34:01 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -53,44 +53,45 @@ snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "anaconda"
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "anacoNDa"
-leet - 'leet' KO
-	expected : "l33t" - got "leet"
-leet - 'yoda' KO
-	expected : "70d4" - got "yoda"
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "evaluation"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "mon travail"
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
+verlan - 'anaconda' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'kayak' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "ekuL m adoy"
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
-verlan - ' ' OK
-verlan - 'null' OK
-verlan - 'Object' OK
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - ' ' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
 
 Checking yoda
 yoda - 'anaconda' KO
-	expected : "anaconda" - got " anaconda"
+	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got " m Luke yoda  Luke"
+	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got " la position des mots d’une phrase Inverser  position des mots d’une phrase"
+	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - ' ' KO
-	expected : " " - got "   "
-yoda - 'null' OK
-yoda - 'Object' OK
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
