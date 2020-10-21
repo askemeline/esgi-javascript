@@ -11,3 +11,5 @@ function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(' ').map(word => ucfirst(word.toLowerCase())).join(' ');
 }
+
+function 
