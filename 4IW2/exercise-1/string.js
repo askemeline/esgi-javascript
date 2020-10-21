@@ -12,3 +12,5 @@ function capitalize(chaine) {
 }
 
 console.log(capitalize("bonjour LA FraNce"));
+
+function 
