@@ -51,6 +51,8 @@ function type_check_v2(val, conf) {
                 }
         }
     }
+
+    return true;
 }
 
 console.info("\n========== type_check_v2 ==========");
