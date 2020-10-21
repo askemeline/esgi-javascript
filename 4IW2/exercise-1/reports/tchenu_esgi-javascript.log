@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 17:25:48 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 17:26:18 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -58,6 +58,8 @@ snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
 Checking leet
+vig - 'anticonstitutionnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
 leet - 'anaconda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'anacoNDa' KO
@@ -72,6 +74,8 @@ leet - 'mon travail' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - ' ' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
+vig - 'antiConstiTutioNnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
 leet - 'null' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'Object' KO
@@ -86,6 +90,18 @@ verlan - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - '70da m L(_)k3' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
 verlan - ' ' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'null' KO
@@ -98,8 +114,14 @@ yoda - 'anaconda' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got undefined
 yoda - 'Inverser la position des mots d’une phrase' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
 yoda - ' ' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'null' KO
@@ -122,100 +144,24 @@ vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got undefined
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-
-Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-
-Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-
-Checking yoda
-yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - ' ' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-
-Checking vig
-vig - 'anticonstitutionnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'antiConstiTutioNnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-
-Checking prop_access
 prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got undefined
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
-prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
 
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got undefined
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 prop_access - 'object null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 prop_access - 'path null' KO
