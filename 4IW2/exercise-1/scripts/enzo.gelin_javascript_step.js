@@ -14,11 +14,8 @@ function capitalize(chaine) {
     } else {
         var splitChaine = chaine.toLowerCase().split(' ');
         for (var i = 0; i < splitChaine.length; i++) {
-            // You do not need to check if i is larger than splitChaine length, as your for does that for you
-            // Assign it back to the array
             splitChaine[i] = splitChaine[i].charAt(0).toUpperCase() + splitChaine[i].substring(1);
         }
-        // Directly return the joined string
         return splitChaine.join(' ');
     }
 }
@@ -50,17 +47,19 @@ function snakecase(chaine) {
 console.log('snakecase =>');
 console.log(snakecase('tu est extraordinaire'));
 
-// function leet(chaine) {
-//     if (typeof chaine !== "string" || chaine === "") {
-//         return "";
-//     } else {
-
-//     }
-// }
-// console.log(leet('tu est extraordinaire'));
 
 
-function prop_access(chaine, obj) {
+const person = {
+    firstName: "James",
+    lastName: "Bond",
+    age: 25,
+    address: {
+        id: 1,
+        country: "UK"
+    }
+};
+
+function prop_access(obj, chaine) {
     if (typeof chaine !== "string" || chaine === "" || typeof obj === 'undefined') {
         return "";
     } else {
@@ -75,22 +74,11 @@ function prop_access(chaine, obj) {
             }
             value = value[access[i]]
         }
-
         return value
     }
 }
 console.log('prop_access =>');
-console.log(prop_access('prairie', 'animal.type.name'));
-
-/*
-    prop_access: obj, props
-    Si Obj n'est pas défini et props n'est pas une string vide
-
-    Récupération du chemin
-
-    on test toute les clé et on récupère la valeur si exist
-    return valeur
- */
+console.log(prop_access(person, 'person.address.country'));
 
 
 function verlan(chaine) {
@@ -127,21 +115,12 @@ function yoda(chaine) {
 console.log('yoda  =>');
 console.log(yoda('tu est extraordinaire'));
 
-// function vig(chaine) {
-//     if (typeof chaine !== "string" || chaine === "") {
-//         return "";
-//     } else {
-//     }
-// }
-// console.log('vig');
-// console.log(vig('tu est extraordinaire'));
+
 
 
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
-module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
-module.exports.vig = vig;
 module.exports.prop_access = prop_access;
