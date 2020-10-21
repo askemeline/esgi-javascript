@@ -2,59 +2,45 @@ Loading script...
 
 Wed Oct 21 2020 16:07:55 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
-ucfirst - 'test' KO
-	expected : "Test" - got ""
-ucfirst - ' test' KO
-	expected : " test" - got ""
-ucfirst - 'Test' KO
-	expected : "Test" - got ""
-ucfirst - 'TEST' KO
-	expected : "TEST" - got ""
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
 ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got ""
-capitalize - ' test' KO
-	expected : " Test" - got " "
+capitalize - 'test' OK
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got " "
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "  "
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got " "
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got ""
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got ""
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got ""
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got ""
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got ""
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got ""
+	expected : "Togglecase" - got "ToggleCase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "toggle-case is the coolest"
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase-is the coolest"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "togglecase-is the 3oolest"
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
 snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "togglecase-is_the coolest"
-snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "-togglecase"
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
 snake_case - 'null' OK
 snake_case - 'Object' OK
 
