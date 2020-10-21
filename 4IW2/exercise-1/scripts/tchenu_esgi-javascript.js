@@ -38,13 +38,15 @@ function prop_access(object, path) {
 }
 
 function camelCase(string) {
-    const separators = [' ', '-', '_'];
+    const separators = ['-', '_'];
 
     separators.forEach(function (separator) {
-        string = string.replace(separator, '_')
+        string = string.replace(separator, ' ')
     })
 
-    return string.split('_').join('')
+    let words = string.split(' ').map((word) => ucfirst(word))
+
+    return words.join('')
 }
 
 
