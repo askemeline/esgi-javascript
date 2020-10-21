@@ -16,7 +16,7 @@ function capitalize(str) {
 
 function camelCase(str) {
     if(typeof str !== "string" || str === "") return "";
-    let words = str.toLowerCase().split(' ');
+    let words = str.toLowerCase().replace("_", "").split(' ');
     let newStr = "";
     for(let i in words) {
         newStr += ucfirst(words[i]);
@@ -62,7 +62,7 @@ function leet(str) {
 function prop_access(obj, path) {
   if(typeof path !== "string" || path === "" || typeof obj !== "object") return obj;
   if(obj === null) {
-    console.log(`${obj} not exist`);
+    console.log(`${path} not exist`);
     return false;
   }
   let args = path.split(".");

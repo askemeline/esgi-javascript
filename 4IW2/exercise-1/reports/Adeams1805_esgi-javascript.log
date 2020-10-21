@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 10:03:31 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 10:03:59 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -25,7 +25,7 @@ camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -101,7 +101,6 @@ prop_access - 'path exist - value object' OK
 prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' OK
 prop_access - 'path empty' OK
-prop_access - 'object null' KO
-	expected : test not exist - got null not exist
+prop_access - 'object null' OK
 prop_access - 'path null' OK
 
