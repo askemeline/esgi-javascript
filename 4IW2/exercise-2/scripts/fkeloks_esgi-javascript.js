@@ -41,6 +41,8 @@ function type_check_v2(val, conf) {
                 for (let subValue of conf.enum) {
                     if (!found) {
                         found = type_check_v2(val, {value: subValue});
+                    } else {
+                        break;
                     }
                 }
 
