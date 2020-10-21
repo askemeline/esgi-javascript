@@ -27,6 +27,19 @@ function snake_case(chaine) {
 
 function leet(chaine) {
     return chaine.replace(/[aeiouy]/gi, function(e) {
-        switch(e)
+        switch(e.toLowerCase()){
+            case 'a':
+                return 4;
+            case 'a':
+                return 4;
+            case 'a':
+                return 4;
+            case 'a':
+                return 4;
+            case 'a':
+                return 4;
+            case 'a':
+                return 4;
+        }
     })
 }
