@@ -30,6 +30,12 @@ function snake_case(chaine) {
 		.toLowerCase();
 }
 
+function leet(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
+    var voyelles = { "A": 4, "E": 3, "I": 1, "O": "0", "U": "(_)", "Y": 7 };
+    return chaine.split('').map(letter => voyelles[letter.toUpperCase()] || letter).join('')
+}
+
 function verlan(chaine) {
     return chaine.split("").reverse().join("").split(" ").reverse().join(" ")
 };
@@ -47,5 +53,6 @@ module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
+module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
