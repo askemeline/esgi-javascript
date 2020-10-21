@@ -47,7 +47,10 @@ function leet(chaine) {
 console.log(leet("AnaCOnDA"));
 
 function verlan(chaine) {
-    return chaine.split(" ").map(word => {
-        
-    }).join(" ")
+  return chaine
+    .split(" ")
+    .map((word) => {
+      return word.split("").reverse().join("");
+    })
+    .join(" ");
 }
