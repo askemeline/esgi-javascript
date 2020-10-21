@@ -35,7 +35,9 @@ function type_check_v2(variable, conf) {
           return false;
         break;
         case "enum":
-            for()
+            for(subValue of conf.enum) {
+                if(type_check_v2(variable, {value: subValue}))
+            }
             break;
     }
   }
