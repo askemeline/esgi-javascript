@@ -13,7 +13,7 @@ function type_check_v1(value, type) {
            case "null":
                return value === null;
            default:
-               return data !== null && !Array.isArray(value);
+               return value !== null && !Array.isArray(value);
        }
    }
 
@@ -28,7 +28,7 @@ function type_check_v2(value, object) {
             if (!type_check_v1(value, object[key])) return false;
             break;
           case 'value':
-             if (JSON.stringigy(value) !== JSON.stringify(object[key])) return false;
+             if (JSON.stringify(value) !== JSON.stringify(object[key])) return false;
             break;
           case 'enum':
              let check = false;

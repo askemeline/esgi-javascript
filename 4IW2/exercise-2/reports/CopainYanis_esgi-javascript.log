@@ -1,35 +1,30 @@
 Loading script...
 
-Wed Oct 21 2020 18:51:00 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 18:51:36 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
 type_check_v1 - 'BooleanNotNumber' OK
-type_check_v1 - 'object' KO
-	Unexpected behaviour : ReferenceError - data is not defined
+type_check_v1 - 'object' OK
 type_check_v1 - 'null' OK
-type_check_v1 - 'nullNotObject' KO
-	Unexpected behaviour : ReferenceError - data is not defined
+type_check_v1 - 'nullNotObject' OK
 type_check_v1 - 'undefined' KO
-	Unexpected behaviour : ReferenceError - data is not defined
+	expected : true - got false
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' OK
 type_check_v1 - 'function' KO
-	Unexpected behaviour : ReferenceError - data is not defined
-type_check_v1 - 'arrayNotObject' KO
-	Unexpected behaviour : ReferenceError - data is not defined
+	expected : true - got false
+type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
-	Unexpected behaviour : TypeError - JSON.stringigy is not a function
-type_check_v2 - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - JSON.stringigy is not a function
+	expected : true - got undefined
+type_check_v2 - 'numberNotValue' OK
 type_check_v2 - 'numberNotObject' OK
 type_check_v2 - 'stringEnum' OK
 type_check_v2 - 'objectMatch' KO
-	Unexpected behaviour : ReferenceError - data is not defined
-type_check_v2 - 'objectNotMatch' KO
-	Unexpected behaviour : ReferenceError - data is not defined
+	expected : true - got undefined
+type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
 type_check - 'number' KO
