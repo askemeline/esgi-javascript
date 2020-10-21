@@ -22,7 +22,7 @@ function capitalize(chaine) {
 console.log('capitalize =>');
 console.log(capitalize('tu est extraordinaire'));
 
-function camelcase(chaine) {
+function camelCase(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
         return "";
     } else {
@@ -32,9 +32,9 @@ function camelcase(chaine) {
     }
 }
 console.log('camelcase =>');
-console.log(camelcase('tu est extraordinaire'));
+console.log(camelCase('tu est extraordinaire'));
 
-function snakecase(chaine) {
+function snake_case(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
         return "";
     } else {
@@ -45,7 +45,7 @@ function snakecase(chaine) {
     }
 }
 console.log('snakecase =>');
-console.log(snakecase('tu est extraordinaire'));
+console.log(snake_case('tu est extraordinaire'));
 
 
 
@@ -81,7 +81,7 @@ console.log('prop_access =>');
 console.log(prop_access(person, 'person.address.country'));
 
 
-function verlan(chaine) {
+function verlanBis(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
         return "";
     } else {
@@ -89,9 +89,9 @@ function verlan(chaine) {
     }
 }
 console.log('verlan =>');
-console.log(verlan('tu est extraordinaire'));
+console.log(verlanBis('tu est extraordinaire'));
 
-function verlanBis(chaine) {
+function verlan(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
         return "";
     } else {
@@ -102,8 +102,8 @@ function verlanBis(chaine) {
         return output;
     }
 }
-console.log('verlanBis =>');
-console.log(verlanBis('tu est extraordinaire'));
+console.log('verlan =>');
+console.log(verlan('tu est extraordinaire'));
 
 function yoda(chaine) {
     if (typeof chaine !== "string" || chaine === "") {
@@ -121,6 +121,8 @@ console.log(yoda('tu est extraordinaire'));
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
+module.exports.camelCase = camelCase;
+module.exports.snake_case = snake_case;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
 module.exports.prop_access = prop_access;
