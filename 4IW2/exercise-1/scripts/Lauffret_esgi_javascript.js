@@ -18,7 +18,7 @@ function camelCase(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 		var res = chaine.split(" ");
 		rLen = res.length;
-		var text;
+		text="";
 		for (i = 0; i < rLen; i++) {
 		  text += res[i].charAt(0).toUpperCase() + res[i].slice(1);;
 		}
@@ -29,7 +29,7 @@ function snake_case(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";	
 		var res = chaine.split(" ");
 		rLen = res.length;
-		var text;
+		text="";
 		for (i = 0; i < rLen; i++) {
 		  text += res[i].toLowerCase();
 		  if(i != rLen-1){
