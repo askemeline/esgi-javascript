@@ -16,7 +16,7 @@ function camelCase(chaine)
     return chaine.split(' ').map(s => ucfirst(s)).join('');
 }
 
-function snakeCase_case(chaine)
+function snake_case(chaine)
 {
     if(typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(' ').join('_');
@@ -27,3 +27,4 @@ function snakeCase_case(chaine)
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
+module.exports.snake_case = snake_case;
