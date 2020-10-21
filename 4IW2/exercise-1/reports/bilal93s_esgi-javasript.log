@@ -53,15 +53,23 @@ snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "4naconda"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "4nacoNDa"
+leet - 'leet' KO
+	expected : "l33t" - got "l4et"
+leet - 'yoda' KO
+	expected : "70d4" - got "4oda"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "4valuation"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "m4n travail"
 leet - ' ' OK
-leet - 'null' OK
-leet - 'Object' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.replace is not a function
 
 Checking verlan
 verlan - 'anaconda' KO
