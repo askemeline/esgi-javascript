@@ -19,3 +19,4 @@ function camelCase(chaine) {
   return capitalize(chaine).replace(/\W/g, "");
 }
 
+function snake_case
