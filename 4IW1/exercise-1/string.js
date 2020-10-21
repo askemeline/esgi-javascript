@@ -8,5 +8,7 @@ console.log(ucfirst("bonjour"));
 console.log(ucfirst("bonJOur"));
 
 function capitalize(chaine) {
-    
+    if (typeof chaine !== "string" || chaine === "") return "";
+
+    return 
 }
