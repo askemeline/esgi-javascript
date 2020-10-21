@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:46:39 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:46:38 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -11,7 +11,8 @@ ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' OK
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 capitalize - 'ipsum DOLOR' KO
 	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
 capitalize - 'sit 8met consectetur' OK
@@ -30,7 +31,7 @@ camelCase - 'ToggleCaseIsTheCoolest' KO
 camelCase - 'ToggleCase is_the coolest' KO
 	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -45,74 +46,65 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "anaconda"
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "anacoNDa"
-leet - 'leet' KO
-	expected : "l33t" - got "leet"
-leet - 'yoda' KO
-	expected : "70d4" - got "yoda"
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "evaluation"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "mon travail"
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
+verlan - 'anaconda' KO
+	expected : "adnocana" - got "adnocana "
+verlan - 'kayak' KO
+	expected : "kayak" - got "kayak "
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "ekuL m adoy"
+	expected : "adoy m ekuL" - got "adoy m ekuL "
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
-verlan - ' ' OK
+	expected : "ad07 m 3k)_(L" - got "ad07 m 3k)_(L "
+verlan - ' ' KO
+	expected : " " - got "  "
 verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : "anaconda" - got "anaconda "
 yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : "Luke m yoda" - got "Luke m yoda "
 yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : "phrase d’une mots des position la Inverser" - got "phrase d’une mots des position la Inverser "
 yoda - ' ' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - "yoda" not implemented
+	expected : " " - got "  "
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'antiConstiTutioNnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got undefined
 vig - ' - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : " " - got undefined
+vig - 'null - test' OK
+vig - 'Object - test' OK
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : "dog" - got "animal.type.name => dog"
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"dog"} - got "animal.type => [object Object]"
 prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"cat"} - got "animals.1.type => [object Object]"
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+prop_access - 'path null' OK
 

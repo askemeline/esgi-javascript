@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:46:02 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:46:40 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -21,19 +21,22 @@ capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
-camelCase - 'null' OK
-camelCase - 'Object' OK
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK

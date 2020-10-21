@@ -30,15 +30,15 @@ function leet(chaine) {
         switch(e.toLowerCase()){
             case 'a':
                 return 4;
-            case 'a':
-                return 4;
-            case 'a':
-                return 4;
-            case 'a':
-                return 4;
-            case 'a':
-                return 4;
-            case 'a':
+            case 'e':
+                return 3;
+            case 'i':
+                return 1;
+            case 'o':
+                return 0;
+            case 'u':
+                return '(';
+            case 'y':
                 return 4;
         }
     })

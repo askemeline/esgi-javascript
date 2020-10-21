@@ -15,7 +15,7 @@ function capitalize(string) {
 }
 
 function camelCase(string) {
-    return capitalize(string).replace(/\W/g, '');
+    return capitalize(string).replaceAll(' ', '');
 }
 
 function snake_case(string) {
