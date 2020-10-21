@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 17:11:03 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 17:11:41 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -56,14 +56,10 @@ leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	expected : "adnocana" - got "a n a c o n d a"
-verlan - 'kayak' KO
-	expected : "kayak" - got "k a y a k"
-verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "y o d a   m   L u k e"
-verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "7 0 d a   m   L ( _ ) k 3"
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
@@ -73,10 +69,8 @@ yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.split is not a function
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO

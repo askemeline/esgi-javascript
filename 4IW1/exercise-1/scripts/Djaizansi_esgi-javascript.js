@@ -40,10 +40,11 @@ function leet(chaine) {
 
 function verlan(chaine){
     if (typeof chaine !== "string" || chaine === "") return "";
-    return chaine.split('').map(word => word.split('').reverse().join('')).join(' ');
+    return chaine.split(' ').map(word => word.split('').reverse().join('')).join(' ');
 }
 
 function yoda(chaine){
+    if (typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(" ").reverse().join(" ");
 }
 
