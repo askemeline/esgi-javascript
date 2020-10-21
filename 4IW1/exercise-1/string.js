@@ -12,4 +12,6 @@ function capitalize(chaine) {
     return chaine.split(' ').map(word => ucfirst(word.toLowerCase())).join(' ');
 }
 
-function 
+function camelCase(chaine) {
+    
+}
