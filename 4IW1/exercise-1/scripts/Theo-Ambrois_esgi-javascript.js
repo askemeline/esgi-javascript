@@ -1,7 +1,7 @@
-function ucfirst(string){
-	if(typeof string !== "string" || string !== "")
+function ucfirst(message){
+	if(typeof message !== "string" || message !== "")
 		return "";
-	return string.charAt(0).toUpperCase() + string.slice(1);
+	return message.charAt(0).toUpperCase() + message.slice(1);
 }
 
 function capitalize(string) {

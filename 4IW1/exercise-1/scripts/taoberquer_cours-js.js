@@ -9,7 +9,7 @@ function capitalize(chaine) {
 
   toRetrun = "";
   for (value of chaine.split(' ')) {
-      toRetrun += ' ' + ucfirst(value);
+      toRetrun += ' ' + ucfirst(value.toLowerCase());
   }
 
   return toRetrun.substring(1);
