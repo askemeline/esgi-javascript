@@ -15,7 +15,7 @@ function camelCase(chaine){
 
 function snake_case(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";	
-	return capitalize(chaine).replace(/\W/g,"_");
+	return chaine.toLowerCase().replace(/(\W)/g,"_");
 }
 
 

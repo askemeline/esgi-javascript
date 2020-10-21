@@ -24,3 +24,7 @@ function snake_case(chaine) {
 }
 
 console.log(snake_case("bonjour LA 'FraNce"));
+
+function leet(chaine) {
+    
+}
