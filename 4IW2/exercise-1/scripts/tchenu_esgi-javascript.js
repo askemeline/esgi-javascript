@@ -44,7 +44,7 @@ function camelCase(string) {
         string = string.replace(separator, ' ')
     })
 
-    let words = string.split(' ').map((word) => ucfirst(word))
+    let words = string.split(' ').map((word) => ucfirst(word.toLowerCase()))
 
     return words.join('')
 }

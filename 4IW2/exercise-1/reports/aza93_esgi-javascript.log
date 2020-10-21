@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 09:19:53 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:20:22 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -10,32 +10,22 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got "test"
-capitalize - ' test' KO
-	expected : " Test" - got " test"
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "ipsum dolor"
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "sit 8met consectetur"
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscing elit"
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "togglecaseisthecoolest"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "togglecaseisthecoolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "togglecaseisthe3oolest"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "togglecaseisthecoolest"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "togglecaseis_thecoolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "togglecase"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
 

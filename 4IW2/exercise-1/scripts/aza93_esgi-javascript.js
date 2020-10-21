@@ -24,10 +24,12 @@ function capitalize(s) {
 
     i = 0;
     for (mot of splitStr) {
-        splitStr[i] = ucfirst(mot).toLowerCase();
+        splitStr[i] = ucfirst(mot.toLowerCase());
         i++;
     }
     return splitStr.join(' ');
+
+    //return s.split(' ').map(word => ucfirst(word.toLowerCase())).join(' ');
 }
 
 //console.log(capitalize("ipsum DOLOR"));
