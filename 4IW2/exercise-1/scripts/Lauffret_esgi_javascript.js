@@ -7,7 +7,7 @@ function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 		var res = chaine.split(" ");
 		rLen = res.length;
-		var text;
+		text ="";
 		for (i = 0; i < rLen; i++) {
 		  text += ucfirst(res[i]);
 		}
@@ -20,7 +20,7 @@ function camelCase(chaine){
 		rLen = res.length;
 		var text;
 		for (i = 0; i < rLen; i++) {
-		  text += ucfirst(res[i]);
+		  text += res[i].charAt(0).toUpperCase() + res[i].slice(1);;
 		}
 	return text;
 }
