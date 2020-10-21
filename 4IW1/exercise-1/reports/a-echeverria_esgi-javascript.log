@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:20:58 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:21:02 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -11,23 +11,32 @@ ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
+capitalize - ' test' KO
+	expected : " Test" - got "Test"
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OK
-camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
+camelCase - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
+camelCase - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
-camelCase - ' toggleCase' OK
-camelCase - 'null' OK
-camelCase - 'Object' OK
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
+camelCase - ' toggleCase' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - capitalize(...).replaceAll is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -56,7 +65,8 @@ verlan - 'anaconda' OK
 verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
-verlan - ' ' OK
+verlan - ' ' KO
+	expected : " " - got ""
 verlan - 'null' OK
 verlan - 'Object' OK
 
@@ -71,31 +81,31 @@ yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'antiConstiTutioNnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got undefined
 vig - ' - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : " " - got undefined
 vig - 'null - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : "" - got undefined
 vig - 'Object - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	expected : "" - got undefined
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : "dog" - got undefined
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"dog"} - got undefined
 prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"cat"} - got undefined
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : test not exist - got null
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 
