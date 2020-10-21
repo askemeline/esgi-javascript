@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:57:08 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:57:43 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -51,13 +51,16 @@ leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
+verlan - 'anaconda' KO
+	Unexpected behaviour : ReferenceError - chaine is not defined
+verlan - 'kayak' KO
+	Unexpected behaviour : ReferenceError - chaine is not defined
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "ekuL m adoy"
+	Unexpected behaviour : ReferenceError - chaine is not defined
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
-verlan - ' ' OK
+	Unexpected behaviour : ReferenceError - chaine is not defined
+verlan - ' ' KO
+	Unexpected behaviour : ReferenceError - chaine is not defined
 verlan - 'null' OK
 verlan - 'Object' OK
 

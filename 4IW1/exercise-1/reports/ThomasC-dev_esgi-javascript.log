@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:57:08 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:57:40 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -11,29 +11,20 @@ ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' KO
-	expected : " Test" - got " test  test"
-capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum dolor Ipsum dolor"
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "Sit 8met consectetur Sit 8met consectetur Sit 8met consectetur"
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_dipiscing elit _dipiscing elit"
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "TogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolest"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "Togglecaseisthe3oolestTogglecaseisthe3oolestTogglecaseisthe3oolestTogglecaseisthe3oolest"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "Togglecaseis_thecoolestTogglecaseis_thecoolestTogglecaseis_thecoolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "togglecasetogglecase"
+camelCase - 'ToggleCase is_the coolest' OK
+camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -48,28 +39,40 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
+leet - 'anaconda' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+leet - 'anacoNDa' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+leet - 'leet' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+leet - 'yoda' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+leet - 'evaluation' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+leet - 'mon travail' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+leet - ' ' KO
+	Unexpected behaviour : ReferenceError - string is not defined
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+	Unexpected behaviour : ReferenceError - string is not defined
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.replace is not a function
+	Unexpected behaviour : ReferenceError - string is not defined
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
-verlan - 'yoda m Luke' OK
-verlan - '70da m L(_)k3' OK
-verlan - ' ' OK
+verlan - 'anaconda' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+verlan - 'kayak' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+verlan - 'yoda m Luke' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+verlan - '70da m L(_)k3' KO
+	Unexpected behaviour : ReferenceError - string is not defined
+verlan - ' ' KO
+	Unexpected behaviour : ReferenceError - string is not defined
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : ReferenceError - string is not defined
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.split is not a function
+	Unexpected behaviour : ReferenceError - string is not defined
 
 Checking yoda
 yoda - 'anaconda' OK

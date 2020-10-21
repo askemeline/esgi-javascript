@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:57:09 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:57:43 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -45,38 +45,46 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "anaconda"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "anacoNDa"
+leet - 'leet' KO
+	expected : "l33t" - got "leet"
+leet - 'yoda' KO
+	expected : "70d4" - got "yoda"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "evaluation"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "mon travail"
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	expected : "adnocana" - got "a n a c o n d a"
-verlan - 'kayak' KO
-	expected : "kayak" - got "k a y a k"
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
 verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got "y o d a   m   L u k e"
+	expected : "adoy m ekuL" - got "ekuL m adoy"
 verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got "7 0 d a   m   L ( _ ) k 3"
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
 verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
+yoda - 'anaconda' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+yoda - ' ' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.split is not a function
+	Unexpected behaviour : TypeError - "yoda" not implemented
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO

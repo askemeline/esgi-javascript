@@ -4,13 +4,29 @@ function ucfirst(chaine) {
 }
 
 function capitalize(chaine) {
-    if (typeof(chaine) != "string" || chaine === "") return "";
-    return chaine.split(' ').map(word => ucfirst(chaine.toLowerCase())).join(" ");
+    if (typeof (chaine) != "string" || chaine === "") return "";
+
+    let str = "";
+    let words = chaine.split(" ");
+    for (let i = 0; i < words.length; i++) {
+        if (i > 0) {
+            str += " ";
+        }
+        str += ucfirst(words[i].toLowerCase());
+    }
+    return str;
 }
 
 function camelCase(chaine) {
     if (typeof(chaine) != "string" || chaine === "") return "";
-    return capitalize(chaine).replace(/\W/g, "");
+
+    let str = "";
+    let string = chaine.replace('_',' ');
+    let words = string.split(" ");
+    for(let i=0;i<words.length;i++) {
+        str += ucfirst(words[i].toLowerCase());
+    }
+    return str;
 }
 
 function snake_case(chaine) {
@@ -19,6 +35,7 @@ function snake_case(chaine) {
 }
 
 function leet(chaine) {
+    if (typeof string !== "string" && string !== "") return "";
     return chaine.replace(/[aeiouy]/gi, function(e){
         switch(e.toLowerCase()) {
             case "a":
@@ -51,28 +68,12 @@ function prop_access(obj, path) {
 }
 
 function verlan(chaine) {
-    if (typeof(chaine) != "string" && chaine === "") return ""
-    let words = chaine.split(" ");
-
-    let str = "";
-    for (let i=0;i<words.length;i++) {
-        if (i>0) {
-            str += " ";
-        }
-
-        let verlanWord = "";
-        for (let j=words[i].length-1;j>=0;j--) {
-            verlanWord += words[i].charAt(j);
-        }
-        str += verlanWord;
-    }
-
-    return str;
+    if (typeof string !== "string" && string !== "") return "";
+    return chaine.split(" ").map((word) => word.split("").reverse().join("")).join(" ");
 }
 
 function yoda(string) {
     if (typeof string !== "string" && string !== "") return ""
-
     return string.split(" ").reverse().join(" ")
 }
 
