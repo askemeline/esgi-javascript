@@ -68,17 +68,17 @@ function prop_access(obj, text) {
     let value = obj;
 
     for (let i = 0; i < access.length; i++) {
-        propPath += `.${access[i]}`;
+        propPath += access[i];
 
         if (!value[access[i]]) {
-            return `${obj} n'existe pas`;
+            return obj + " n'existe pas";
         }
         value = value[access[i]];
     }
 
     return value;
 }
-prop_access(prairie, "animal.type");
+prop_access(prairie, "animal.x");
 
 function verlan(text){
     if(typeof text !== "string" || text === "")
@@ -96,6 +96,20 @@ function yoda(text){
 }
 yoda("Hello world");
 
+function vig(text, code){
+    if(typeof text !== "string" || text === "")
+        return "";
+
+    while(code.length < text.length){
+        code += code;
+    }
+
+    code = code.substr(0, text.length);
+    let codeIndex = 0;
+
+    return text.split();
+}
+
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
@@ -103,4 +117,5 @@ module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.vig = vig;
 module.exports.prop_access = prop_access;
