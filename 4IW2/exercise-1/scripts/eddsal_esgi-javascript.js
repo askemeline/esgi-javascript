@@ -8,7 +8,7 @@ console.log(ucfirst('eddy'));
 
 
 function capitalize(string) {
-    if (typeof string !== 'string')
+    if ((typeof string !== 'string') ||(typeof string == ''))
         return '';
     var str = string.split(' ')
     for (var i = 0; i < str.length; i++) {
@@ -45,9 +45,24 @@ console.log(snakeCase('eddy salibi'));
 function leet(string) {
     if (typeof string !== 'string')
         return '';
-    return string.replace('A', "4").replace('I', "1").replace('O', "o").replace('U', "_").replace('Y', "7")
+   return  string.replace(/[AEIOUY]/gi, function (e){
+        switch (e) {
+            case 'a':
+                return 4;
+            case 'i':
+                return 1;
+            case 'o':
+                return 0;
+            case 'u':
+                return "(_)";
+            case 'y':
+                return 7;
+            
+        }
+    })
 }
-console.log(leet('I WANT TO  WU0Y'));
+console.log(leet('anaconda'));
+
 
 function verlan(string) {
     if (typeof string !== 'string')
@@ -60,14 +75,31 @@ console.log(verlan('eddy salibi'));
 function yoda(string) {
     if (typeof string !== 'string')
         return '';
-    var str = string.split(' ')
-;
-    var firstChar = string.replace(str[1], '')
-    var secondChar = string.replace(str[0], '')
-
-    return secondChar +' '+ firstChar
+  
+    return string.split(" ").reverse.join(' ')
 }
 console.log(yoda('eddy salibi'));
+
+
+function prop_access(prairie, string) {
+    if (string !== null) {
+        for (let string in prairie) {
+            if ((prairie[string] !== null) || (prairie[string] !== undefined)) {
+                console.log(prairie[string++])
+            }
+        console.log('string not found')
+         
+        }
+            
+        }
+}
+console.log(prop_access({
+    animal: {
+        Type: {
+            Name:'chien'
+        }
+    }
+}, 'animal.type'))
 
 
 module.exports.ucfirst = ucfirst;
@@ -76,3 +108,4 @@ module.exports.camelCase = camelCase;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.prop_access = prop_access;
