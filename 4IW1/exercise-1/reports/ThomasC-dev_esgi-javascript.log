@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 15:55:04 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 15:55:01 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -10,12 +10,16 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
+capitalize - 'test' KO
+	expected : "Test" - got "Test "
+capitalize - ' test' KO
+	expected : " Test" - got " Test "
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR "
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got "Sit 8met Consectetur "
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got "_dipiscing Elit "
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
@@ -35,41 +39,30 @@ camelCase - 'null' OK
 camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
 snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
+	expected : "_togglecase" - got "togglecase"
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "4naconda"
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "4nacoNDa"
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
 leet - 'leet' KO
-	expected : "l33t" - got "l4et"
+	expected : "l33t" - got "1337"
 leet - 'yoda' KO
-	expected : "70d4" - got "4oda"
+	expected : "70d4" - got "y0d4"
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "4valuation"
+	expected : "3v4l(_)4t10n" - got "3v41u47i0n"
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m4n travail"
+	expected : "m0n tr4v41l" - got "m0n 7r4v4i1"
 leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.replace is not a function
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' KO
