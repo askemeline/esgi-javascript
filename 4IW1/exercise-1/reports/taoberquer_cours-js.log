@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 17:08:10 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 17:08:42 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -23,7 +23,8 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' OK
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -39,12 +40,18 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "undefinednundefinedcundefinedndundefined"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "undefinednundefinedcundefinedNDundefined"
+leet - 'leet' KO
+	expected : "l33t" - got "lundefinedundefinedt"
+leet - 'yoda' KO
+	expected : "70d4" - got "undefinedundefineddundefined"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "undefinedvundefinedlundefinedundefinedtundefinedundefinedn"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "mundefinedn trundefinedvundefinedundefinedl"
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
@@ -59,10 +66,14 @@ verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
+yoda - 'anaconda' KO
+	Unexpected behaviour : ReferenceError - str is not defined
+yoda - 'yoda m Luke' KO
+	Unexpected behaviour : ReferenceError - str is not defined
+yoda - 'Inverser la position des mots d’une phrase' KO
+	Unexpected behaviour : ReferenceError - str is not defined
+yoda - ' ' KO
+	Unexpected behaviour : ReferenceError - str is not defined
 yoda - 'null' OK
 yoda - 'Object' OK
 
@@ -81,18 +92,11 @@ vig - 'Object - test' KO
 	expected : "" - got undefined
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	expected : "dog" - got undefined
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got undefined
-prop_access - 'path exist - value array' KO
-	expected : {"name":"cat"} - got undefined
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
-prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
-prop_access - 'object null' KO
-	expected : test not exist - got null
-prop_access - 'path null' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' OK
+prop_access - 'path empty' OK
+prop_access - 'object null' OK
+prop_access - 'path null' OK
 

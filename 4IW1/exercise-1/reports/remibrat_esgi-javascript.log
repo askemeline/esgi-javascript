@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 17:08:10 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 17:08:43 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -80,13 +80,18 @@ vig - 'null - test' OK
 vig - 'Object - test' OK
 
 Checking prop_access
-prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
-prop_access - 'path exist - value array' OK
+prop_access - 'path exist - value string' KO
+	expected : "dog" - got "animal.type.name"
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got "animal.type"
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got "animals.1.type"
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
-prop_access - 'path empty' OK
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got ""
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
-prop_access - 'path null' OK
+	expected : test not exist - got null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 
