@@ -9,6 +9,5 @@ console.log(ucfirst("bonJOur"));
 
 function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
-
-    return chaine.split(' ').map(word => ).join(' ');
+    return chaine.split(' ').map(word => ucfirst(word.toLowerCase())).join(' ');
 }
