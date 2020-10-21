@@ -119,14 +119,15 @@ const animal = {
     }
 }
 
-console.log("ucfirst", ucfirst("annaconda"))
-console.log("capitalize", capitalize("hello world"))
-console.log("camel Case", camelCase("hello world"))
-console.log("snake Case", snake_case("hello world"))
-console.log("leet", leet("annaconda"))
-console.log("prop_access", prop_access(animal, "annaconda.color"))
-console.log("verlan", verlan("grand mère"))
-console.log("yoda", yoda("grand mère"))
+
+// console.log("ucfirst", ucfirst("annaconda"))
+// console.log("capitalize", capitalize("hello world"))
+// console.log("camel Case", camelCase("hello world"))
+// console.log("snake Case", snake_case("hello world"))
+// console.log("leet", leet("annacoNDa"))
+// console.log("prop_access", prop_access(animal, "annaconda.color"))
+// console.log("verlan", verlan("grand mère"))
+// console.log("yoda", yoda("grand mère"))
 console.log("vig", vig("anticonstitutionnellement", "foo"))
 
 
