@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:56:30 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:57:08 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -57,14 +57,10 @@ leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	expected : "adnocana" - got " undefineda undefinedn undefineda undefinedc undefinedo undefinedn undefinedd undefineda"
-verlan - 'kayak' KO
-	expected : "kayak" - got " undefinedk undefineda undefinedy undefineda undefinedk"
-verlan - 'yoda m Luke' KO
-	expected : "adoy m ekuL" - got " undefinedymL undefinedou undefineddk undefinedae"
-verlan - '70da m L(_)k3' KO
-	expected : "ad07 m 3k)_(L" - got " undefined7mL undefined0( undefinedd_ undefineda) undefinedk undefined3"
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
 verlan - ' ' KO
 	expected : " " - got ""
 verlan - 'null' OK

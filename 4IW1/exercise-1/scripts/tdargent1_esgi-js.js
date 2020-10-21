@@ -9,13 +9,23 @@ ucfirst('test');
 function capitalize(text){
     if(typeof text !== "string" || text === "")
         return "";
+    
+    const words = text.split(' ');
 
-    return text.split(' ').map(word => ucfirst(word.toLowerCase())).join(' ');
+    let chaine = "";
+    for(word of words){
+        chaine += ucfirst(word) + " ";
+    }
+
+    return chaine.trim();
 }
 capitalize('test test');
 
 function camelCase(text){
-    return capitalize(text).replace(/\W/g, '');
+    text = capitalize(text);
+
+    return text.replace(' ', '');
+
 }
 camelCase('test test');
 
@@ -23,76 +33,79 @@ function snake_case(text){
     if(typeof text !== "string" || text === "")
         return "";
 
-    return text.toLowerCase().replace(/\W/g, '_');
+    return text.toLowerCase().replace(' ', '_');
+
 }
 snake_case('test test');
 
 function leet(text){
     if(typeof text !== "string" || text === "")
         return "";
-
-    return text.replace(/[aeiouy]/gi, function(e){
-        switch(e.toUpperCase()){
+        
+    let chaine = "";
+    for(letter of text){
+        switch(letter.toUpperCase()){
             case "A" :
-                return 4;
+                chaine += "4";
+                break;
             case "E" :
-                return 3;
+                chaine += "3";
+                break;
             case "I" :
-                return 1;
+                chaine += "1";
+                break;
             case "O" :
-                return 0;
+                chaine += "0";
+                break;
             case "U" :
-                return "(_)";
+                chaine += "(_)";
+                break;
             case "Y" :
-                return 7;
+                chaine += "7";
+                break;
+            default:
+                chaine += letter;
         }
-    });
+    }
+
+    return chaine;
 }
 leet('anaconda');
 
-var prairie = {
+/*var prairie = {
     animal : {
-        type : {
-            name : "chien"
+        Type : {
+            Name : "chien"
         }
     }
 }
-function prop_access(obj, text) {
-    if (obj === "undefined") 
-        return obj;
+function prop_access(obj, path){
     if(typeof text !== "string" || text === "")
         return "";
 
-    let access = text.split(".");
-    let propPath = access[0];
-    let value = obj;
-
-    for (let i = 0; i < access.length; i++) {
-        propPath += `.${access[i]}`;
-
-        if (!value[access[i]]) {
-            return `${obj} n'existe pas`;
-        }
-        value = value[access[i]];
-    }
-
-    return value;
 }
-prop_access(prairie, "animal.type");
+console.log(prop_access(prairie, "animal.type"));*/
 
 function verlan(text){
     if(typeof text !== "string" || text === "")
         return "";
 
-    return text.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+    const words = text.split(' ');
+
+    let chaine = "";
+    for(word of words){
+        chaine += word.split("").reverse().join("") + " ";
+    }
+    return chaine.trim();
 }
-console.log(verlan("Hello World"));
+verlan("Hello World");
 
 function yoda(text){
     if(typeof text !== "string" || text === "")
         return "";
 
     return text.split(" ").reverse().join(" ");
+    
 }
 yoda("Hello world");
 
