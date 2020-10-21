@@ -17,16 +17,12 @@ function capitalize(chaine) {
     return str;
 }
 
-function camelCase(chaine) {
-    if (typeof (chaine) != "string" || chaine === "") return "";
+function camelCase(string) {
+    if (typeof string !== "string" && string !== "") return "";
 
-    let str = "";
-    let words = chaine.split(" ");
-    for (let i = 0; i < words.length; i++) {
-        str += i > 0 ? ucfirst(words[i]) : words[i];
-    }
-    return str;
+    return capitalize(string).split(" ").join("")
 }
+
 
 function snake_case(chaine) {
     if (typeof (chaine) != "string" || chaine === "") return "";
@@ -66,7 +62,6 @@ function leet(string) {
 }
 
 console.log(leet("j'AIME les spagetti"));
-console.log(leet("annaconda"))
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
