@@ -26,7 +26,7 @@ console.log(capitalize('Mon texte'));
 console.log(capitalize('mOn Super Texte'));
 
 function camelCase(text) {
-    return capitalize(text).replace(/[\s+_-]/g, '');
+    return capitalize(text.replace(/[_-]/g, ' ')).replace(/[\s+]/g, '');
 }
 
 console.info("\n========== camelCase ==========");
