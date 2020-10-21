@@ -1,34 +1,43 @@
 Loading script...
 
-Wed Oct 21 2020 09:08:21 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:08:49 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
-ucfirst - 'TEST' KO
-	expected : "TEST" - got "Test"
+ucfirst - 'TEST' OK
 ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
+capitalize - 'ipsum DOLOR' KO
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - s.split is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OK
-camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
-camelCase - ' toggleCase' OK
-camelCase - 'null' OK
-camelCase - 'Object' OK
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - ' toggleCase' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -49,8 +58,10 @@ Checking leet
 leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
+leet - 'yoda' KO
+	expected : "70d4" - got "y0d4"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "3v4l_4t10n"
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
@@ -75,14 +86,17 @@ yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "anticonstitutionnellement"
+	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'antiConstiTutioNnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "antiConstiTutioNnellement"
+	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "test un juste est c car dire rien absolument veut ne qui mais longue tres tres phrase une"
-vig - ' - test' OK
-vig - 'null - test' OK
-vig - 'Object - test' OK
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
 prop_access - 'path exist - value string' KO

@@ -10,16 +10,12 @@ function ucfirst(s) {
         return "";
     }
 
-    return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+    return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 //console.log(ucfirst("hello world"));
 
 function capitalize(s) {
-    if (!check(s)) {
-        return "";
-    }
-
     var splitStr = s.split(' ');
 
     i = 0;
@@ -30,13 +26,13 @@ function capitalize(s) {
     return splitStr.join(' ');
 }
 
-//console.log(capitalize("ipsum DOLOR"));
+//console.log(capitalize("hello world"));
 
-function camelCase(s) {
+function pascalCase(s) {
     return capitalize(s).split(' ').join('');
 }
 
-//console.log(camelCase("hello world"));
+//console.log(pascalCase("hello world"));
 
 function snake_case(s) {
     if (!check(s)) {
@@ -49,7 +45,7 @@ function snake_case(s) {
 //console.log(snake_case("hello world Bonjour Monde Ciao mondo"));
 
 function crypte(lettre) {
-    var regles = {'A':'4', 'E':'3', 'I':'1', 'O':'0', 'U':'(_)', 'Y':'7'};
+    var regles = {'A':'4', 'E':'3', 'I':'1', 'O':'0', 'U':'_', 'Y':'7'};
 
     return regles[lettre.toUpperCase()] || lettre;
 }
@@ -57,10 +53,10 @@ function leet(s) {
     if (!check(s)) {
         return "";
     }
-    return s.replace(/[AEIOUYaeiouy]/g, crypte);
+    return s.replace(/[AEIOU_7aeiou]/g, crypte);
 }
 
-//console.log(leet("evaluation"));
+//console.log(leet("Ici il fait pAs beau"));
 
 function Animal(type) {
     this.type = type;
@@ -102,26 +98,9 @@ function yoda(s) {
 
 //console.log(yoda("Hello world"));
 
-function vig(s) {
-    if (!check(s)) {
-        return "";
-    }
-
-    var splitStr = s.split(' ');
-    var newStr = [];
-    for (var i = splitStr.length - 1, x = 0; i >= 0; i--) {
-        newStr[x++] = splitStr[i];
-    }
-    return newStr.join(' ');
-}
-
-//console.log(vig("Hello world"));
-
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
-module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
-module.exports.vig = vig;
