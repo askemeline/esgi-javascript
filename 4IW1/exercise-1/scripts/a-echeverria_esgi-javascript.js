@@ -45,15 +45,14 @@ function verlan(string) {
     if (typeof string !== "string" || string === '') {
         return '';
     }
-    let res = '';
+    let res = [];
     const split = string.split(' ');
     for (let word of split) {
         for (let i = word.length; i > 0; i--) {
-            res += word[i-1]
+            res[i] += word[i-1]
         }
-        res += ' ';
     }
-    return res.trim();
+    return res.join(' ');
 }
 
 function yoda(string) {

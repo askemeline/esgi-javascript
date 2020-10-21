@@ -1,7 +1,7 @@
 Loading script...
 Invalid script: ReferenceError: vig is not defined
 ReferenceError: vig is not defined
-    at Object.<anonymous> (/Users/karl/projects/2020-2021/esgi-javascript/4IW1/exercise-1/scripts/tdargent1_esgi-js.js:125:22)
+    at Object.<anonymous> (/Users/karl/projects/2020-2021/esgi-javascript/4IW1/exercise-1/scripts/tdargent1_esgi-js.js:112:22)
     at Module._compile (internal/modules/cjs/loader.js:1133:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)
     at Module.load (internal/modules/cjs/loader.js:977:32)
