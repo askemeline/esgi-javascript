@@ -34,19 +34,7 @@ function snake_case(chaine) {
 function leet(chaine) {
     if(typeof chaine !== "string" || chaine === "") return "";
 
-    const characterMap = {
-            'a': '4',
-            'b': '8',
-            'e': '3',
-            'g': '6',
-            'l': '1',
-            'o': '0',
-            's': '5',
-            't': '7',
-            'æ': '43',
-            'ø': '03',
-            'å': '44'
-        };
+    const characterMap = { "A": "4", "E": "3", "I": "1", "O": "0", "U": "(_)", "Y": "7" };
 
     for(i = 0; i < chaine.length; i++) {
         if(chaine.charAt(i) in characterMap) {
@@ -56,9 +44,23 @@ function leet(chaine) {
     return chaine;
 }
 
+function prop_access(obj, path) {
+    if (typeof(obj) != "object") return path;
+    if (typeof(path) != "string" || path === "") return obj;
+    let pathSplitted = path.split(".");
+    for (let elem of pathSplitted) {
+        if (typeof(obj[elem]) == "undefined") {
+            return path;
+        }
+        obj = obj[elem];
+    }
+    return obj;
+}
+
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
+module.exports.prop_access = prop_access;
