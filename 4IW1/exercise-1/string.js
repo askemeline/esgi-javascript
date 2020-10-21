@@ -43,8 +43,8 @@ function leet(chaine) {
     }
   });
 }
-
-console.log(`${chaine} => $}leet("anaconda"));
+const chaine = "anaconda";
+console.log(`${chaine}} => ${leet(chaine)});
 
 function verlan(chaine) {
   return chaine
