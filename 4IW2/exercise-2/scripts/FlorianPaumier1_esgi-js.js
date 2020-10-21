@@ -1,5 +1,6 @@
 function type_check_v1(arg, type) {
-    return typeof arg == type
+    console.log(typeof arg)
+    return typeof arg === type || Array.isArray(arg)
 }
 
 function type_check_v2(arg, type) {
@@ -10,12 +11,15 @@ function type_check_v2(arg, type) {
     return correctEnum && correctType && correctValue
 }
 
-function type_check_v3(arg, types) {
+function type_check(arg, types) {
     return arg.map((ele) => {
         return type_check_v2(ele, types[ele])
     })
 }
 
+console.log(type_check_v1(() => {}, 'function'))
+
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
+module.exports.type_check = type_check;
