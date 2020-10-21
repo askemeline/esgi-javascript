@@ -8,7 +8,7 @@ function capitalize(chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
 
   toRetrun = "";
-  for (chaine.split(' ') of value) {
+  for (value of chaine.split(' ')) {
       toRetrun += ' ' + ucfirst(value);
   }
 
@@ -19,7 +19,7 @@ function camelCase(chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
 
   toRetrun = "";
-  for (chaine.split(' ') of value) {
+  for (value of chaine.split(' ')) {
       toRetrun += ucfirst(value);
   }
 
@@ -30,7 +30,7 @@ function snake_case(chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
 
   toRetrun = "";
-  for (chaine.split(' ') of value) {
+  for (value of chaine.split(' ')) {
       toRetrun += '_' + value.toLowerCase();
   }
   
@@ -49,7 +49,7 @@ function leet(chaine) {
   }
 
   toRetrun = "";
-  for (chaine.split('') of value) {
+  for (value of chaine.split('')) {
       toRetrun += value.toLowerCase in vowelObj ? vowelObj.value.toLowerCase : value; 
   }
    
@@ -64,26 +64,26 @@ function verlan (chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
 
   toRetrun = "";
-  for (chaine.split(' ') of value) {
+  for (value of chaine.split(' ')) {
     reverse = '';
-    for (value.split('') of char) {
+    for (char of value.split('')) {
       reverse = char + reverse;
     }
     toRetrun += ' ' + reverse;
   }
 
-  return toRetrun;
+  return toRetrun.substring(1);
 }
 
 function yoda(chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
 
   toRetrun = "";
-  for (chaine.split(' ') of value) {
+  for (value of chaine.split(' ')) {
     toRetrun = value + ' ' + toRetrun;
   }
 
-  return toRetrun;
+  return toRetrunslice(0, -1);
 }
 
 module.exports.ucfirst = ucfirst;

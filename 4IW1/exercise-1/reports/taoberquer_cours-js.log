@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:06:42 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:07:19 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -10,92 +10,75 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-capitalize - ' test' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+capitalize - 'test' OK
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "Togglecase" - got "ToggleCase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
 snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "4n4c0nd4" - got "anaconda"
 leet - 'anacoNDa' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "4n4c0ND4" - got "anacoNDa"
 leet - 'leet' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "l33t" - got "leet"
 leet - 'yoda' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "70d4" - got "yoda"
 leet - 'evaluation' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "3v4l(_)4t10n" - got "evaluation"
 leet - 'mon travail' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-leet - ' ' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	expected : "m0n tr4v41l" - got "mon travail"
+leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-verlan - 'kayak' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-verlan - 'yoda m Luke' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : ReferenceError - value is not defined
-verlan - ' ' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
+verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	Unexpected behaviour : ReferenceError - toRetrunslice is not defined
 yoda - 'yoda m Luke' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	Unexpected behaviour : ReferenceError - toRetrunslice is not defined
 yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	Unexpected behaviour : ReferenceError - toRetrunslice is not defined
 yoda - ' ' KO
-	Unexpected behaviour : ReferenceError - value is not defined
+	Unexpected behaviour : ReferenceError - toRetrunslice is not defined
 yoda - 'null' OK
 yoda - 'Object' OK
 
