@@ -47,5 +47,8 @@ function leet(chaine) {
 console.log(leet("anaconda"));
 
 function verlan(chaine) {
-    return chaine.split(" ").map(word => word.split('').reverse())
+  return chaine
+    .split(" ")
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
 }
