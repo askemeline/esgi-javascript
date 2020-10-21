@@ -44,7 +44,7 @@ function verlan(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 	return chaine.split(" ").map(word => word.split("").reverse().join("")).join(" ");
 }
-s
+
 function yoda(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 	return chaine.split("").reverse().join("").join(" ");
