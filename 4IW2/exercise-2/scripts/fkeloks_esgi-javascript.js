@@ -1,10 +1,22 @@
 function type_check_v1(val, type) {
-    let valType
-    if (val === null) valType = 'null';
-    else if (typeof val === 'object' && val.length !== undefined) valType = 'array';
-    else valType = typeof val;
-
-    return valType === type;
+    switch (typeof val) {
+        case 'symbol':
+        case 'number':
+        case 'string':
+        case 'boolean':
+        case 'undefined':
+        case 'function':
+            return type === typeof val;
+        case 'object':
+            switch (type) {
+                case 'null':
+                    return val === null;
+                case 'array':
+                    return Array.isArray(val);
+                default:
+                    return val !== null && Array.isArray(val);
+            }
+    }
 }
 
 console.info("\n========== type_check_v1 ==========");
