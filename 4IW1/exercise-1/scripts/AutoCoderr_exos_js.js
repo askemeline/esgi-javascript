@@ -12,7 +12,7 @@ function capitalize(chaine) {
         if (i > 0) {
             str += " ";
         }
-        str += ucfirst(words[i]);
+        str += chaine.charAt(0).toUpperCase()+chaine.slice(1).toLowerCase();
     }
     return str;
 }
@@ -74,7 +74,7 @@ function prop_access(obj, path) {
 }
 
 function verlan(chaine) {
-    if (typeof(chaine) != "string" && chaine === "") return ""
+    if (typeof(chaine) != "string" || chaine === "") return ""
     let words = chaine.split(" ");
 
     let str = "";
@@ -99,7 +99,7 @@ function yoda(string) {
     return string.split(" ").reverse().join(" ")
 }
 
-//console.log(yoda("J'aime les pâtes"));
+console.log(verlan({coucou: ""}));
 //console.log(capitalize("ipsum DOLOR"));
 
 

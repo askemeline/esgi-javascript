@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:38:29 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:39:06 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -11,11 +11,14 @@ ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' OK
+capitalize - ' test' KO
+	expected : " Test" - got " test  test"
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+	expected : "Ipsum Dolor" - got "Ipsum dolor Ipsum dolor"
+capitalize - 'sit 8met consectetur' KO
+	expected : "Sit 8met Consectetur" - got "Sit 8met consectetur Sit 8met consectetur Sit 8met consectetur"
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got "_dipiscing elit _dipiscing elit"
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
@@ -57,10 +60,8 @@ verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.split is not a function
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK

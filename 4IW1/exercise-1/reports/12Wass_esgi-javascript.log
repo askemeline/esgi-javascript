@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:38:30 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:39:04 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -40,17 +40,12 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got "4n4cond4"
-leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got "4n4coND4"
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
 leet - 'leet' OK
-leet - 'yoda' KO
-	expected : "70d4" - got "7od4"
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l(_)4t1on"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "mon tr4v41l"
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
