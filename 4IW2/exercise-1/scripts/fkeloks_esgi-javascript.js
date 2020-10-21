@@ -72,29 +72,28 @@ console.log(leet('Mon texte'));
 console.log(leet('mOn Super Texte'));
 console.log(leet('anaconda'));
 
-function prop_access(object, path) {
-    if (typeof path !== 'string' || path === '') {
-        return '';
+const prop_access = (object, string) => {
+    string = string.split('.');
+
+    let path = '';
+
+    for (let v of string) {
+        path += '.' + v;
+
+        if (typeof object[v] === 'undefined') {
+            return path.slice(1) + ' not exist';
+        }
+
+        object = object[v];
     }
 
-    let result = object
-    path.split('.').forEach(element => {
-        if (result[element]) {
-            return `${path} not exist`
-        }
-
-        if (result[element] === null || result[element] === '') {
-            return object
-        }
-
-        result = result[element]
-    })
-
-    return result
-}
+    return object;
+};
 
 console.info("\n========== prop_access ==========");
-console.log('xxx');
+const a = {b: {c: {d: {e: 3}}}};
+console.log(prop_access(a, 'b.y.d.e')); // b.y not exist
+console.log(prop_access(a, 'b.c.d.e')); // 3 (valeur de a.b.c.d.e)
 
 function verlan(text) {
     if (typeof text !== 'string' || text === '') {
