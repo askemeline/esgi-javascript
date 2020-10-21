@@ -41,7 +41,6 @@ function prop_access(chaine){
 }
 
 function verlan(chaine){
-	if(typeof chaine !== "string" || chaine === "") return "";
 	chaine.split(" ").map(word => return word.split("").reverse().join("")).join(" ");
 }
 
