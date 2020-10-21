@@ -62,6 +62,19 @@ function leet(chaine) {
     return chaine;
 }
 
+function prop_access(obj, path) {
+    if (typeof(obj) != "object" || obj == null) return path;
+    if (typeof(path) != "string" || path === "") return obj;
+    let pathSplitted = path.split(".");
+    for (let elem of pathSplitted) {
+        if (typeof(obj[elem]) == "undefined") {
+            return path;
+        }
+        obj = obj[elem]
+    }
+    return obj
+}
+
 function verlan(chaine) {
     if (typeof(chaine) != "string" || chaine === "") return ""
     let words = chaine.split(" ");
@@ -88,24 +101,11 @@ function yoda(string) {
     return string.split(" ").reverse().join(" ")
 }
 
-function prop_access(obj, path) {
-    if (typeof(obj) != "object" || obj == null) return path+" not exist";
-    if (typeof(path) != "string" || path === "") return obj;
-    let pathSplitted = path.split(".");
-    for (let elem of pathSplitted) {
-        if (typeof(obj[elem]) == "undefined") {
-            return path+" not exist";
-        }
-        obj = obj[elem]
-    }
-    return obj
-}
-
 //console.log(verlan({coucou: ""}));
-//console.log(capitalize(" test"));
+console.log(capitalize(" test"));
 
 
-let prairie = {
+/*let prairie = {
     animal : {
         type: {
             name: "TOTO"
@@ -113,7 +113,7 @@ let prairie = {
     }
 }
 
-console.log(prop_access(prairie, "animal.gender"));
+console.log(prop_access(prairie, "machin.fefe.name"));*/
 
 //console.log(leet("anacOnda"))
 //console.log(camelCase(""));
