@@ -36,22 +36,20 @@ function snake_case(chaine) {
 
 function leet(chaine) {
     if (typeof string !== "string" && string !== "") return "";
-    return chaine.replace(/[aeiouy]/gi, function(e){
-        switch(e.toLowerCase()) {
-            case "a":
-                return 4;
-            case "e":
-                return 3;
-            case "i":
-                return 1;
-            case "o":
-                return 0;
-            case "u":
-                return "(_)";
-            case "y":
-                return 7;
-        }
-    })
+    const toCrypt = {
+        A: 4,
+        E: 3,
+        I: 1,
+        O: "0",
+        U: "(_)",
+        Y: 7
+    }
+
+    for (let key in toCrypt) {
+        chaine = chaine.replace(new RegExp(key, 'g'), toCrypt[key]);
+        chaine = chaine.replace(new RegExp(key.toLowerCase(), 'g'), toCrypt[key]);
+    }
+    return chaine;
 }
 
 function prop_access(obj, path) {
@@ -68,8 +66,11 @@ function prop_access(obj, path) {
 }
 
 function verlan(chaine) {
-    if (typeof string !== "string" && string !== "") return "";
-    return chaine.split(" ").map((word) => word.split("").reverse().join("")).join(" ");
+    if (typeof (chaine) != "string" || chaine === "") return "";
+
+    return chaine.split(" ").map((word) => {
+        return word.split("").reverse().join("")
+    }).join(" ")
 }
 
 function yoda(string) {
