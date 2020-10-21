@@ -6,11 +6,15 @@ function ucfirst(chaine){
 function capitalize(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 		var res = chaine.split(" ");
-	return res.forEach(ucfirst(res)) ;
+	    res.forEach(ucfirst) ;
+		return text
+	
+	function ucfirst(chaine){	
+		text += chaine.charAt(0).toUpperCase() + chaine.slice(1);
 }
 
 console.log(ucfirst("hello world"));
-console.log(ucfirst("........."));
+console.log(".........");
 console.log(capitalize("hello world"));
 
 

@@ -17,7 +17,7 @@ function capitalize(chaine) {
 console.log(capitalize("hello world"));
 
 
-function camelcase(chaine) {
+function camelCase(chaine) {
     chaine = capitalize(chaine);
     return chaine.split(' ').join('');
 }
@@ -32,3 +32,4 @@ console.log(snakecase("hello world slt"));
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
+module.exports.camelCase = camelCase;
