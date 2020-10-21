@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:48:56 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:49:31 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -50,8 +50,7 @@ leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l_4t10n"
+leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
