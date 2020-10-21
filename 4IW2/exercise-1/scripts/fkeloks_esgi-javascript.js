@@ -73,6 +73,10 @@ console.log(leet('mOn Super Texte'));
 console.log(leet('anaconda'));
 
 const prop_access = (object, string) => {
+    if (typeof object !== 'string' || object === '' || typeof string !== 'string' || string === '') {
+        return '';
+    }
+
     string = string.split('.');
 
     let path = '';

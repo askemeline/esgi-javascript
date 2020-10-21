@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 08:54:30 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 08:55:00 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
@@ -36,13 +36,12 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - string.split is not a function
+	Unexpected behaviour : TypeError - string.replace is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
