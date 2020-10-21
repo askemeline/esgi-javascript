@@ -7,7 +7,7 @@ function capitalize(str, join = " ") {
   if (str === "" || typeof str !== "string") {
     return "";
   }
-
+  str = str.toLowerCase();
   let words = str.split(" ");
   for (let i = 0; i < words.length; i++) {
     words[i] = ucfirst(words[i]);
@@ -18,7 +18,6 @@ function capitalize(str, join = " ") {
 
 let camelCase = (str) => capitalize(str, "");
 let snake_case = (str) => str.toLowerCase().replace(" ", "_");
-
 function leet(str) {
   for (i in str) {
     switch (str[i]) {

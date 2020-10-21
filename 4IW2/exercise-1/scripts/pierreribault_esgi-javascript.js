@@ -1,17 +1,17 @@
 function camelCase(string) {
-    return string.split(' ').map(word => toUpperCase(word)).join('')
+    return string.replace('_', ' ').split(' ').map(word => toUpperCase(word)).join('')
 }
 
 function prop_access(object, path) {
     let result = object
+
+    if(path == null || path == "") {
+        return object
+    }
+
     path.split('.').forEach(element => {
         if(result[element] == undefined) {
-            result = `${path} not found`;
-            return
-        }
-
-        if(result[element] === null || result[element] === "") {
-            result = object
+            result = `${path} not exist`;
             return
         }
 
