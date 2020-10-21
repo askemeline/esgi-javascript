@@ -25,5 +25,8 @@ console.log(type_check_v1({}, "null") === false);
 console.log(type_check_v1(undefined, "undefined") === true);
 
 
-function type_check_v2(variable, type) {
+function type_check_v2(variable, conf) {
+    for(toCheck in conf) {
+        case ''
+    }
 }
