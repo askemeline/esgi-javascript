@@ -4,3 +4,9 @@ function type_check_V1(arg1 , arg2){
 	}
 }
 
+function type_check_V2(arg1 , [arg2, arg3 = null]){
+	if (typeof(agr1) == arg2){
+		return true;
+	}
+}
+
