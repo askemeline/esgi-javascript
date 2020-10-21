@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 09:04:22 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:04:55 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -11,47 +11,47 @@ ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' KO
-	expected : "Test" - got undefined
+	expected : "Test" - got "undefinedTest"
 capitalize - ' test' KO
-	expected : " Test" - got undefined
+	expected : " Test" - got "undefinedTest"
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got undefined
+	expected : "Ipsum Dolor" - got "undefinedIpsumDOLOR"
 capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got undefined
+	expected : "Sit 8met Consectetur" - got "undefinedSit8metConsectetur"
 capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got undefined
+	expected : "_dipiscing Elit" - got "undefined_dipiscingElit"
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got undefined
+	expected : "ToggleCaseIsTheCoolest" - got "undefinedToggleCaseIsTheCoolest"
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got undefined
+	expected : "TogglecaseIsTheCoolest" - got "undefinedToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got undefined
+	expected : "TogglecaseIsThe3oolest" - got "undefinedToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got undefined
+	expected : "Togglecaseisthecoolest" - got "undefinedToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got undefined
+	expected : "TogglecaseIsTheCoolest" - got "undefinedToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got undefined
+	expected : "Togglecase" - got "undefinedToggleCase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got undefined
+	expected : "toggle_case_is_the_coolest" - got "undefinedtoggle_case_is_the_coolest"
 snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got undefined
+	expected : "togglecase_is_the_coolest" - got "undefinedtogglecase_is_the_coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got undefined
+	expected : "togglecase_is_the_3oolest" - got "undefinedtogglecase_is_the_3oolest"
 snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got undefined
+	expected : "togglecaseisthecool3st" - got "undefinedtogglecaseisthecool3st"
 snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got undefined
+	expected : "togglecase_is_the_coolest" - got "undefinedtogglecase_is_the_coolest"
 snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got undefined
+	expected : "_togglecase" - got "undefined_togglecase"
 snake_case - 'null' OK
 snake_case - 'Object' OK
 

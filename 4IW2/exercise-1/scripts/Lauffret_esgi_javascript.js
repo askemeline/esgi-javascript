@@ -11,6 +11,7 @@ function capitalize(chaine){
 		for (i = 0; i < rLen; i++) {
 		  text += ucfirst(res[i]);
 		}
+	return text;
 }
 
 function camelCase(chaine){
@@ -21,6 +22,7 @@ function camelCase(chaine){
 		for (i = 0; i < rLen; i++) {
 		  text += ucfirst(res[i]);
 		}
+	return text;
 }
 
 function snake_case(chaine){
@@ -34,6 +36,7 @@ function snake_case(chaine){
 			  text += "_";
 		  }
 		}
+	return text;
 }
 
 function leet(chaine){
@@ -55,10 +58,6 @@ function yoda(chaine){
 function vig(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
 }
-
-
-console.log(capitalize("hello world"));
-
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;

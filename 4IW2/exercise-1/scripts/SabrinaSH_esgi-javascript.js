@@ -27,6 +27,9 @@ function snake_case(str) {
   return words;
 }
 function leet(str) {
+  if (str === "" || typeof str !== "string") {
+    return "";
+  }
   for (i in str) {
     switch (str[i]) {
       case ("A", "a"):
@@ -62,6 +65,9 @@ function reverse(str) {
 }
 
 function verlan(str) {
+  if (str === "" || typeof str !== "string") {
+    return "";
+  }
   let words = str.split(" ");
 
   for (i in words) {
@@ -72,12 +78,15 @@ function verlan(str) {
 }
 
 function yoda(str) {
+  if (str === "" || typeof str !== "string") {
+    return "";
+  }
   let words = str.split(" ");
   let result = "";
   for (let i = 0; i < words.length; i++) {
     result += " " + words[words.length - i - 1];
   }
-  return result;
+  return result.trim();
 }
 
 
