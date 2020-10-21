@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:51:50 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:52:25 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -10,32 +10,30 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got ""
+capitalize - 'test' OK
 capitalize - ' test' KO
-	expected : " Test" - got " "
+	expected : " Test" - got " test  test"
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got " "
+	expected : "Ipsum Dolor" - got "Ipsum dolor Ipsum dolor"
 capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "  "
+	expected : "Sit 8met Consectetur" - got "Sit 8met consectetur Sit 8met consectetur Sit 8met consectetur"
 capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got " "
+	expected : "_dipiscing Elit" - got "_dipiscing elit _dipiscing elit"
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got ""
+	expected : "ToggleCaseIsTheCoolest" - got "TogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolest"
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got ""
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolestTogglecaseisthecoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got ""
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got ""
+	expected : "TogglecaseIsThe3oolest" - got "Togglecaseisthe3oolestTogglecaseisthe3oolestTogglecaseisthe3oolestTogglecaseisthe3oolest"
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got ""
+	expected : "TogglecaseIsTheCoolest" - got "Togglecaseis_thecoolestTogglecaseis_thecoolestTogglecaseis_thecoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got ""
+	expected : "Togglecase" - got "togglecasetogglecase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -57,8 +55,10 @@ leet - 'yoda' OK
 leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' OK
-leet - 'Object' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.replace is not a function
 
 Checking verlan
 verlan - 'anaconda' OK

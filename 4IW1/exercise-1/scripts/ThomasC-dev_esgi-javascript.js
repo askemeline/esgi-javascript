@@ -5,7 +5,7 @@ function ucfirst(chaine) {
 
 function capitalize(chaine) {
     if (typeof(chaine) != "string" || chaine === "") return "";
-    return chaine.split(' ').map(word => ucfirst(chaine.toLowerCase)).join(" ");
+    return chaine.split(' ').map(word => ucfirst(chaine.toLowerCase())).join(" ");
 }
 
 function camelCase(chaine) {
@@ -19,21 +19,22 @@ function snake_case(chaine) {
 }
 
 function leet(chaine) {
-    if (typeof(chaine) != "string" || chaine === "") return ""
-    const toCrypt = {
-        A: 4,
-        E: 3,
-        I: 1,
-        O: "0",
-        U: "(_)",
-        Y: 7
-    }
-
-    for (let key in toCrypt) {
-        chaine = chaine.replace(new RegExp(key, 'g'), toCrypt[key]);
-        chaine = chaine.replace(new RegExp(key.toLowerCase(), 'g'), toCrypt[key]);
-    }
-    return chaine;
+    return chaine.replace(/[aeiouy]/gi, function(e){
+        switch(e.toLowerCase()) {
+            case "a":
+                return 4;
+            case "e":
+                return 3;
+            case "i":
+                return 1;
+            case "o":
+                return 0;
+            case "u":
+                return "(_)";
+            case "y":
+                return 7;
+        }
+    })
 }
 
 function prop_access(obj, path) {
