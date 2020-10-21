@@ -89,6 +89,23 @@ function yoda(str) {
   return result.trim();
 }
 
+function prop_access(praire, str) {
+  if (str === "" || typeof str !== "string") {
+    return praire;
+  }
+  let chemin = str.split(".");
+  if (praire[chemin[1]] !== "undefiened") {
+    if (praire[chemin[0]][chemin[1]] !== "undefiened") {
+      if (
+        praire[chemin[0]][chemin[1]][chemin[2]] !== "" &&
+        typeof praire[chemin[0]][chemin[1]][chemin[2]] == "string"
+      ) {
+        return chemin[2];
+      }
+    }
+  }
+}
+
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
@@ -97,3 +114,4 @@ module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.prop_access = prop_access;

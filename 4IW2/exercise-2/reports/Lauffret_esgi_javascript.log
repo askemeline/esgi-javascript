@@ -1,7 +1,7 @@
 Loading script...
 Invalid script: SyntaxError: Unexpected token '['
 /Users/karl/projects/2020-2021/esgi-javascript/4IW2/exercise-2/scripts/Lauffret_esgi_javascript.js:7
-function type_check_V2(arg1 , arg2[]=null, arg3[] = null){
+function type_check_V2(arg1 , arg2[]){
                                   ^
 
 SyntaxError: Unexpected token '['

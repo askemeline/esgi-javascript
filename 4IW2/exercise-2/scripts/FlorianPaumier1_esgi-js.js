@@ -1,6 +1,9 @@
 function type_check_v1(arg, type) {
-    console.log(typeof arg)
-    return typeof arg === type || Array.isArray(arg)
+    if(arg === type) return true;
+    if(Array.isArray(arg)) return true;
+    return arg === null;
+
+
 }
 
 function type_check_v2(arg, type) {

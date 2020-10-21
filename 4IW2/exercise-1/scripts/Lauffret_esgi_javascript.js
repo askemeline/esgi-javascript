@@ -10,7 +10,7 @@ function capitalize(chaine){
 
 function camelCase(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return capitalize(chaine).replace(/\W/g,"");
+	return capitalize(chaine).replace(/\W/gi,"");
 }
 
 function snake_case(chaine){
@@ -42,7 +42,7 @@ function prop_access(chaine){
 
 function verlan(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return chaine.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+	return chaine.split(" ").map(word => (word.split("").reverse().join(""))).join(" ");
 }
 
 function yoda(chaine){
