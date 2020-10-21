@@ -18,9 +18,18 @@ function snake_case(chaine){
 	return chaine.toLowerCase().replace(/(\W)/g,"_");
 }
 
-
 function leet(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
+	chaine.replace(/[AEUIOY]/gi,function(e){
+		switch(e.toLowerCase()){
+			case"a":return 4;
+			case"e":return 3;
+			case"i":return 1;
+			case"o":return 0;
+			case"u":return "(_)";
+			case"y":return 7;
+		}
+	}
 }
 
 function prop_access(chaine){
