@@ -1,12 +1,12 @@
 function type_check_v1(input, type) {
-    if (input === null) {
-        type = "null";
-    } else if (typeof input === "object" && input.length !== undefined) {
-        type = "array";
-    } else {
-        type = typeof input;
+    switch (typeof input) {
+        case "string":
+        case "number":
+        case "function":
+        case "undefined":
+        case "boolean":
+            return typeof input === type;
     }
-    return type === type;
 }
 
 
