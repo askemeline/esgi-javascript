@@ -26,10 +26,10 @@ function type_check_v2(variable , conf){
 				if(type_check_v1(variable , conf.type) === false) return false;
 				break;
 			case"value":
-				if(JSON.stringify(variable) !== JSON.stringify(conf.value);
+				if(JSON.stringify(variable) !== JSON.stringify(conf.value)) return false;
 				break;
 			case"enum":
-			let found = false;
+				let found = false;
 				for(subValue of conf.enum){
 					if(!found) found = type_check_v2(variable,{value: subValue});	
 					if(found)break;	
