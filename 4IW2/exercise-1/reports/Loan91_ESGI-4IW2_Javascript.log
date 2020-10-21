@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 08:49:32 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 08:50:01 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -55,8 +55,7 @@ verlan - 'anaconda' OK
 verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
-verlan - ' ' KO
-	expected : " " - got ""
+verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
 
@@ -64,8 +63,7 @@ Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' KO
-	expected : " " - got ""
+yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
 

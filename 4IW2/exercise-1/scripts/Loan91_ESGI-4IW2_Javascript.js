@@ -4,7 +4,7 @@ function ucfirst(chaine) {
 }
 
 function capitalize(chaine) {
-	if (typeof chaine !== "string" || chaine === "") return "";
+	if (typeof chaine !== "string" || chaine === "") return "";
 	return chaine
 		.toLowerCase()
 		.split(' ')
@@ -13,22 +13,25 @@ function capitalize(chaine) {
 }
 
 function camelCase(chaine) {
-	if (typeof chaine !== "string" || chaine === "") return "";
-	return capitalize(chaine).split(' ').join('');
+	if (typeof chaine !== "string" || chaine === "") return "";
+	if (chaine === " ") return chaine;
+	return ucfirst(capitalize(chaine).split(' ').join(''));
 }
 
 function snake_case(chaine) {
-	if (typeof chaine !== "string" || chaine === "") return "";
+	if (typeof chaine !== "string" || chaine === "") return "";
+	if (chaine === " ") return chaine;
 	return chaine.toLowerCase().split(' ').join('_');
 }
 
 function leet(chaine) {
-	if (typeof chaine !== "string" || chaine === "") return "";
+	if (typeof chaine !== "string" || chaine === "") return "";
 	return chaine.split('A').join('4').split('a').join('4').split('E').join('3').split('e').join('3').split('I').join('1').split('i').join('1').split('O').join('0').split('o').join('0').split('U').join('(_)').split('u').join('(_)').split('Y').join('7').split('y').join('7');
 }
 
 function verlan(chaine) {
-	if (typeof chaine !== "string" || chaine === "") return "";
+	if (typeof chaine !== "string" || chaine === "") return "";
+	if (chaine === " ") return chaine;
 	let mots = chaine.split(' ');
 	chaine = "";
 	mots.forEach(function (mot){
@@ -42,7 +45,8 @@ function verlan(chaine) {
 }
 
 function yoda(chaine) {
-	if (typeof chaine !== "string" || chaine === "") return "";
+	if (typeof chaine !== "string" || chaine === "") return "";
+	if (chaine === " ") return chaine;
 	var liste = chaine.split(' ');
 	var count = liste.length-1;
 	chaine = "";
