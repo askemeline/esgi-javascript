@@ -27,14 +27,21 @@ function snake_case(string){
 }
 
 function leet(string){
+    if (typeof string !== "string" || string === "") return "";
+    var monCryptage = { "A": 4, "a": 4, "E": 3, "e": 3, "I": 1, "i": 1, "O": "0", "o": 0, "U": "(_)", "u": "(_)", "Y": 7, "y": 7};
+    return string.split('').map(s => monCryptage[s] || s).join('')
 }
 
-// leet('Cbueiaze ezabeia e zae iuzae zae azu ');
+function verlan(string){
+    if (typeof string !== "string" || string === "") return "";
 
-console.log(camelCase("toggle case is the coolest")); 
+    return string.split('').reverse().join('');
+}
+
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
 module.exports.snake_case = snake_case;
 module.exports.leet = leet;
+module.exports.verlan = verlan;

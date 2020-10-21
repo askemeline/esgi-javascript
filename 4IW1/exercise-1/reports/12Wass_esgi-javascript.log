@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:16:14 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:16:53 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -41,39 +41,30 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' KO
-	expected : "4n4c0nd4" - got undefined
+	expected : "4n4c0nd4" - got "4n4cond4"
 leet - 'anacoNDa' KO
-	expected : "4n4c0ND4" - got undefined
-leet - 'leet' KO
-	expected : "l33t" - got undefined
+	expected : "4n4c0ND4" - got "4n4coND4"
+leet - 'leet' OK
 leet - 'yoda' KO
-	expected : "70d4" - got undefined
+	expected : "70d4" - got "7od4"
 leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got undefined
+	expected : "3v4l(_)4t10n" - got "3v4l(_)4t1on"
 leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got undefined
-leet - ' ' KO
-	expected : " " - got undefined
-leet - 'null' KO
-	expected : "" - got undefined
-leet - 'Object' KO
-	expected : "" - got undefined
+	expected : "m0n tr4v41l" - got "mon tr4v41l"
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "adoy m ekuL" - got "ekuL m adoy"
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - ' ' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - "verlan" not implemented
+	expected : "ad07 m 3k)_(L" - got "3k)_(L m ad07"
+verlan - ' ' OK
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' KO
