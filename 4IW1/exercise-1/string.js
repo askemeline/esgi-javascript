@@ -26,5 +26,5 @@ function snake_case(chaine) {
 }
 
 function leet(chaine) {
-    
+    return chaine.replace(/[]/gi)
 }
