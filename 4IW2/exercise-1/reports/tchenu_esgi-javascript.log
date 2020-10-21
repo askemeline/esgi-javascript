@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 09:14:30 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 09:14:59 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -109,8 +109,6 @@ yoda - ' ' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
-
-
 yoda - 'Object' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 
