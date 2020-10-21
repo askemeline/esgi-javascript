@@ -1,17 +1,11 @@
 Loading script...
 
-ucfirst - 'test' OK
-ucfirst - ' test' OK
-Wed Oct 21 2020 08:56:03 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 08:56:32 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
-ucfirst - 'Test' OK
 ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 ucfirst - 'Object' KO
@@ -20,8 +14,6 @@ ucfirst - 'Object' KO
 Checking capitalize
 capitalize - 'test' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
 capitalize - ' test' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - 'ipsum DOLOR' KO
@@ -42,8 +34,6 @@ camelCase - 'toggleCase is the coolest' KO
 	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCase is the 3oolest' KO
 	Unexpected behaviour : TypeError - "camelCase" not implemented
-
-Checking capitalize
 camelCase - 'ToggleCaseIsTheCoolest' KO
 	Unexpected behaviour : TypeError - "camelCase" not implemented
 camelCase - 'ToggleCase is_the coolest' KO
@@ -58,22 +48,16 @@ camelCase - 'Object' KO
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
-capitalize - 'test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 snake_case - 'toggleCase is the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCase is the 3oolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'ToggleCaseIsTheCool3st' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
-capitalize - ' test' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 snake_case - 'ToggleCase is_the coolest' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - ' toggleCase' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
-capitalize - 'ipsum DOLOR' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'Object' KO
@@ -88,8 +72,86 @@ leet - 'leet' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'yoda' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'evaluation' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'mon travail' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - ' ' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+Wed Oct 21 2020 08:56:32 GMT+0200 (GMT+02:00) - Starting tests...
+Checking ucfirst
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+ucfirst - 'TEST' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - 'sit 8met consectetur' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - ' toggleCase' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - ' toggleCase' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+
+Checking leet
+leet - 'anaconda' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'anacoNDa' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'leet' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'yoda' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'evaluation' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'mon travail' KO
@@ -140,8 +202,6 @@ vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c e
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - ' - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 vig - 'null - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'Object - test' KO
@@ -156,8 +216,6 @@ prop_access - 'path exist - value array' KO
 	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
 prop_access - 'path empty' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 prop_access - 'object null' KO
@@ -166,62 +224,6 @@ prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
 
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-
-Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - "camelCase" not implemented
-
-Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-
-Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'Object' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 

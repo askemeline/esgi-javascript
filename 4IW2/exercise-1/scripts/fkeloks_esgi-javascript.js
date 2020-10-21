@@ -72,7 +72,7 @@ console.log(leet('Mon texte'));
 console.log(leet('mOn Super Texte'));
 console.log(leet('anaconda'));
 
-const prop_access = (object, string) => {
+function prop_access(object, string) {
     if (typeof object !== 'string' || object === '' || typeof string !== 'string' || string === '') {
         return '';
     }
@@ -121,24 +121,31 @@ function yoda(text) {
 console.info("\n========== yoda ==========");
 console.log(yoda('Hello world'));
 
-function vig(key, string) {
-    if (typeof key !== 'string' && key !== '') return ''
-    if (typeof string !== 'string' && string !== '') return ''
-
-    const msgLength = string.length
-    const keyLength = key.length
-
-    let cryptage = '';
-
-    for (let i = 1; i < msgLength; i++) {
-        let charCode = string.charCodeAt(i - 1) - 65
-        let decalage = key.charCodeAt((i - 1) % keyLength) - 65
-        let char = String.fromCharCode(65 + (charCode + decalage) % 26)
-
-        cryptage += char
+function vig(message, key) {
+    if (typeof message !== 'string' || typeof key !== 'string') {
+        return '';
     }
 
-    return cryptage
+    let result = [];
+    let letterCounter = 0;
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    alphabet = alphabet.split('');
+    let rowIndex;
+    let colIndex;
+
+    while (letterCounter < message.length) {
+        for (let i = 0; i < key.length; i++) {
+            rowIndex = alphabet.indexOf(key[i]);
+            colIndex = alphabet.indexOf(message[letterCounter]);
+
+            result.push(alphabet[(rowIndex + colIndex) % alphabet.length]);
+            letterCounter++;
+
+            if (letterCounter >= message.length) break;
+        }
+    }
+
+    return result.join('');
 }
 
 console.info("\n========== vig ==========");
