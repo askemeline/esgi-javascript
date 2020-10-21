@@ -53,4 +53,7 @@ function verlan(chaine) {
     .join(" ");
 }
 
-function yoda()
+function yoda(chaine) {
+  return chaine.split(" ").reverse().join(" ");
+}
+

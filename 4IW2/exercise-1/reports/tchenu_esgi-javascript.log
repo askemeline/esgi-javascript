@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 16:53:34 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 16:54:09 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -70,6 +70,14 @@ leet - 'evaluation' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'mon travail' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+
+
 leet - ' ' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'null' KO
