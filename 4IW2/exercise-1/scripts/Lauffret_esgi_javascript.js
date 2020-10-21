@@ -20,7 +20,7 @@ function snake_case(chaine){
 
 function leet(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	chaine.replace(/[AEUIOY]/gi),function(e){
+	return chaine.replace(/[AEUIOY]/gi),function(e){
 		switch(e.toLowerCase()){
 			case"a":return 4;
 			case"e":return 3;
@@ -42,12 +42,12 @@ function prop_access(chaine){
 
 function verlan(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return chaine.split(" ").map(word => (word.split("").reverse().join(""))).join(" ");
+	return chaine.split(" ").map(word =>(word.split("").reverse().join(""))).join(" ");
 }
 
 function yoda(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return chaine.split("").reverse().join("").join(" ");
+	return chaine.split("").reverse().join(" ");
 }
 
 function vig(chaine , code){

@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 18:47:19 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 18:47:51 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -68,13 +68,12 @@ verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' KO
-	Unexpected behaviour : TypeError - chaine.split(...).reverse(...).join(...).join is not a function
+	expected : "anaconda" - got "a d n o c a n a"
 yoda - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - chaine.split(...).reverse(...).join(...).join is not a function
+	expected : "Luke m yoda" - got "e k u L   m   a d o y"
 yoda - 'Inverser la position des mots d’une phrase' KO
-	Unexpected behaviour : TypeError - chaine.split(...).reverse(...).join(...).join is not a function
-yoda - ' ' KO
-	Unexpected behaviour : TypeError - chaine.split(...).reverse(...).join(...).join is not a function
+	expected : "phrase d’une mots des position la Inverser" - got "e s a r h p   e n u ’ d   s t o m   s e d   n o i t i s o p   a l   r e s r e v n I"
+yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
 
