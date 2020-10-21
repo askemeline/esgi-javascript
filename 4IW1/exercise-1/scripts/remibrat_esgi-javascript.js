@@ -55,7 +55,7 @@ function prop_access(obj, path) {
         
         toReturn = toReturn[key];
 
-        if (key === path[path.length - 1]) return path.slice(0, path.indexOf(key)).join('.') + '.' + key + " => " + toReturn;
+        if (key === path[path.length - 1]) return toReturn;
     }
 }
 
