@@ -6,5 +6,5 @@ function ucfirst(chaine) {​​​​​
 function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
 
-    return 
+    return chaine.split(" ").map(word => )
 }
