@@ -1,9 +1,17 @@
 function type_check_v1(arg, type) {
-    if(typeof arg === type) return true;
-    if(Array.isArray(arg)) return true;
-    if(type === "undefined") return arg === undefined
+    if(typeof arg === type) return true
+    if(type === 'object'){
+        switch (type){
+            case 'null':
+                return arg === null
+            case 'array':
+                return Array.isArray(arg)
+            default:
+                return arg !== null && !Array.isArray(arg)
+        }
+    }
 
-    return arg === null;
+    return false;
 }
 
 function type_check_v2(arg, type) {

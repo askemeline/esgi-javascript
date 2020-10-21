@@ -1,26 +1,30 @@
 Loading script...
 
-Wed Oct 21 2020 18:55:37 GMT+0200 (GMT+02:00) - Starting tests...
+Wed Oct 21 2020 18:56:13 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
 type_check_v1 - 'BooleanNotNumber' OK
 type_check_v1 - 'object' OK
-type_check_v1 - 'null' OK
+type_check_v1 - 'null' KO
+	expected : true - got false
 type_check_v1 - 'nullNotObject' KO
 	expected : false - got true
 type_check_v1 - 'undefined' KO
 	expected : true - got false
 type_check_v1 - 'string' OK
-type_check_v1 - 'array' OK
-type_check_v1 - 'function' OK
+type_check_v1 - 'array' KO
+	expected : true - got false
+type_check_v1 - 'function' KO
+	expected : true - got false
 type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
 Checking type_check_v2
 type_check_v2 - 'number' OK
 type_check_v2 - 'numberNotValue' OK
-type_check_v2 - 'numberNotObject' OK
+type_check_v2 - 'numberNotObject' KO
+	expected : false - got true
 type_check_v2 - 'stringEnum' OK
 type_check_v2 - 'objectMatch' OK
 type_check_v2 - 'objectNotMatch' OK
@@ -29,7 +33,8 @@ Checking type_check
 type_check - 'number' KO
 	Unexpected behaviour : TypeError - Cannot read property 'map' of undefined
 type_check - 'numberNotValue' OK
-type_check - 'numberNotObject' OK
+type_check - 'numberNotObject' KO
+	Unexpected behaviour : TypeError - Cannot read property 'map' of undefined
 type_check - 'stringEnum' OK
 type_check - 'objectMatch' KO
 	Unexpected behaviour : TypeError - Cannot read property 'map' of undefined
