@@ -34,12 +34,13 @@ function type_check_v2(variable, conf) {
         if (JSON.stringify(variable) !== JSON.stringify(conf.value))
           return false;
         break;
-        case "enum":
-            let found = false;
-            for(subValue of conf.enum) {
-                if(!foundtype_check_v2(variable, {value: subValue}))
-            }
-            break;
+      case "enum":
+        let found = false;
+        for (subValue of conf.enum) {
+          if (!found) found = type_check_v2(variable, { value: subValue });
+        }
+        
+        break;
     }
   }
   return true;
