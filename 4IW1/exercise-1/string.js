@@ -46,3 +46,6 @@ function leet(chaine) {
 
 console.log(leet("anaconda"));
 
+function verlan(chaine) {
+    return chaine.split(" ")
+}
