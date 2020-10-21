@@ -39,7 +39,7 @@ function leet(chaine) {
     return toReturn;
 }
 
-function prop_access(obj, path) {
+function prop_access(path, obj) {
     if (typeof path !== 'string' || path === "" || path === null ) return obj;
 
     path = path.split('.');
