@@ -1,6 +1,6 @@
 Loading script...
 
-Thu Oct 22 2020 11:43:24 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 11:43:59 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -138,7 +138,6 @@ prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
 
-ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
 ucfirst - 'null' KO
 	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
