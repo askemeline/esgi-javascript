@@ -1,6 +1,9 @@
 Loading script...
 
-Thu Oct 22 2020 08:43:09 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 08:43:44 GMT+0200 (GMT+02:00) - Starting tests...
+Checking ucfirstLoading script...
+
+Thu Oct 22 2020 08:43:44 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -28,9 +31,6 @@ capitalize - 'Object' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OKChecking camelCase
 camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
@@ -103,17 +103,78 @@ yoda - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Inverser la position des mots d’une phrase' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
-camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' OK
-camelCase - ' toggleCase' OK
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 yoda - ' ' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'null' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 yoda - 'Object' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'anticonstitutionnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'antiConstiTutioNnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - ' - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got undefined
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+
+
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - Cannot convert undefined or null to object
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - ' test' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'ToggleCase is_the coolest' OK
+camelCase - ' toggleCase' OK
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 camelCase - 'Object' KO
 	Unexpected behaviour : TypeError - string.replace is not a function
 
@@ -152,36 +213,16 @@ leet - ' ' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'null' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
-
-
 leet - 'Object' KO
 	Unexpected behaviour : TypeError - "leet" not implemented
 
-Checking vig
-vig - 'anticonstitutionnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'antiConstiTutioNnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-
-Checking prop_accessChecking verlan
+Checking verlan
 verlan - 'anaconda' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
 verlan - 'kayak' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'yoda m Luke' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got undefined
 verlan - '70da m L(_)k3' KO
 	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - ' ' KO
@@ -206,32 +247,20 @@ yoda - 'Object' KO
 	Unexpected behaviour : TypeError - "yoda" not implemented
 
 Checking vig
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - Cannot read property 'type' of undefined
 vig - 'anticonstitutionnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'antiConstiTutioNnellement - foo' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - ' - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'null - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
-prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
 
 Checking prop_access
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-
-
 prop_access - 'path exist - value string' KO
 	Unexpected behaviour : TypeError - Cannot read property 'name' of undefined
 prop_access - 'path exist - value object' KO
