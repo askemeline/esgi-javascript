@@ -51,7 +51,11 @@ function type_check(variable, conf) {
   if (conf.properties === undefined) {
     return type_check_v1(variable, conf.type);
   }
-  if (type_check_v2(variable, conf) === false) {
+  if (
+    variable === null ||
+    variable === undefined ||
+    type_check_v2(variable, conf) === false
+  ) {
     return false;
   } else if (type_check_v1(conf.properties, conf.type) === false) {
     return false;
