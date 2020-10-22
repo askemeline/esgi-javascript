@@ -19,11 +19,6 @@ function type_check_v1(variable, type) {
     }
 }
 
-console.log(type_check_v1(null, "null") === true);
-console.log(type_check_v1(null, "object") === false);
-console.log(type_check_v1({}, "null") === false);
-console.log(type_check_v1(undefined, "undefined") === true);
-
 function type_check_v2(variable, conf) {
     for (toCheck in conf) {
         switch (toCheck) {
@@ -47,7 +42,7 @@ function type_check_v2(variable, conf) {
     return true;
 }
 
-function type_check_v3(variable, conf) {
+function type_check(variable, conf) {
     for (toCheck in conf) {
         for (prop in toCheck) {
             switch (toCheck) {
@@ -74,3 +69,4 @@ function type_check_v3(variable, conf) {
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
+module.exports.type_check = type_check;
