@@ -10,7 +10,7 @@ function capitalize(chaine){
 
 function camelCase(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return capitalize(chaine).replace(/\W/g,"");
+	return capitalize(chaine).replace(/\W/gi,"");
 }
 
 function snake_case(chaine){
@@ -20,7 +20,7 @@ function snake_case(chaine){
 
 function leet(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return chaine.replace(/[AEUIOY]/gi),function(e){
+	return chaine.replace(/[AEUIOY]/gi,function(e){
 		switch(e.toLowerCase()){
 			case"a":return 4;
 			case"e":return 3;
@@ -29,7 +29,7 @@ function leet(chaine){
 			case"u":return "(_)";
 			case"y":return 7;
 		}
-	}
+	});
 }
 
 function prop_access(chaine){
