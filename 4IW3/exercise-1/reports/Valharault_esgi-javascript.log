@@ -1,6 +1,6 @@
 Loading script...
 
-Thu Oct 22 2020 12:06:35 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 12:07:22 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -14,7 +14,8 @@ capitalize - 'test' OK
 capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
+capitalize - '_dipiscing elit' KO
+	expected : "_dipiscing Elit" - got " Dipiscing Elit"
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
@@ -23,8 +24,7 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIstheCoolest"
+camelCase - 'ToggleCase is_the coolest' OK
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -51,12 +51,16 @@ leet - 'null' OK
 leet - 'Object' OK
 
 Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
-verlan - 'yoda m Luke' OK
-verlan - '70da m L(_)k3' OK
+verlan - 'anaconda' KO
+	expected : "adnocana" - got "adnocana "
+verlan - 'kayak' KO
+	expected : "kayak" - got "kayak "
+verlan - 'yoda m Luke' KO
+	expected : "adoy m ekuL" - got "adoy m ekuL "
+verlan - '70da m L(_)k3' KO
+	expected : "ad07 m 3k)_(L" - got "ad07 m 3k)_(L "
 verlan - ' ' KO
-	expected : " " - got ""
+	expected : " " - got "  "
 verlan - 'null' OK
 verlan - 'Object' OK
 
