@@ -32,12 +32,14 @@ function leet(chaine){
 	});
 }
 
-function prop_access(chaine){
-	if(typeof chaine !== "string" || chaine === "") return "";
-
-	for (key in myArr) {
-	  return key;
-	}
+function prop_access(conf){
+	for(toCheck in conf){
+			switch(toCheck){
+				case"value":
+				case"properties":
+			}
+		}
+	return conf;
 }
 
 function verlan(chaine){
