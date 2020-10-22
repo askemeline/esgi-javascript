@@ -60,7 +60,10 @@ function type_check(conf){
 				break;
 			case"properties":
 				type_check(toCheck);
+				break;
 		}
+	}
+	return true;
 }
 
 module.exports.type_check_v1 = type_check_v1;
