@@ -41,7 +41,7 @@ function type_check_v2(variable , conf){
 	return true;
 }
 
-function type_check(conf){
+function type_check(variable,conf){
 	for(toCheck in conf){
 		switch(toCheck){
 			case "type":
