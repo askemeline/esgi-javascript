@@ -1,25 +1,29 @@
 Loading script...
 
-Thu Oct 22 2020 08:52:42 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 08:52:46 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
-type_check_v1 - 'number' OK
+type_check_v1 - 'number' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'StringNotNumber' KO
-	expected : false - got undefined
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'BooleanNotNumber' KO
-	expected : false - got undefined
-type_check_v1 - 'object' OK
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
+type_check_v1 - 'object' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'null' KO
-	expected : true - got false
-type_check_v1 - 'nullNotObject' OK
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
+type_check_v1 - 'nullNotObject' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'undefined' KO
-	expected : true - got false
-type_check_v1 - 'string' OK
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
+type_check_v1 - 'string' KO
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'array' KO
-	expected : true - got undefined
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'function' KO
-	expected : true - got false
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 type_check_v1 - 'arrayNotObject' KO
-	expected : false - got true
+	Unexpected behaviour : TypeError - "type_check_v1" not implemented
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
