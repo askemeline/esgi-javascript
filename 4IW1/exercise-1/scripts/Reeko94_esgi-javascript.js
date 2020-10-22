@@ -48,9 +48,31 @@ function yoda(chaine) {
     return chaine.split(' ').reverse().join(' ');
 }
 
-function prop_access(obj, string) {
-    string.split('.').map()
+function vig(str, code) {
+    while (code.length < str.length) {
+        code += code;
+    }
+    let codeIndex = 0;
+    return str.split("").map(function(car) {
+        car = car.toLowerCase();
+        const carCode = car.charCodeAt(0) - "a".charCodeAt(0);
+
+        if (carCode < 0 || carCode > 25) return car;
+        const codeCode = code[codeIndex++].charCodeAt(0) - "a".charCodeAt(0);
+
+        const encodedCode = (carCode + codeCode) % 26;
+
+        return String.fromCharCode(encodedCode + 'a'.charCodeAt(0));
+    }).join('');
 }
+
+function prop_access(obj, path) {
+    return path.split('.').reduce((prev, curr) => {
+        return prev ? prev[curr] : null
+    }, obj) || path + " not exist";
+}
+
+console.log(vig("une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test", "nawakdecheznawak"))
 
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
@@ -59,4 +81,5 @@ module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
+module.exports.vig = vig;
 module.exports.prop_access = prop_access;

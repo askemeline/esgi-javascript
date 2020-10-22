@@ -23,6 +23,7 @@ function snake_case(chaine) {
 }
 
 function leet(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
     return chaine.replace(/[aeiouy]/gi, function (e) {
         switch (e.toLowerCase()) {
             case "a":
@@ -42,6 +43,7 @@ function leet(chaine) {
 }
 
 function verlan(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
     return chaine
         .split(" ")
         .map((word) => word.split("").reverse().join(""))
@@ -49,6 +51,7 @@ function verlan(chaine) {
 }
 
 function yoda(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(" ").reverse().join(" ");
 }
 

@@ -10,7 +10,7 @@ function capitalize(chaine){
 
 function camelCase(chaine){
 	if(typeof chaine !== "string" || chaine === "") return "";
-	return capitalize(chaine).replace(/\W/gi,"");
+	return capitalize(chaine).replace(/(_)\W/g,"");
 }
 
 function snake_case(chaine){

@@ -1,6 +1,6 @@
 Loading script...
 
-Wed Oct 21 2020 19:09:30 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 08:07:45 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -74,32 +74,25 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'anticonstitutionnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'antiConstiTutioNnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'anticonstitutionnellement - foo' OK
+vig - 'antiConstiTutioNnellement - foo' OK
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' OK
+vig - ' - test' OK
 vig - 'null - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	Unexpected behaviour : TypeError - Cannot read property 'length' of null
 vig - 'Object - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - undefined is not a function
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - undefined is not a function
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - undefined is not a function
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - undefined is not a function
+	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - undefined is not a function
+	expected : {"animal":{"type":{"name":"dog"}}} - got " not exist"
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - undefined is not a function
+	expected : test not exist - got null
 prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 

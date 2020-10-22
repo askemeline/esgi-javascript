@@ -10,21 +10,23 @@ function capitalize(string) {
     return string
         .toLowerCase()
         .split(" ")
-        .map((string) => {
-            return ucfirst(string)
-        }).join(" ")
+        .map(word => ucfirst(word))
+        .join(" ")
 }
 
 function camelCase(string) {
     if (typeof string !== "string" && string !== "") return "";
 
-    return capitalize(string.replace(/-_,/, " ").trim()).split(" ").join("")
+    console.log(string.replace(/\W/g, " "))
+    return capitalize(string).replace(/\W/g, "");
 }
 
 function snake_case(string) {
     if (typeof string !== "string" && string !== "") return "";
 
-    return string.toLowerCase().replace(/ /g, "_")
+    return string
+        .toLowerCase()
+        .replace(/(\W)+/g, "-");
 }
 
 function leet(string) {
@@ -58,23 +60,21 @@ function leet(string) {
     return valeur
  */
 function prop_access(obj, props) {
-    if (obj === "undefined") return obj
-    if (typeof props !== "string" && props === "") return obj
+    if (obj === "undefined" || !obj) return obj
+    if (typeof props !== "string" || !props) return obj
 
-    let access = props.split(".")
-    let propPath = access[0]
-    let value = obj
+    let propPath = ""
 
-    for (let i = 0; i < access.length; i++) {
-        propPath += `.${access[i]}`
+    for (const accessKey of props.split(".")) {
+        propPath += propPath.length > 0 ? `.${accessKey}` : accessKey
 
-        if (!value[access[i]]) {
+        if (!obj[accessKey]) {
             return `${propPath} don't exist`
         }
-        value = value[access[i]]
+        obj = obj[accessKey]
     }
 
-    return value
+    return obj
 }
 
 function verlan(string) {
@@ -91,44 +91,52 @@ function yoda(string) {
     return string.split(" ").reverse().join(" ")
 }
 
-function vig(string,key) {
-    if (typeof key !== "string" && key !== "") return ""
-    if (typeof string !== "string" && string !== "") return ""
+function vig(string, code) {
+    if (typeof string !== "string") return "";
+    if (string.length === 0) return string;
 
-    string = string.toLowerCase()
-
-    const msgLength = string.length
-    const keyLength = key.length
-
-    let cryptage = "";
-
-    for (let i = 1; i <= msgLength; i++) {
-        let charCode = string.toLowerCase().charCodeAt(i-1)-96
-        let decalage = key.toLowerCase().charCodeAt((i-1)%keyLength)-96
-        let char = String.fromCharCode((charCode+decalage)%26+96)
-
-        cryptage += char
+    while (code.length < string.length) {
+        code += code;
     }
 
-    return cryptage
+    code = code.substr(0, string.length);
+    let codeIndex = 0;
+
+    return string
+        .split("")
+        .map((letter, index) => {
+            letter = letter.toLowerCase();
+            const aCode = "a".charCodeAt(0);
+            const letterNumber = letter.charCodeAt(0) - aCode; // [0-25]
+
+            if (letterNumber < 0 || letterNumber > 25) return letter;
+
+            const codeNumber = code.charCodeAt(codeIndex) - aCode; // [0-25]
+            codeIndex++;
+
+            return String.fromCharCode(((letterNumber + codeNumber) % 26) + aCode);
+        })
+        .join("");
 }
 
-const animal = {
-    'annaconda': {
-        'color': "green"
+const prairie = {
+    'animal': {
+        'annaconda': {
+            'color': "green"
+        }
     }
 }
 
 
 // console.log("ucfirst", ucfirst("annaconda"))
-// console.log("capitalize", capitalize("hello world"))
-// console.log("camel Case", camelCase("hello world"))
+// console.log("capitalize", capitalize("ToggleCase is_the coolest"))
+// console.log("capitalize", camelCase("ToggleCase is_the coolest"))
 // console.log("snake Case", snake_case("hello world"))
 // console.log("leet", leet("annacoNDa"))
-// console.log("prop_access", prop_access(animal, "annaconda.color"))
+console.log("prop_access", prop_access(prairie, "animal.annaconda.color"))
 // console.log("verlan", verlan("grand mère"))
 // console.log("yoda", yoda("grand mère"))
-console.log("vig", vig("anticonstitutionnellement", "foo"))
+// console.log("vig", vig("anticonstitutionnellement", "foo"))
 
 
 module.exports.ucfirst = ucfirst;
