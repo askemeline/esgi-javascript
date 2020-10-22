@@ -1,6 +1,6 @@
 Loading script...
 
-Thu Oct 22 2020 08:46:43 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 08:47:26 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -19,17 +19,13 @@ capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "Toggle Case Is The Coolest"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "Togglecase Is The Coolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "Togglecase Is The 3oolest"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "Togglecase Is_the Coolest"
-camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got " Togglecase"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -71,12 +67,9 @@ verlan - 'null' OK
 verlan - 'Object' OK
 
 Checking yoda
-yoda - 'anaconda' KO
-	expected : "anaconda" - got "a d n o c a n a"
-yoda - 'yoda m Luke' KO
-	expected : "Luke m yoda" - got "e k u L   m   a d o y"
-yoda - 'Inverser la position des mots d’une phrase' KO
-	expected : "phrase d’une mots des position la Inverser" - got "e s a r h p   e n u ’ d   s t o m   s e d   n o i t i s o p   a l   r e s r e v n I"
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
