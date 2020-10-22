@@ -61,9 +61,21 @@ console.log(type_check_v2('foo', {type: 'string', value: 'foo'}));
 console.log(type_check_v2('bar', {type: 'object', value: 'foo'}));
 console.log(type_check_v2(3, {enum: ['foo', 'bar', 3]}));
 
-
 function type_check(obj, conf) {
+    let check = type_check_v2(obj, conf);
 
+    if (!conf.properties) {
+        return check;
+    }
+
+    for (const typeKey in conf.properties) {
+        check = type_check(type_check_v1(obj, 'object') ? obj[typeKey] : obj, conf.properties[typeKey]);
+        if (!check) {
+            break
+        }
+    }
+
+    return check;
 }
 
 let object = {

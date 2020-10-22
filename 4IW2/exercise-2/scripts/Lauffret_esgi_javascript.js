@@ -31,7 +31,7 @@ function type_check_v2(variable , conf){
 			case"enum":
 				let found = false;
 				for(subValue of conf.enum){
-					if(!found) found = type_check_v2(variable,{value: subValue});	
+					found = type_check_v2(variable,{value: subValue});	
 					if(found)break;	
 				}
 				if(!found) return false;
@@ -41,5 +41,28 @@ function type_check_v2(variable , conf){
 	return true;
 }
 
+function type_check(conf){
+	for(toCheck in conf){
+		switch(toCheck){
+			case "type":
+				if(type_check_v1(variable , conf.type) === false) return false;
+				break;
+			case"value":
+				if(JSON.stringify(variable) !== JSON.stringify(conf.value)) return false;
+				break;
+			case"enum":
+				let found = false;
+				for(subValue of conf.enum){
+					found = type_check_v2(variable,{value: subValue});	
+					if(found)break;	
+				}
+				if(!found) return false;
+				break;
+			case"properties":
+				type_check(toCheck);
+		}
+}
+
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
+module.exports.type_check = type_check;

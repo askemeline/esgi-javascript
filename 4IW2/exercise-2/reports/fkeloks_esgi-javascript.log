@@ -1,6 +1,6 @@
 Loading script...
 
-Thu Oct 22 2020 08:25:19 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 08:38:21 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
@@ -25,18 +25,11 @@ type_check_v2 - 'objectMatch' OK
 type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
-type_check - 'number' KO
-	expected : true - got undefined
-type_check - 'numberNotValue' KO
-	expected : false - got undefined
-type_check - 'numberNotObject' KO
-	expected : false - got undefined
-type_check - 'stringEnum' KO
-	expected : false - got undefined
-type_check - 'objectMatch' KO
-	expected : true - got undefined
-type_check - 'objectNotMatch' KO
-	expected : false - got undefined
-type_check - 'objectSuperMatch' KO
-	expected : true - got undefined
+type_check - 'number' OK
+type_check - 'numberNotValue' OK
+type_check - 'numberNotObject' OK
+type_check - 'stringEnum' OK
+type_check - 'objectMatch' OK
+type_check - 'objectNotMatch' OK
+type_check - 'objectSuperMatch' OK
 
