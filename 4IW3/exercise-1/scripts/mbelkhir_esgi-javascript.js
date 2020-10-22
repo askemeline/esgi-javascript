@@ -10,14 +10,14 @@ function capitalize(a) {
 
 console.log(capitalize('test test'));
 
-function camelCase(chaine) {
-  return capitalize(chaine).replace(/\s/g, "");
+function camelCase(a) {
+  return capitalize(a).replace(/\W/g, "");
 }
 
 console.log(camelCase("test test test"));
 
-function snake_case(chaine) {
-  return (chaine).replace(/\s/g, "-");
+function snake_case(a) {
+  return (a).replace(/\W/g, "-");
 }
 
 console.log(snake_case('test test test'));
@@ -41,7 +41,7 @@ function leet(a) {
   });
 }
 
-console.log(leet("AnaCOnDA"));
+console.log(leet("anaconda"));
 
 
 function prop_access(obj, nomObjet) {
@@ -82,11 +82,11 @@ function vig(string, code) {
   return string.split("").map((letter, index) => {
       letter = letter.toLowerCase();
       const aCode = "a".charCodeAt(0);
-      const letterNumber = letter.charCodeAt(0) - aCode; // [0-25]
+      const letterNumber = letter.charCodeAt(0) - aCode;
 
       if (letterNumber < 0 || letterNumber > 25) return letter;
 
-      const codeNumber = code.charCodeAt(codeIndex) - aCode; // [0-25]
+      const codeNumber = code.charCodeAt(codeIndex) - aCode;
       codeIndex++;
 
       return String.fromCharCode(((letterNumber + codeNumber) % 26) + aCode);
