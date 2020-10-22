@@ -45,17 +45,17 @@ function type_check_v2(variable, conf) {
 function type_check(variable, conf) {
     for (toCheck in conf) {
         for (prop in toCheck) {
-            switch (toCheck) {
+            switch (prop) {
                 case "type":
-                    if (type_check_v1(variable, conf.type) === false) return false;
+                    if (type_check_v1(variable, toCheck.type) === false) return false;
                     break;
                 case "value":
-                    if (JSON.stringify(variable) !== JSON.stringify(conf.value))
+                    if (JSON.stringify(variable) !== JSON.stringify(toCheck.value))
                         return false;
                     break;
                 case "enum":
                     let found = false;
-                    for (subValue of conf.enum) {
+                    for (subValue of toCheck.enum) {
                         found = type_check_v2(variable, { value: subValue });
                         if (found) break;
                     }
@@ -66,6 +66,8 @@ function type_check(variable, conf) {
     }
     return true;
 }
+
+console.log(type_check)
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
