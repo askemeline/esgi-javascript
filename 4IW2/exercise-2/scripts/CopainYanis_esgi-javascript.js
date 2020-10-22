@@ -42,6 +42,30 @@ function type_check_v2(value, object) {
 }
 
 
+function type_check(value, object){
+    for(let key of Object.keys(object)) {
+        switch(key) {
+             case 'type':
+             case 'value':
+             case 'enum':
+                 let conf = {};
+                 conf[key] = object[key];
+                 if(!type_check_v2(value, conf)) return false;
+                 break;
+            case 'properties':
+               for(let property of Object.keys(conf[key])) {
+                   if(value[property] === undefined) return false;
+                   if(!type_check(value[property], conf[key][property])) return false;
+                   return false;
+               }
+              break;
+          }
+     }
+     return true;
+}
+
+
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
+module.exports.type_check = type_check;
