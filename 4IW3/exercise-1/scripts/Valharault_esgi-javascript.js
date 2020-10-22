@@ -5,7 +5,7 @@ function ucfirst(chaine) {
 
 function capitalize(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
-    let string = chaine.toLowerCase().replace('_',' ').split(" ");
+    let string = chaine.toLowerCase().split(" ");
     for (let i = 0; i < string.length; i++) {
         string[i] = ucfirst(string[i]);
     }
@@ -61,7 +61,7 @@ function verlan(chaine) {
     for (const element of chaine.split(" ")) {
         output += element.split("").reverse().join("") + " ";
     }
-    return output;
+    return output.trim();
 }
 
 function yoda(chaine) {
