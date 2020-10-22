@@ -1,6 +1,6 @@
 Loading script...
 
-Thu Oct 22 2020 09:26:57 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 09:27:36 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
@@ -28,8 +28,7 @@ Checking type_check
 type_check - 'number' OK
 type_check - 'numberNotValue' OK
 type_check - 'numberNotObject' OK
-type_check - 'stringEnum' KO
-	expected : false - got true
+type_check - 'stringEnum' OK
 type_check - 'objectMatch' OK
 type_check - 'objectNotMatch' OK
 type_check - 'objectSuperMatch' OK
