@@ -1,6 +1,6 @@
 Loading script...
 
-Thu Oct 22 2020 08:52:12 GMT+0200 (GMT+02:00) - Starting tests...
+Thu Oct 22 2020 08:52:07 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -10,34 +10,33 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got "TEST"
-capitalize - ' test' KO
-	expected : " Test" - got " TEST"
+capitalize - 'test' OK
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "IPSUM DOLOR"
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "SIT 8MET CONSECTETUR"
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_DIPISCING ELIT"
-capitalize - 'null' OK
-capitalize - 'Object' OK
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "TOGGLECASEISTHECOOLEST"
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TOGGLECASEISTHECOOLEST"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "TOGGLECASEISTHE3OOLEST"
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "TOGGLECASEISTHECOOLEST"
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TOGGLECASEIS_THECOOLEST"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "TOGGLECASE"
-camelCase - 'null' OK
-camelCase - 'Object' OK
+	expected : "Togglecase" - got "ToggleCase"
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - str.split is not a function
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' OK
@@ -49,36 +48,37 @@ snake_case - ' toggleCase' OK
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.toLowerCase is not a function
+	Unexpected behaviour : TypeError - str.toLowerCase is not a function
 
 Checking leet
 leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
-leet - 'evaluation' OK
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "3v4l_4t10n"
 leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.replace is not a function
+	Unexpected behaviour : TypeError - str.replace is not a function
 
 Checking verlan
 verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - ' ' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'spilt' of null
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 
 Checking yoda
 yoda - 'anaconda' KO
@@ -110,17 +110,17 @@ vig - 'Object - test' KO
 
 Checking prop_access
 prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : "dog" - got undefined
 prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"dog"} - got undefined
 prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"name":"cat"} - got undefined
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : test not exist - got null
 prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : {"animal":{"type":{"name":"dog"}}} - got undefined
 
