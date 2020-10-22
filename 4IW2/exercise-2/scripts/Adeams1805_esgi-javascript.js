@@ -30,9 +30,46 @@ function type_check_v2(val, args) {
 
     return bool;
 }
+
+function type_check(val, conf) {
+  let bool = true;
   
-  //console.log(type_check_v1(function(){}, "function"));
-  //console.log(type_check_v2(3, {enum: ["hey", 6]}));
+  if(conf.type !== undefined) {
+    bool = type_check_v1(val, conf.type);
+  }
+  if(bool && conf.properties !== undefined) {
+    if(conf.type === "array") {
+      for(let i in conf.properties) {
+        
+      }
+    } else if (conf.type === "object") {
+      for(let i in Object.keys(conf.properties)) {
+        let type = conf.properties[Object.keys(conf.properties)[i]].type;
+        if(type === "object" || type === "array") type_check(val[Object.keys(val)[i]], conf.properties[Object.keys(conf.properties)[i]]);
+        else bool = type_check_v2(val[Object.keys(val)[i]], conf.properties[Object.keys(conf.properties)[i]]);
+        if(!bool) break;
+      }
+    }
+  }
+  
+  return bool;
+}
+
+const test = {
+  p1: 7,
+  p2: "val1"
+}
+  
+//console.log(type_check_v1(function(){}, "function"));
+//console.log(type_check_v2(3, {enum: ["hey", 6]}));
+console.log(type_check(test, {
+  type: "object",
+  properties: {
+    prop1: {type: "number", value: 7},
+    prop2: {type: "string", enum: ["val1", "val2"]}
+  }
+}))
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
+module.exports.type_check = type_check;
