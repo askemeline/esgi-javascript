@@ -22,17 +22,21 @@ function snake_case(string) {
     return string.toLowerCase().replace(/(\W)+/g, "-");
 }
 
-function prop_access(object, path)
-{
-    if (typeof object != "object" || object == null) return path + "not exist";
-    if (typeof path != "string" || path == "") return object;
+function prop_access(object, propAccess) {
+    if ((typeof propAccess !== "string" || !propAccess) && (object === "undefined" || !object)) return object;
 
-    let splitPath = path.split('.');
+    let prop = "";
 
-    for (let element of splitPath) {
-        if (typeof object[element] == "undefined" ) return path + "not exist";
-        object = object[element];
+    for (const key of propAccess.split(".")) {
+        prop += prop.length > 0 ? `.${key}` : key
+
+        if (!object[key]) {
+            return `${prop} not exist`
+        }
+        object = object[key]
     }
+
+    return object;
 }
 
 function leet(string) {
