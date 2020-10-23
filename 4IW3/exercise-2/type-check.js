@@ -19,3 +19,8 @@ function type_check_v1(variable, type) {
       }
   }
 }
+
+function type_check(variable, type) {
+}
+
+console.log()
