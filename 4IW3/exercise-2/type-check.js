@@ -39,6 +39,8 @@ function type_check_v2(value, conf) {
         if (!type_check_v1(value, conf.type)) return false;
         break;
       case "value":
+          
+          break;
     }
   }
 }
