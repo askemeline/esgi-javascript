@@ -16,7 +16,11 @@ function type_check_v1(variable, type) {
           return Array.isArray(variable);
         case "object":
           return variable !== null && !Array.isArray(variable);
+          default: 
       }
+      break;
+      default:
+        return typeOfVariable === type;
   }
 }
 
