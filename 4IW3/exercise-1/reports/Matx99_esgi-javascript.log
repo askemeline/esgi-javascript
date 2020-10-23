@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 15:01:19 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 15:01:15 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -10,75 +10,80 @@ ucfirst - 'null' OK
 ucfirst - 'Object' OK
 
 Checking capitalize
-capitalize - 'test' KO
-	expected : "Test" - got "TEST"
-capitalize - ' test' KO
-	expected : " Test" - got " TEST"
+capitalize - 'test' OK
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
-	expected : "Ipsum Dolor" - got "IPSUM DOLOR"
-capitalize - 'sit 8met consectetur' KO
-	expected : "Sit 8met Consectetur" - got "SIT 8MET CONSECTETUR"
-capitalize - '_dipiscing elit' KO
-	expected : "_dipiscing Elit" - got "_DIPISCING ELIT"
+	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "TOGGLECASEISTHECOOLEST"
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TOGGLECASEISTHECOOLEST"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "TOGGLECASEISTHE3OOLEST"
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "TOGGLECASEISTHECOOLEST"
+	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TOGGLECASEIS_THECOOLEST"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "TOGGLECASE"
+	expected : "Togglecase" - got "ToggleCase"
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' OK
-snake_case - 'toggleCase is the coolest' OK
-snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
+snake_case - 'toggleCase is the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "togglecase-is-the-coolest"
+snake_case - 'ToggleCase is the 3oolest' KO
+	expected : "togglecase_is_the_3oolest" - got "togglecase-is-the-3oolest"
 snake_case - 'ToggleCaseIsTheCool3st' OK
-snake_case - 'ToggleCase is_the coolest' OK
-snake_case - ' toggleCase' OK
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.toLowerCase is not a function
+snake_case - 'ToggleCase is_the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "togglecase-is_the-coolest"
+snake_case - ' toggleCase' KO
+	expected : "_togglecase" - got "-togglecase"
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
+leet - 'anaconda' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'anacoNDa' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'leet' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'yoda' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'evaluation' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - 'mon travail' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+leet - ' ' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+	Unexpected behaviour : TypeError - "leet" not implemented
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.replace is not a function
+	Unexpected behaviour : TypeError - "leet" not implemented
 
 Checking verlan
 verlan - 'anaconda' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'kayak' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'yoda m Luke' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - '70da m L(_)k3' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - ' ' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'spilt' of null
+	Unexpected behaviour : TypeError - "verlan" not implemented
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.spilt is not a function
+	Unexpected behaviour : TypeError - "verlan" not implemented
 
 Checking yoda
 yoda - 'anaconda' KO

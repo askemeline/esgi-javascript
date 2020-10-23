@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 15:01:17 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 15:01:14 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -15,10 +15,8 @@ capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - str.toLowerCase is not a function
+capitalize - 'null' OK
+capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -44,14 +42,10 @@ snake_case - 'Object' OK
 Checking leet
 leet - 'anaconda' OK
 leet - 'anacoNDa' OK
-leet - 'leet' KO
-	expected : "l33t" - got "l337"
-leet - 'yoda' KO
-	expected : "70d4" - got "y0d4"
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l(_)4710n"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n 7r4v41l"
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK
@@ -75,24 +69,29 @@ yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "\u000004.(?3=/.(.-793=4=?6=>=4"
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'antiConstiTutioNnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "\u000004.(?3=/.(.-793=4=?6=>=4"
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got undefined
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "\u0000.(5B6+:36-)/>5=8/>5=8A=@(725)9-35??-8?-@3-</B9434*?)A?8@7)25B6-4>B754?/@*9=5,?=2>B?(89-;"
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got undefined
 vig - ' - test' KO
-	expected : " " - got "\u0000"
-vig - 'null - test' OK
-vig - 'Object - test' OK
+	expected : " " - got undefined
+vig - 'null - test' KO
+	expected : "" - got undefined
+vig - 'Object - test' KO
+	expected : "" - got undefined
 
 Checking prop_access
-prop_access - 'path exist - value string' OK
-prop_access - 'path exist - value object' OK
-prop_access - 'path exist - value array' OK
+prop_access - 'path exist - value string' KO
+	expected : "dog" - got ""
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got ""
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got ""
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'test' of null
+	Unexpected behaviour : TypeError - Cannot read property 'hasOwnProperty' of null
 prop_access - 'path null' OK
 

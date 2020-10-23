@@ -92,7 +92,7 @@ function prop_access(object, path) {
 
         /* Je n'ai pas réussi à découper le path comme il fallait, je suis parti sur un découpage et une concaténation
         * en string mais forcément ça ne fonctionne pas*/
-        console.log(Object.keys(object)); // peut être utilisé ça ? 
+        console.log(Object.keys(object)); // peut être utilisé ça ?
 
         return object+pathFinal;
 
