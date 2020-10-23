@@ -8,26 +8,51 @@ function type_check_v1(arg, type){
  }
 
 function type_check_v2(arg, conf){
-    if (typeof(arg) === "object"){
-        arg.forEach(a => {
-            if (typeof(conf) === "enum"){
-                conf.forEach(en => {
-                    if (en === arg){
-                        return true;
+   c = true; 
+   Object.keys(conf).forEach(function(element){
+    if (!c) return c; 
+    switch (element){
+        case 'type' : 
+            c = type_check_v1(arg, conf['type'])
+            break;
+        case 'value':
+            c = (JSON.stringify(conf) === JSON.stringify(conf["value"]));
+            break;
+        case 'enum':
+            let found = false; 
+            enum_loop: {
+                for (value of conf.enum){
+                    if (type_check_v1(arg, 'array')){
+                        for (el of object){
+                            if (type_check_v2(el, {value: value})) {
+                                found = true; 
+                                break enum_loop; 
+                            }
+                        }
+                    } else if (type_check_v2(arg, {value: value})){
+                        found = true; 
+                        break; 
                     }
-                });
+                }
             }
-        });
+            if (!found) return false;
+            break;    
     }
-    if (typeof(arg) == conf.type && arg == conf.value){
-        return true;
-    }
-    return false; 
+   });
+   return c; 
 }
 
-console.log(type_check_v1(undefined, "undefined")); // JSON 
-
-console.log(type_check_v2()); 
+function type_check(arg, types){
+    const checked = type_check_v2(arg, types);
+    if (!types.properties) return checked; 
+    for (const tk in types.properties){
+        checked = type_check(type_check_v1(arg, 'object') ? arg[tk] : arg, types.properties[tk]);
+        if (!checked) break;
+    }
+    return checked; 
+}
+console.log(type_check_v2("foo", {enum:["foo", "bar", 3]})); 
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
+module.exports.type_check = type_check;
