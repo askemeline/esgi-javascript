@@ -4,15 +4,18 @@ function type_check_v1(myNumber, typecheck){
         case 'StringNotNumber':
         case 'BooleanNotNumber':
         case 'object':
-            return (typeof(myNumber)== typecheck);
-
-          console.log('Mangoes and papayas are $2.79 a pound.');
-          // expected output: "Mangoes and papayas are $2.79 a pound."
+        case 'string':
+        case 'null':
+            return (typeof(myNumber) === typecheck);
           break;
+        case 'undefined':
+            return myNumber === undefined;
+
         default:
          return false;
       }
 }
+console.log(typeof(type_check_v1(1,'number')))
 
 
 
