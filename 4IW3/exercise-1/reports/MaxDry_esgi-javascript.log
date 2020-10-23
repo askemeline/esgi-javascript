@@ -1,49 +1,45 @@
 Loading script...
 
-Fri Oct 23 2020 14:30:19 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 14:31:06 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
 ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	expected : "" - got "noop"
 ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	expected : "" - got "noop"
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' OK
+capitalize - ' test' KO
+	expected : " Test" - got "noop Test"
 capitalize - 'ipsum DOLOR' KO
 	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got "noop"
 capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - message.split is not a function
+	expected : "" - got "noop"
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "ToggleCase Is The Coolest"
+camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs The Coolest"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIs The 3oolest"
+	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseIsThe3oolest"
 camelCase - 'ToggleCaseIsTheCoolest' KO
 	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_the Coolest"
+	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "ToggleCase"
+	expected : "Togglecase" - got "noopToggleCase"
 camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got "noop"
 camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - message.split is not a function
+	expected : "" - got "noop"
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
@@ -59,24 +55,22 @@ snake_case - 'ToggleCase is_the coolest' KO
 snake_case - ' toggleCase' KO
 	expected : "_togglecase" - got "_toggleCase"
 snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+	expected : "" - got "noop"
 snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - message.replace is not a function
+	expected : "" - got "noop"
 
 Checking leet
 leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
-leet - 'evaluation' KO
-	expected : "3v4l(_)4t10n" - got "3v4l(_)4ti0n"
-leet - 'mon travail' KO
-	expected : "m0n tr4v41l" - got "m0n tr4v4il"
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'allReplace' of null
+	expected : "" - got "noop"
 leet - 'Object' KO
-	Unexpected behaviour : TypeError - message.allReplace is not a function
+	expected : "" - got "noop"
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -85,9 +79,9 @@ verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
 verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got "noop"
 verlan - 'Object' KO
-	Unexpected behaviour : TypeError - message.split is not a function
+	expected : "" - got "noop"
 
 Checking yoda
 yoda - 'anaconda' OK
@@ -95,9 +89,9 @@ yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
 yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+	expected : "" - got "noop"
 yoda - 'Object' KO
-	Unexpected behaviour : TypeError - message.split is not a function
+	expected : "" - got "noop"
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
