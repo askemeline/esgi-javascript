@@ -1,20 +1,29 @@
 Loading script...
 
-Fri Oct 23 2020 19:00:24 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 19:00:31 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
-type_check_v1 - 'number' OK
-type_check_v1 - 'StringNotNumber' OK
-type_check_v1 - 'BooleanNotNumber' OK
-type_check_v1 - 'object' OK
-type_check_v1 - 'null' OK
-type_check_v1 - 'nullNotObject' OK
+type_check_v1 - 'number' KO
+	Unexpected behaviour : ReferenceError - type is not defined
+type_check_v1 - 'StringNotNumber' KO
+	Unexpected behaviour : ReferenceError - type is not defined
+type_check_v1 - 'BooleanNotNumber' KO
+	Unexpected behaviour : ReferenceError - type is not defined
+type_check_v1 - 'object' KO
+	Unexpected behaviour : ReferenceError - type is not defined
+type_check_v1 - 'null' KO
+	Unexpected behaviour : ReferenceError - type is not defined
+type_check_v1 - 'nullNotObject' KO
+	Unexpected behaviour : ReferenceError - type is not defined
 type_check_v1 - 'undefined' KO
-	expected : true - got false
-type_check_v1 - 'string' OK
-type_check_v1 - 'array' OK
+	Unexpected behaviour : ReferenceError - type is not defined
+type_check_v1 - 'string' KO
+	Unexpected behaviour : ReferenceError - type is not defined
+type_check_v1 - 'array' KO
+	Unexpected behaviour : ReferenceError - type is not defined
 type_check_v1 - 'function' KO
-	expected : true - got false
-type_check_v1 - 'arrayNotObject' OK
+	Unexpected behaviour : ReferenceError - type is not defined
+type_check_v1 - 'arrayNotObject' KO
+	Unexpected behaviour : ReferenceError - type is not defined
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
