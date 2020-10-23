@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 18:14:05 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 18:14:59 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
@@ -14,39 +14,34 @@ type_check_v1 - 'undefined' KO
 	expected : true - got false
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' KO
-	expected : true - got false
+	Unexpected behaviour : TypeError - value.isArray is not a function
 type_check_v1 - 'function' KO
 	expected : true - got false
 type_check_v1 - 'arrayNotObject' KO
 	expected : false - got true
 
 Checking type_check_v2
-type_check_v2 - 'number' KO
-	Unexpected behaviour : ReferenceError - type_check_V1 is not defined
-type_check_v2 - 'numberNotValue' KO
-	Unexpected behaviour : ReferenceError - type_check_V1 is not defined
-type_check_v2 - 'numberNotObject' KO
-	Unexpected behaviour : ReferenceError - type_check_V1 is not defined
-type_check_v2 - 'stringEnum' KO
-	Unexpected behaviour : ReferenceError - type_check_V1 is not defined
+type_check_v2 - 'number' OK
+type_check_v2 - 'numberNotValue' OK
+type_check_v2 - 'numberNotObject' OK
+type_check_v2 - 'stringEnum' OK
 type_check_v2 - 'objectMatch' KO
-	Unexpected behaviour : ReferenceError - type_check_V1 is not defined
-type_check_v2 - 'objectNotMatch' KO
-	Unexpected behaviour : ReferenceError - type_check_V1 is not defined
+	expected : true - got false
+type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
 type_check - 'number' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : RangeError - Maximum call stack size exceeded
 type_check - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : RangeError - Maximum call stack size exceeded
 type_check - 'numberNotObject' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : RangeError - Maximum call stack size exceeded
 type_check - 'stringEnum' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	Unexpected behaviour : RangeError - Maximum call stack size exceeded
 type_check - 'objectMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : true - got undefined
 type_check - 'objectNotMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : false - got undefined
 type_check - 'objectSuperMatch' KO
-	Unexpected behaviour : TypeError - "type_check" not implemented
+	expected : true - got undefined
 

@@ -1,6 +1,14 @@
 Loading script...
 
-Fri Oct 23 2020 18:14:07 GMT+0200 (GMT+02:00) - Starting tests...
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got ".animal = [object Object]\n"
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
+
+
+Fri Oct 23 2020 18:15:01 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented

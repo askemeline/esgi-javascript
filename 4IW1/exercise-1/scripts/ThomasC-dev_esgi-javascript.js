@@ -42,6 +42,26 @@ function leet(chaine) {
   });
 }
 
+function prop_access(object, path) {
+  if (typeof path != "string" || path === "") return object;
+
+  if (typeof object != "object" || object == null) {
+    console.log(path + " not exist");
+    return;
+  }
+
+  const props = path.split(".");
+  let property = object;
+  props.forEach(function (prop) {
+    if (!property.hasOwnProperty(prop)) {
+      console.log(path + " not exist");
+      return;
+    }
+    property = property[prop];
+  });
+  return property;
+}
+
 function verlan(chaine) {
   if (typeof chaine !== "string" || chaine === "") return "";
   return chaine
@@ -97,26 +117,6 @@ function vig(chaine, code) {
   }
 
   return res;
-}
-
-function prop_access(object, path) {
-  if (typeof path != "string" || path === "") return object;
-
-  if (typeof object != "object" || object == null) {
-    console.log(path + " not exist");
-    return;
-  }
-
-  const props = path.split(".");
-  let property = object;
-  props.forEach(function (prop) {
-    if (!property.hasOwnProperty(prop)) {
-      console.log(path + " not exist");
-      return;
-    }
-    property = property[prop];
-  });
-  return property;
 }
 
 module.exports.ucfirst = ucfirst;
