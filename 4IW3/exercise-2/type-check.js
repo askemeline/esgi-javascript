@@ -33,7 +33,12 @@ function type_check_v1_2(value, type) {
 }
 
 function type_check_v2(value, conf) {
-    for (key in conf)
+    for (key in conf) {
+        switch(key) {
+            case 'type':
+                
+        }
+    }
 }
 
 console.log(type_check(null, "object"));
