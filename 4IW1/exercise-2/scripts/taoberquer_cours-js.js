@@ -1,6 +1,9 @@
 function type_check_v1(value, type) {
-  if (type == 'array' && value.isArray()) return false;
-  if (type == 'null' && value === null) return false;
+  if (type == 'array' && ! Array.isArray(value)) return false;
+  if (type == 'null' && value !== null) return false;
+  if (type == 'function' && {}.toString.call(value) !== '[object Function]') return false;
+  if (type == 'arrayNotObject' && (! Array.isArray(value) || typeof value === 'object')) return false;
+  if (type == 'nullNotObject' && (value !== null || typeof value === 'object')) return false;
 
   return typeof value === type;
 }

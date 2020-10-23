@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 18:31:09 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 18:31:56 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
@@ -14,7 +14,7 @@ type_check_v1 - 'undefined' KO
 	expected : true - got false
 type_check_v1 - 'string' OK
 type_check_v1 - 'array' KO
-	Unexpected behaviour : TypeError - value.isArray is not a function
+	expected : true - got false
 type_check_v1 - 'function' KO
 	expected : true - got false
 type_check_v1 - 'arrayNotObject' KO
