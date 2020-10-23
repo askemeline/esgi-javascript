@@ -1,13 +1,6 @@
 function type_check_v1(variable, type) {
   const typeOfVariable = typeof variable;
   switch (typeOfVariable) {
-    case "string":
-    case "number":
-    case "boolean":
-    case "undefined":
-    case "symbol":
-    case "function":
-      return typeOfVariable === type;
     case "object":
       switch (type) {
         case "null":
@@ -16,11 +9,12 @@ function type_check_v1(variable, type) {
           return Array.isArray(variable);
         case "object":
           return variable !== null && !Array.isArray(variable);
-          default: 
+        default:
+          return false;
       }
       break;
-      default:
-        return typeOfVariable === type;
+    default:
+      return typeOfVariable === type;
   }
 }
 
