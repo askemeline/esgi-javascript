@@ -3,7 +3,13 @@ function type_check_v1(variable, type) {
 
   switch (typeOfVariable) {
     case "object":
-        switch(type)
+      switch (type) {
+        case "null":
+          return variable === null;
+        case "array":
+          return Array.isArray(variable);
+        
+      }
     default:
       return typeOfVariable === type;
   }
