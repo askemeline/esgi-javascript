@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 18:07:38 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 18:09:13 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -47,10 +47,8 @@ leet - 'yoda' OK
 leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.replace is not a function
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -58,20 +56,16 @@ verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.split is not a function
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - chaine.split is not a function
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' OK

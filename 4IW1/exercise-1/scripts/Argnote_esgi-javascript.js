@@ -21,7 +21,7 @@ function snake_case(chaine)
     if(typeof chaine !== "string" || chaine === "") return "";
     return chaine.split(' ').map(s=> s.toLocaleLowerCase()).join('_');
 }
-//  console.log(capitalize('je suis un tEst'));
+    //console.log(capitalize('ipsum DOLOR'));
 // console.log(snake_case('je sUIs UN test'));
 
 module.exports.ucfirst = ucfirst;
