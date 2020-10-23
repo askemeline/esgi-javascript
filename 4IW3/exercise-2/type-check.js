@@ -32,6 +32,10 @@ function type_check_v1_2(value, type) {
   }
 }
 
+function type_check_v2(value, conf) {
+
+}
+
 console.log(type_check(null, "object"));
 console.log(type_check_v1(null, "object"));
 
