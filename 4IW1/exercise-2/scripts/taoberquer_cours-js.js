@@ -1,27 +1,22 @@
-function type_check_v1(value, type) {
+function type_check_v1 (value, type) {
   const typeOfVariable = typeof value;
 
-  switch (typeOfVariable) {
-    case 'object':
-      switch (type) {
-        case 'null':
-          return value === null;
-        case 'array':
-          return Array.isArray(value);
-        case 'object':
-          return value !== null && ! Array.isArray(value);
-        default:
-          return false;
-      }
-    default:
-      return typeOfVariable === type;
-  }
+  if (typeOfVariable !== 'object') return typeOfVariable === type;
+  if (type === 'object') return value !== null && ! Array.isArray(value);
+
+  return (type === 'null' && value === null) || (type === 'array' && Array.isArray(value));
+}
+
+function better_includes (array, search) {
+  for (value of array) if (value === search) return true;
+
+  return false;
 }
 
 function type_check_v2(value, checkers) {
   if ('type' in checkers && ! type_check_v1(value, checkers.type)) return false;
-  if ('value' in checkers && value !== checkers.value) return false;
-  if ('enum' in checkers && ! checkers.enum.includes(value)) return false;
+  if ('value' in checkers && JSON.stringify(value) !== JSON.stringify(checkers.value)) return false;
+  if ('enum' in checkers && ! better_includes(checkers.enum,value)) return false;
 
   return true;
 }
