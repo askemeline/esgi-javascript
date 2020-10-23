@@ -15,7 +15,7 @@ function type_check_v1(value, type) {
 }
 
 function type_check_v2(value, type) {
-    if (type["type"] && typeof value !== type["type"]) {
+    if (type["type"] && !(type_check_v1(value, type["type"]))) {
         return false;
     }
     if (type["value"] && value !== type["value"]){
