@@ -1,13 +1,20 @@
 function type_check_v1(value, type) {
     switch (typeof value) {
-        case 'object':
-            if (type === "array") return Array.isArray(value);
-            if (type === "null") return value === null;
-            if (type === "undefined") return value === undefined;
-            if (type === "function") return value === function(){};
-            return value != null && !Array.isArray(value);
-        default:
-            return typeof value === type;
+        case "string":
+        case "number":
+        case "boolean":
+        case "function":
+        case "undefined":
+            return type === typeof value;
+        case "object":
+            switch (type) {
+                case "array":
+                    return Array.isArray(value);
+                case "null":
+                    return value === null;
+                default:
+                    return value !== null && !Array.isArray(value);
+            }
     }
 }
 
