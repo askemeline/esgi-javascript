@@ -1,6 +1,25 @@
 Loading script...
 
-Fri Oct 23 2020 19:02:56 GMT+0200 (GMT+02:00) - Starting tests...
+vig - 'Object - test' OK
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	expected : "dog" - got "animal.type.name.animal = [object Object]\n"
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got "animal.type.animal = [object Object]\n"
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got "animals.1.type.animals = [object Object],[object Object]\n"
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got ".animal = [object Object]\n"
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
+
+
+Fri Oct 23 2020 19:03:56 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
