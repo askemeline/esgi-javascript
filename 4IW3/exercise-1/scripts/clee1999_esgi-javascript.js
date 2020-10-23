@@ -40,12 +40,14 @@ function leet(chaine) {
 
 
 function prop_access(obj, path) {
-    if(typeof(obj) != object || obj == null ) 
-    return path + " not exist";
-    if(typeof obj === undefined || obj == null  ) 
-    return obj;
+    if(typeof(obj) != object || obj === null ) {
+     return path + " not exist";
+    }
+    if (typeof path != "string" ||  path === "") {
+        return object;
+      }
     let err = '';
-    path.split('.').map(chld => typeof object[chld] === 'undefined' && err === 'null' ? err = chemin.split(chld)[0] + chld + "not exist " : object = object[child]);
+    path.split('.').map(chld => typeof obj[chld] === 'null' && err === 'null' ? err = path.split(chld)[0] + chld + "no exist " : obj = obj[chld]);
     return obj;
 
 }

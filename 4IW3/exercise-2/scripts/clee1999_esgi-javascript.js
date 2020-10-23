@@ -1,19 +1,20 @@
-function type_check_v1(input, type) {
-    switch (typeof input) {
+function type_check_v1(variable, type) {
+    const typeOfVariable = typeof variable;
+    switch (typeOfVariable) {
         case "string":
         case "number":
         case "function":
         case "undefined":
         case "boolean":
-            return typeof input === type;
+            return typeof variable === type;
         case "object":
             switch (type) {
                 case 'null':
-                    return input === null;
+                    return variable === null;
                 case 'array':
-                    return Array.isArray(input);
-                default:
-                    return input !== null && !Array.isArray(input);
+                    return Array.isArray(variable);
+                case "object":
+                    return variable !== null && !Array.isArray(variable);
             }
     }
 }
