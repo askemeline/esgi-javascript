@@ -46,10 +46,23 @@ function type_check_v2(value, conf) {
         if (JSON.stringify(value) !== JSON.stringify(conf.value)) return false;
         break;
       case "enum":
-          for (subValue of )
+        // Par défault, non trouvé dans l'enum
+        let found = false;
+        for (subValue of conf.enum) {
+          found = type_check_v2(value, { value: subValue });
+          // ou
+          // found = JSON.stringify(value) !== JSON.stringify(subValue);
+          
+          // Si je trouve, je m'arrete
+          if (found) break;
+        }
+        // Si je ne me suis jamais arrêté, value n'est pas dans l'enum => return false
+        if (!found) return false;
         break;
     }
   }
+
+  return true;
 }
 
 console.log(type_check(null, "object"));
