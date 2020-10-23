@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 14:42:05 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 14:42:46 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -39,18 +39,12 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : ReferenceError - e is not defined
-leet - 'anacoNDa' KO
-	Unexpected behaviour : ReferenceError - e is not defined
-leet - 'leet' KO
-	Unexpected behaviour : ReferenceError - e is not defined
-leet - 'yoda' KO
-	Unexpected behaviour : ReferenceError - e is not defined
-leet - 'evaluation' KO
-	Unexpected behaviour : ReferenceError - e is not defined
-leet - 'mon travail' KO
-	Unexpected behaviour : ReferenceError - e is not defined
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK

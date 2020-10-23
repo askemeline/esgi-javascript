@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 14:42:05 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 14:42:46 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
@@ -16,6 +16,13 @@ ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
 Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got "animal.type.animal = [object Object]\n"
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got "animals.1.type.animals = [object Object],[object Object]\n"
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
@@ -26,9 +33,6 @@ prop_access - 'path null' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
 
 
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
