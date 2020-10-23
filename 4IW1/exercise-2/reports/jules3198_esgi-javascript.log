@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 19:00:29 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 19:01:19 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
@@ -18,17 +18,17 @@ type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
 type_check_v2 - 'number' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	Unexpected behaviour : ReferenceError - type is not defined
 type_check_v2 - 'numberNotValue' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	Unexpected behaviour : ReferenceError - type is not defined
 type_check_v2 - 'numberNotObject' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	Unexpected behaviour : ReferenceError - type is not defined
 type_check_v2 - 'stringEnum' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	Unexpected behaviour : ReferenceError - type is not defined
 type_check_v2 - 'objectMatch' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	Unexpected behaviour : ReferenceError - type is not defined
 type_check_v2 - 'objectNotMatch' KO
-	Unexpected behaviour : TypeError - "type_check_v2" not implemented
+	Unexpected behaviour : ReferenceError - type is not defined
 
 Checking type_check
 type_check - 'number' KO
