@@ -32,9 +32,11 @@ function type_check_v2(variable, conf) {
     switch (key) {
       case "type":
         if (!type_check_v1(variable, conf.type)) return false;
+        break;
       case "value":
         if (JSON.stringify(variable) !== JSON.stringify(conf.value))
           return false;
+        break;
       //
       case "enum":
         let found = false;

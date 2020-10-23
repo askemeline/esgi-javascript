@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 19:46:39 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 19:47:39 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
@@ -16,40 +16,6 @@ ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
 Checking capitalize
-camelCase - 'Object' OK
-
-Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "toggleCase-is-the-coolest"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "ToggleCase-is-the-3oolest"
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase-is_the-coolest"
-snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "-toggleCase"
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - a.replace is not a function
-
-Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - a.replace is not a function
-
-Checking verlan
 capitalize - 'test' OK
 capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
@@ -146,6 +112,73 @@ prop_access - 'path null' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
 
 
+Fri Oct 23 2020 19:47:40 GMT+0200 (GMT+02:00) - Starting tests...
+Checking ucfirst
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' OK
+capitalize - 'Object' OK
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
+camelCase - 'null' OK
+camelCase - 'Object' OK
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
+snake_case - 'toggleCase is the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "toggleCase-is-the-coolest"
+snake_case - 'ToggleCase is the 3oolest' KO
+	expected : "togglecase_is_the_3oolest" - got "ToggleCase-is-the-3oolest"
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
+snake_case - 'ToggleCase is_the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "ToggleCase-is_the-coolest"
+snake_case - ' toggleCase' KO
+	expected : "_togglecase" - got "-toggleCase"
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - a.replace is not a function
+
+Checking leet
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - a.replace is not a function
+
+Checking verlan
 verlan - 'anaconda' OK
 verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
