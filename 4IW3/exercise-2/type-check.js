@@ -32,3 +32,6 @@ console.log(type_check_v1(null, "null"));
 
 console.log(type_check({}, "null"));
 console.log(type_check_v1({}, "null"));
+
+console.log(type_check([], "array"));
+console.log(type_check_v1([], "array"));
