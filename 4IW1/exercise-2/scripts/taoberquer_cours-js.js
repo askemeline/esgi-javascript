@@ -24,7 +24,7 @@ function type_check_v2(value, checkers) {
 function type_check(value, checkers) {
   if (! type_check_v2(value, checkers)) return false;
 
-  for (key in value) if (typeof value[key] === 'object' && ! type_check(value[key], checkers[key])) return false;
+  for (key in value) if (type_check_v1(value[key], 'object') && ! type_check(value[key], checkers[key])) return false;
 
   return true;
 }
