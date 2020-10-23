@@ -5,17 +5,18 @@ function type_check_v1(myNumber, typecheck){
         case 'BooleanNotNumber':
         case 'object':
         case 'string':
-        case 'null':
             return (typeof(myNumber) === typecheck);
           break;
         case 'undefined':
             return myNumber === undefined;
-
+            case 'null':
+                return myNumber === null;
         default:
          return false;
       }
 }
-console.log(typeof(type_check_v1(1,'number')))
+str = null;
+console.log(type_check_v1(str,'null'))
 
 
 
