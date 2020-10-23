@@ -46,7 +46,7 @@ function type_check_v2(value, conf) {
         if (JSON.stringify(value) !== JSON.stringify(conf.value)) return false;
         break;
       case "enum":
-          
+          for (subValue of )
         break;
     }
   }
