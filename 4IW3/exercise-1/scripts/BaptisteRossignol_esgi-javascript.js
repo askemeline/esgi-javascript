@@ -14,7 +14,7 @@ function camelCase(text) {
     return capitalize(text.replace(/_/g, ' ')).replace(/\W/g, "");
 }
 
-function snakeCase(text) {
+function snake_case(text) {
     if (typeof text !== "string" || text === "") return "";
     return text.replace(/ /g, '_');
 }
@@ -60,6 +60,8 @@ console.log(capitalize("bonjour la france"));
 // Toutes les 1ères lettres des mots en majuscules + mots collés
 console.log(camelCase("toggleCase is the coolest"));
 
+console.log(snake_case("toggle case is the coolest"));
+
 // Cryptage LEET
 console.log(leet("anaconda"));
 
@@ -84,6 +86,7 @@ console.log(yoda("bonjour le monde"));
 module.exports.ucfirst = ucfirst;
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
+module.exports.snake_case = snake_case;
 module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
