@@ -18,7 +18,7 @@ function type_check_v1(variable, type) {
   }
 }
 
-function type_check(value, type) {
+function type_check_v1_2(value, type) {
   if (typeof value != "object") {
     return type === typeof value;
   } else {
