@@ -47,7 +47,7 @@ function leet(string) {
         i: "1",
         o: "0",
         u: "(_)",
-        y: "5",
+        y: "7",
     }
 
     for (let i = 0; i < string.length; i++) {

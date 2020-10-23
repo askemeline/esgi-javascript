@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 19:03:56 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 19:05:20 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
 type_check_v1 - 'number' OK
 type_check_v1 - 'StringNotNumber' OK
@@ -30,8 +30,7 @@ type_check_v2 - 'objectMatch' KO
 type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
-type_check - 'number' KO
-	Unexpected behaviour : ReferenceError - object is not defined
+type_check - 'number' OK
 type_check - 'numberNotValue' OK
 type_check - 'numberNotObject' OK
 type_check - 'stringEnum' OK
@@ -39,5 +38,5 @@ type_check - 'objectMatch' KO
 	expected : true - got false
 type_check - 'objectNotMatch' OK
 type_check - 'objectSuperMatch' KO
-	Unexpected behaviour : ReferenceError - object is not defined
+	Unexpected behaviour : TypeError - Cannot use 'in' operator to search for 'type' in undefined
 

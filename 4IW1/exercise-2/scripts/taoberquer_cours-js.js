@@ -17,9 +17,9 @@ function type_check_v2(value, checkers) {
 function type_check(value, checkers) {
   if (! type_check_v2(value, checkers)) return false;
 
-  for (key in object) {
-    if (['type', 'value', 'enum'].includes(object[key])) continue;
-  }
+  for (key in value) if (typeof value[key] === 'object' && ! type_check_v2(value[key], checkers[key])) return false;
+
+  return true;
 }
 
 module.exports.type_check_v1 = type_check_v1;
