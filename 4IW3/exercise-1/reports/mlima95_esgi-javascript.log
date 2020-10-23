@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 14:33:14 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 14:33:12 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -23,7 +23,8 @@ camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' OK
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
@@ -42,7 +43,8 @@ Checking leet
 leet - 'anaconda' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
-leet - 'yoda' OK
+leet - 'yoda' KO
+	expected : "70d4" - got "y0d4"
 leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
@@ -67,22 +69,27 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'anticonstitutionnellement - foo' OK
+vig - 'anticonstitutionnellement - foo' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'antiConstiTutioNnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "fbhnncsghnniywcebsqzsrsby"
+	Unexpected behaviour : TypeError - "vig" not implemented
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "hnazkvcziygrasjgrasjospnydmmwicmqqijqibcitgwbcblqmoqxbymdazibryabcgblwsmjqsdrqnjwiua"
+	Unexpected behaviour : TypeError - "vig" not implemented
 vig - ' - test' KO
-	expected : " " - got "s"
-vig - 'null - test' OK
-vig - 'Object - test' OK
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'null - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'Object - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
 prop_access - 'path exist - value string' OK
 prop_access - 'path exist - value object' OK
 prop_access - 'path exist - value array' OK
-prop_access - 'path not exist' OK
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
 prop_access - 'path empty' OK
-prop_access - 'object null' OK
+prop_access - 'object null' KO
+	expected : test not exist - got null
 prop_access - 'path null' OK
 
