@@ -1,45 +1,34 @@
 Loading script...
 
-Fri Oct 23 2020 18:58:03 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 18:58:54 GMT+0200 (GMT+02:00) - Starting tests...
 Checking type_check_v1
-type_check_v1 - 'number' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
-type_check_v1 - 'StringNotNumber' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
+type_check_v1 - 'number' OK
+type_check_v1 - 'StringNotNumber' OK
 type_check_v1 - 'BooleanNotNumber' OK
 type_check_v1 - 'object' OK
 type_check_v1 - 'null' OK
 type_check_v1 - 'nullNotObject' OK
 type_check_v1 - 'undefined' KO
 	expected : true - got false
-type_check_v1 - 'string' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
+type_check_v1 - 'string' OK
 type_check_v1 - 'array' OK
 type_check_v1 - 'function' KO
 	expected : true - got false
 type_check_v1 - 'arrayNotObject' OK
 
 Checking type_check_v2
-type_check_v2 - 'number' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
-type_check_v2 - 'numberNotValue' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
-type_check_v2 - 'numberNotObject' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
-type_check_v2 - 'stringEnum' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
+type_check_v2 - 'number' OK
+type_check_v2 - 'numberNotValue' OK
+type_check_v2 - 'numberNotObject' OK
+type_check_v2 - 'stringEnum' OK
 type_check_v2 - 'objectMatch' OK
 type_check_v2 - 'objectNotMatch' OK
 
 Checking type_check
-type_check - 'number' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
-type_check - 'numberNotValue' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
-type_check - 'numberNotObject' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
-type_check - 'stringEnum' KO
-	Unexpected behaviour : ReferenceError - typecheck is not defined
+type_check - 'number' OK
+type_check - 'numberNotValue' OK
+type_check - 'numberNotObject' OK
+type_check - 'stringEnum' OK
 type_check - 'objectMatch' OK
 type_check - 'objectNotMatch' OK
 type_check - 'objectSuperMatch' OK
