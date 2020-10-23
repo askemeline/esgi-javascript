@@ -40,11 +40,11 @@ function leet(chaine) {
 
 
 function prop_access(obj, path) {
-    if(typeof(obj) != object || obj === null ) {
+    if(typeof(obj) !== "object" || obj === null ) {
      return path + " not exist";
     }
     if (typeof path != "string" ||  path === "") {
-        return object;
+        return obj;
       }
     let err = '';
     path.split('.').map(chld => typeof obj[chld] === 'null' && err === 'null' ? err = path.split(chld)[0] + chld + "no exist " : obj = obj[chld]);
