@@ -1,13 +1,36 @@
 Loading script...
-Invalid script: ReferenceError: type_check is not defined
-ReferenceError: type_check is not defined
-    at Object.<anonymous> (/Users/karl/projects/2020-2021/esgi-javascript/4IW3/exercise-2/scripts/nicoCastro99_esgi-javascript.js:99:29)
-    at Module._compile (internal/modules/cjs/loader.js:1133:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)
-    at Module.load (internal/modules/cjs/loader.js:977:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:877:14)
-    at Module.require (internal/modules/cjs/loader.js:1019:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at startTest (/executor.js:43:21)
-    at process.<anonymous> (/executor.js:120:9)
-    at process.emit (events.js:310:20)
+
+Fri Oct 23 2020 17:19:55 GMT+0200 (GMT+02:00) - Starting tests...
+Checking type_check_v1
+type_check_v1 - 'number' OK
+type_check_v1 - 'StringNotNumber' OK
+type_check_v1 - 'BooleanNotNumber' OK
+type_check_v1 - 'object' OK
+type_check_v1 - 'null' OK
+type_check_v1 - 'nullNotObject' OK
+type_check_v1 - 'undefined' KO
+	expected : true - got false
+type_check_v1 - 'string' OK
+type_check_v1 - 'array' OK
+type_check_v1 - 'function' KO
+	expected : true - got false
+type_check_v1 - 'arrayNotObject' OK
+
+Checking type_check_v2
+type_check_v2 - 'number' OK
+type_check_v2 - 'numberNotValue' OK
+type_check_v2 - 'numberNotObject' OK
+type_check_v2 - 'stringEnum' OK
+type_check_v2 - 'objectMatch' OK
+type_check_v2 - 'objectNotMatch' OK
+
+Checking type_check
+type_check - 'number' OK
+type_check - 'numberNotValue' OK
+type_check - 'numberNotObject' OK
+type_check - 'stringEnum' OK
+type_check - 'objectMatch' OK
+type_check - 'objectNotMatch' OK
+type_check - 'objectSuperMatch' KO
+	Unexpected behaviour : ReferenceError - typeCheck is not defined
+

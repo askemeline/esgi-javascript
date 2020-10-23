@@ -20,7 +20,7 @@ function snake_case(chaine) {
 
 function leet(chaine) {
     if (typeof chaine !== "string" || chaine === "") return "";
-    return chaine.replace(/[aeiouy]/gi, function($e) {
+    return chaine.replace(/[aeiouy]/gi, function(e) {
         switch (e.toLowerCase()) {
             case 'a':
                 return 4;
@@ -66,10 +66,26 @@ function vig(str, code) {
     }).join('');
 }
 
-function prop_access(obj, path) {
-    return path.split('.').reduce((prev, curr) => {
-        return prev ? prev[curr] : null
-    }, obj) || path + " not exist";
+function prop_access(object, path) {
+    if (typeof path != "string") return object;
+
+    if (typeof object != "object" || object == null) {
+        console.log(path + " not exist");
+        return;
+    }
+
+    if (path === "") return object;
+
+    const props = path.split(".");
+    let property = object;
+    props.forEach(function(prop) {
+        if (!property.hasOwnProperty(prop)) {
+            console.log(path + " not exist");
+            return;
+        }
+        property = property[prop];
+    });
+    return property;
 }
 
 console.log(vig("une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test", "nawakdecheznawak"))

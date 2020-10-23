@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 16:56:40 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 17:19:55 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
@@ -26,18 +26,14 @@ capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "togglecaseisthecoolest"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "toggleCaseisthecoolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "ToggleCaseisthe3oolest"
-camelCase - 'ToggleCaseIsTheCoolest' KO
-	expected : "Togglecaseisthecoolest" - got "ToggleCaseIsTheCoolest"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseis_thecoolest"
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "toggleCase"
+	Unexpected behaviour : TypeError - Cannot read property 'toUpperCase' of undefined
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
@@ -60,12 +56,18 @@ snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
+leet - 'anaconda' KO
+	expected : "4n4c0nd4" - got "1n1c4nd1"
+leet - 'anacoNDa' KO
+	expected : "4n4c0ND4" - got "1n1c4ND1"
+leet - 'leet' KO
+	expected : "l33t" - got "l22t"
+leet - 'yoda' KO
+	expected : "70d4" - got "64d1"
+leet - 'evaluation' KO
+	expected : "3v4l(_)4t10n" - got "2v1l51t34n"
+leet - 'mon travail' KO
+	expected : "m0n tr4v41l" - got "m4n tr1v13l"
 leet - ' ' OK
 leet - 'null' OK
 leet - 'Object' OK

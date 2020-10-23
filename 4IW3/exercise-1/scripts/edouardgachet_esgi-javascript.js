@@ -25,7 +25,7 @@ const capitalize = (param) => {
 
 const camelCase = (param) => {
     if(typeof param !== "string" || param === "") return "";
-    return param
+    return capitalize(param)
     .split(' ').join('')
 }
 
@@ -37,8 +37,12 @@ const snakeCase = (param) => {
 
 const leet = (param) => {
     if(typeof param !== "string" || param === "") return "";
+    const table = {a:1, e:2, i:3, o:4, u:5, y:6}
     return param
-    .split('').map(x => {
+    .replace(/[aeiouy]/gi, el => {
+        return table[el]
+    })
+/*    .split('').map(x => {
        x == 'a' ? x = 4 : x
        x == 'e' ? x = 3 : x
        x == 'i' ? x = 1 : x
@@ -47,35 +51,16 @@ const leet = (param) => {
        x == 'y' ? x = 7 : x
        return x
     }).join('')
+*/
 }
 
 const propAccess = (obj, prop) => {
 
-/*    for (const property in obj) {
+    for (const property in obj) {
         if(property != undefined) {
 
         }
-    }*/
-
-    let pathOne;
-    let pathTwo;
-    let props;
-    let result;
-
-    props = prop.split('.')
-    pathOne = props[0]
-    pathTwo = props[1]
-
-    if(obj[pathOne] != undefined) {
-        if(obj[pathOne][pathTwo] != undefined) {
-            result = obj[pathOne][pathTwo]
-        }
-        else{
-            result = obj[pathOne]
-        }
     }
-    return result
-
 }
 
 const verlan = (param) => {
@@ -88,15 +73,6 @@ const yoda = (param) => {
     return param
     .split(' ').reverse().join(' ')
 }
-
-console.log(ucFirst(chaine))
-console.log(capitalize(chaine))
-console.log(camelCase(chaine))
-console.log(snakeCase(chaine))
-console.log(leet(chaine))
-console.log(propAccess(prairie, 'animal.type'))
-console.log(verlan(chaine))
-console.log(yoda(chaine))
 
 module.exports.capitalize = capitalize;
 module.exports.camelCase = camelCase;
