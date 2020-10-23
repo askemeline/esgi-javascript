@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 14:42:39 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 14:43:18 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -122,8 +122,10 @@ Checking prop_access
 prop_access - 'path exist - value string' OK
 prop_access - 'path exist - value object' OK
 prop_access - 'path exist - value array' OK
-prop_access - 'path not exist' OK
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
 prop_access - 'path empty' OK
-prop_access - 'object null' OK
+prop_access - 'object null' KO
+	expected : test not exist - got null
 prop_access - 'path null' OK
 
