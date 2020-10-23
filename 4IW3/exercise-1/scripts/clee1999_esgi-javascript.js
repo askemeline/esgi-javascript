@@ -39,11 +39,14 @@ function leet(chaine) {
 }
 
 
-function prop_access(object, path) {
-    if(typeof(object) != object || value == null ) 
+function prop_access(obj, path) {
+    if(typeof(obj) != object || obj == null ) 
     return path + " not exist";
-    if(typeof value === undefined || value == null  ) 
-    return object;
+    if(typeof obj === undefined || obj == null  ) 
+    return obj;
+    let err = '';
+    path.split('.').map(chld => typeof object[chld] === 'undefined' && err === 'null' ? err = chemin.split(chld)[0] + chld + "not exist " : object = object[child]);
+    return obj;
 
 }
 
