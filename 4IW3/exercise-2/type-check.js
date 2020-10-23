@@ -33,6 +33,10 @@ function type_check(value, type) {
     }​​​​​
 }
 
+function type_check(value, type) {
+    if(typeof value != "")
+}
+
 console.log(type_check(null, "object"));
 console.log(type_check_v1(null, "object"));
 
