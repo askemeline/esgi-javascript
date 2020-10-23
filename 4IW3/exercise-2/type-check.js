@@ -52,7 +52,7 @@ function type_check_v2(value, conf) {
           found = type_check_v2(value, { value: subValue });
           // ou
           // found = JSON.stringify(value) !== JSON.stringify(subValue);
-          
+
           // Si je trouve, je m'arrete
           if (found) break;
         }
@@ -65,20 +65,17 @@ function type_check_v2(value, conf) {
   return true;
 }
 
-console.log(type_check(null, "object"));
-console.log(type_check_v1(null, "object"));
-
-console.log(type_check(null, "null"));
-console.log(type_check_v1(null, "null"));
-
-console.log(type_check({}, "null"));
-console.log(type_check_v1({}, "null"));
-
-console.log(type_check([], "array"));
-console.log(type_check_v1([], "array"));
-
-console.log(type_check([], "object"));
-console.log(type_check_v1([], "object"));
-
-console.log(type_check({}, "number"));
-console.log(type_check_v1({}, "number"));
+console.log(type_check(1, { type: "number", value: 1 }) === true);
+console.log(type_check(1, { type: "number", value: 3 }) === false);
+console.log(type_check(1, { type: "object", value: 1 }) === false);
+console.log(
+  type_check("string", { type: "string", enum: ["string1", "string2"] }) ===
+    false
+);
+console.log(
+  type_check({ bar: "foo" }, { type: "object", value: { bar: "foo" } }) === true
+);
+console.log(
+  type_check({ bar: "foo" }, { type: "object", value: { bar: "value" } }) ===
+    false
+);
