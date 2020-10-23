@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 16:47:57 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 16:48:40 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -18,42 +18,6 @@ capitalize - ' test' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - 'ipsum DOLOR' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'sit 8met consectetur' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - '_dipiscing elit' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'null' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-capitalize - 'Object' KO
-	Unexpected behaviour : TypeError - "capitalize" not implemented
-
-Checking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OK
-camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' OK
-camelCase - ' toggleCase' OK
-camelCase - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-camelCase - 'Object' KO
-	Unexpected behaviour : TypeError - string.replace is not a function
-
-Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'toggleCase is the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is the 3oolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'ToggleCase is_the coolest' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - ' toggleCase' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - "snake_case" not implemented
 capitalize - 'sit 8met consectetur' KO
 	Unexpected behaviour : TypeError - "capitalize" not implemented
 capitalize - '_dipiscing elit' KO
@@ -174,6 +138,32 @@ prop_access - 'path null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 
 
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'ToggleCase is_the coolest' OK
+camelCase - ' toggleCase' OK
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - string.replace is not a function
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'toggleCase is the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - ' toggleCase' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
 snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - "snake_case" not implemented
 
