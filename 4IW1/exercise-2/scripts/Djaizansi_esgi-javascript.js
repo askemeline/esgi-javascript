@@ -7,7 +7,9 @@ function type_check_v1(attr, type){
     return (typeof attr === type);
 }
 
-function type_check_v2()
+function type_check_v2(object, arr){
+    
+}
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;

@@ -66,7 +66,7 @@ function verlan(string) {
 
 
 function yoda(string) {
-    if (typeof string !== "string" || string === "") return "";
+    if (typeof string !== "string" && string === "") return "";
     return string.split(" ").reverse().join('');
 }
 
