@@ -37,25 +37,20 @@ function type_check_v2(variable, conf) {
           return false;
       //
       case "enum":
-          let found = false;
-          for (subValue of conf.enum) {
-              if (type_check_v2(variable, {value: subValue})) {
-                  found = true;
-                  break;
-              }
+        let found = false;
+        for (subValue of conf.enum) {
+          if (type_check_v2(variable, { value: subValue })) {
+            found = true;
+            break;
           }
-          if(!found) return false;
+        }
+        if (!found) return false;
     }
   }
 
   return true;
 }
 
-function type_check_v2_2(value, checkers) {
-  if ("type" in checkers && !type_check_v1(value, checkers.type)) return false;
-  if ("value" in checkers && value !== checkers.value) return false;
-  if ("enum" in checkers && !checkers.enum.includes(value)) return false;
-  return true;
-}
-
-console.log(type_check_v2_2({ e: 4 }, { type: "object", value: { e: 4 } }));
+console.log(
+  type_check_v2({ e: 4 }, { type: "object", enum: [3, "test", { e: 4 }] })
+);
