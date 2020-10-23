@@ -8,7 +8,8 @@ function type_check_v1(variable, type) {
           return variable === null;
         case "array":
           return Array.isArray(variable);
-        
+        case 'object':
+            
       }
     default:
       return typeOfVariable === type;
