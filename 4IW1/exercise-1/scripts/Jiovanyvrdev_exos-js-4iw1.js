@@ -19,7 +19,7 @@ function camelCase(string) {
 
 function snake_case(string) {
     if (typeof string !== "string" && string !== "") return "";
-    return string.toLowerCase().replace(/(\W)+/g, "-");
+    return string.toLowerCase().replace(/(\W)+/g, "_");
 }
 
 function prop_access(object, propAccess) {
