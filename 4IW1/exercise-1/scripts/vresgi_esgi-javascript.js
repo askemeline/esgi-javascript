@@ -58,23 +58,25 @@ function yoda(str){
 }
 
 function vig(key, string) {
-    if (typeof key !== "string" && key !== "") return ""
-    if (typeof string !== "string" && string !== "") return ""
+    function vig(key, string) {
+        if (typeof key !== "string" && key !== "") return ""
+        if (typeof string !== "string" && string !== "") return ""
 
-    const msgLength = string.length
-    const keyLength = key.length
+        const msgLength = string.length
+        const keyLength = key.length
 
-    let cryptage = "";
+        let cryptage = "";
 
-    for (let i = 1; i < msgLength; i++) {
-        let charCode = string.charCodeAt(i-1)-65
-        let decalage = key.charCodeAt((i-1)%keyLength)-65
-        let char = String.fromCharCode(65+(charCode+decalage)%26)
+        for (let i = 1; i < msgLength; i++) {
+            let charCode = string.charCodeAt(i-1)-65
+            let decalage = key.charCodeAt((i-1)%keyLength)-65
+            let char = String.fromCharCode(65+(charCode+decalage)%26)
 
-        cryptage += char
+            cryptage += char
+        }
+
+        return cryptage
     }
-
-    return cryptage
 }
 
 
