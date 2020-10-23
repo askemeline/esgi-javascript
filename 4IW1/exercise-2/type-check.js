@@ -33,7 +33,7 @@ function type_check_v2(variable, conf) {
       case "type":
         if (!type_check_v1(variable, conf.type)) return false;
       case "value":
-
+        if()
       //
       case "enum":
       //

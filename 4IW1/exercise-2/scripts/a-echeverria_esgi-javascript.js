@@ -6,6 +6,10 @@ function type_check_v1(value, type) {
         if (type === "null") {
             return value === null;
         }
+        if (type === "object") {
+            return !(value === null) && !(Array.isArray(value));
+        }
+        return false
     }
     return typeof value === type;
 }

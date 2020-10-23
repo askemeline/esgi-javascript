@@ -1,10 +1,21 @@
-function type_check_v1(attr, type){
-    if(typeof attr === 'object'){
-        if(type === "null") return true;
-        if(type === "array") return Array.isArray(attr);
-        return (attr !== null || !(Array.isArray(attr)));
+function type_check_v1(variable, type){
+    const typeOfVariable = typeof variable;
+
+    switch (typeOfVariable){
+        case "object":
+            switch(type){
+                case "null":
+                    return variable === null;
+                case "array":
+                    return Array.isArray(variable);
+                case "object":
+                    return variable !== null && !Array.isArray(variable);
+                default:
+                    return false;
+            }
+        default:
+            return typeOfVariable === type;
     }
-    return (typeof attr === type);
 }
 
 function type_check_v2(object, arr){

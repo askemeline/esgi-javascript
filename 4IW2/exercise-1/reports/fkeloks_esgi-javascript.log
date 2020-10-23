@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 19:22:48 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 19:38:48 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -57,4 +57,32 @@ verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
+
+Checking yoda
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' OK
+yoda - 'Object' OK
+
+Checking vig
+vig - 'anticonstitutionnellement - foo' OK
+vig - 'antiConstiTutioNnellement - foo' KO
+	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got "fbhnncsghnniywcebsqzsrsby"
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
+	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got "hnazkvcziygrasjgrasjospnydmmwicmqqijqibcitgwbcblqmoqxbymdazibryabcgblwsmjqsdrqnjwiua"
+vig - ' - test' KO
+	expected : " " - got "s"
+vig - 'null - test' OK
+vig - 'Object - test' OK
+
+Checking prop_access
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
+prop_access - 'path not exist' OK
+prop_access - 'path empty' OK
+prop_access - 'object null' OK
+prop_access - 'path null' OK
 
