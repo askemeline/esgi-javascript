@@ -55,25 +55,48 @@ function yoda(chaine) {
   return chaine.split(" ").reverse().join(" ");
 }
 
-function vig(str, code) {
-  while (code.length < str.length) {
-    code += code;
+function vig(chaine, code) {
+  if (
+    typeof chaine != "string" ||
+    chaine === "" ||
+    typeof code != "string" ||
+    code === ""
+  )
+    return "";
+
+  chaine = chaine.toLowerCase();
+
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  let numByAlpha = {};
+  let alphaByNum = {};
+
+  for (let i = 0; i < alphabet.length; i++) {
+    numByAlpha[alphabet.charAt(i)] = i;
+    alphaByNum[i] = alphabet.charAt(i);
   }
-  let codeIndex = 0;
-  return str
-    .split("")
-    .map(function (car) {
-      car = car.toLowerCase();
-      const carCode = car.charCodeAt(0) - "a".charCodeAt(0);
 
-      if (carCode < 0 || carCode > 25) return car;
-      const codeCode = code[codeIndex++].charCodeAt(0) - "a".charCodeAt(0);
+  let nbSpace = 0;
+  let res = "";
+  for (let i = 0; i < chaine.length; i++) {
+    let char = chaine[i];
 
-      const encodedCode = (carCode + codeCode) % 26;
+    if (char !== " ") {
+      let charNumber = numByAlpha[char];
+      let charCode = code[(i - nbSpace) % code.length];
+      let charCodeNumber = numByAlpha[charCode];
 
-      return String.fromCharCode(encodedCode + "a".charCodeAt(0));
-    })
-    .join("");
+      charNumber += charCodeNumber;
+      charNumber %= Object.keys(numByAlpha).length;
+      char = alphaByNum[charNumber];
+    } else {
+      nbSpace += 1;
+    }
+
+    res += char;
+  }
+
+  return res;
 }
 
 function prop_access(obj, path) {
