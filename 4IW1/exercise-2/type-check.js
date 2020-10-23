@@ -19,4 +19,11 @@ function type_check_v1(variable, type) {
 }
 
 
-console.log()
+console.log(type_check_v1({}, "null"))
+console.log(type_check_v1({}, "object"))
+console.log(type_check_v1({}, "array"))
+console.log(type_check_v1(null, "object"))
+console.log(type_check_v1(null, "null"))
+console.log(type_check_v1({}, "number"))
+console.log(type_check_v1([], "array"))
+console.log(type_check_v1([], "array"))
