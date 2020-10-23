@@ -1,28 +1,23 @@
 Loading script...
 
-Fri Oct 23 2020 14:35:59 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 14:36:42 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	expected : "" - got "noop"
-ucfirst - 'Object' KO
-	expected : "" - got "noop"
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' KO
-	expected : " Test" - got "noop Test"
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' KO
 	expected : "Ipsum Dolor" - got "Ipsum DOLOR"
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' KO
-	expected : "" - got "noop"
-capitalize - 'Object' KO
-	expected : "" - got "noop"
+capitalize - 'null' OK
+capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
@@ -35,11 +30,9 @@ camelCase - 'ToggleCaseIsTheCoolest' KO
 camelCase - 'ToggleCase is_the coolest' KO
 	expected : "TogglecaseIsTheCoolest" - got "ToggleCaseIs_theCoolest"
 camelCase - ' toggleCase' KO
-	expected : "Togglecase" - got "noopToggleCase"
-camelCase - 'null' KO
-	expected : "" - got "noop"
-camelCase - 'Object' KO
-	expected : "" - got "noop"
+	expected : "Togglecase" - got "ToggleCase"
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
@@ -54,10 +47,8 @@ snake_case - 'ToggleCase is_the coolest' KO
 	expected : "togglecase_is_the_coolest" - got "ToggleCase_is_the coolest"
 snake_case - ' toggleCase' KO
 	expected : "_togglecase" - got "_toggleCase"
-snake_case - 'null' KO
-	expected : "" - got "noop"
-snake_case - 'Object' KO
-	expected : "" - got "noop"
+snake_case - 'null' OK
+snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' OK
@@ -67,10 +58,8 @@ leet - 'yoda' OK
 leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' KO
-	expected : "" - got "noop"
-leet - 'Object' KO
-	expected : "" - got "noop"
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -78,20 +67,16 @@ verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
-verlan - 'null' KO
-	expected : "" - got "noop"
-verlan - 'Object' KO
-	expected : "" - got "noop"
+verlan - 'null' OK
+verlan - 'Object' OK
 
 Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' KO
-	expected : "" - got "noop"
-yoda - 'Object' KO
-	expected : "" - got "noop"
+yoda - 'null' OK
+yoda - 'Object' OK
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' KO
