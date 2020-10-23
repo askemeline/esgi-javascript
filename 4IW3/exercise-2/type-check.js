@@ -65,6 +65,9 @@ function type_check_v2(value, conf) {
   return true;
 }
 
+
+
+// 
 console.log(type_check(1, { type: "number", value: 1 }) === true);
 console.log(type_check(1, { type: "number", value: 3 }) === false);
 console.log(type_check(1, { type: "object", value: 1 }) === false);
@@ -78,4 +81,28 @@ console.log(
 console.log(
   type_check({ bar: "foo" }, { type: "object", value: { bar: "value" } }) ===
     false
+);
+console.log(
+  type_check(
+    {
+      toto: {
+        fi: 3,
+        fa: {
+          trim: " test ",
+        },
+      },
+    },
+    {
+      type: "object",
+      properties: {
+        toto: {
+          type: "object",
+          properties: {
+            fi: { value: 3 },
+            fa: { enum: [3, "string", { trim: " test " }] },
+          },
+        },
+      },
+    }
+  ) === true
 );
