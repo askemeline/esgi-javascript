@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 14:28:59 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 14:29:02 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -41,8 +41,10 @@ snake_case - 'ToggleCase is_the coolest' KO
 	expected : "togglecase_is_the_coolest" - got "togglecase-is_the-coolest"
 snake_case - ' toggleCase' KO
 	expected : "_togglecase" - got "-togglecase"
-snake_case - 'null' OK
-snake_case - 'Object' OK
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'toLowerCase' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.toLowerCase is not a function
 
 Checking leet
 leet - 'anaconda' OK
@@ -52,8 +54,10 @@ leet - 'yoda' OK
 leet - 'evaluation' OK
 leet - 'mon travail' OK
 leet - ' ' OK
-leet - 'null' OK
-leet - 'Object' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.replace is not a function
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -61,16 +65,20 @@ verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
-verlan - 'null' OK
-verlan - 'Object' OK
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.split is not a function
 
 Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
 yoda - ' ' OK
-yoda - 'null' OK
-yoda - 'Object' OK
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - chaine.split is not a function
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' OK
@@ -86,8 +94,9 @@ prop_access - 'path exist - value object' OK
 prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
-prop_access - 'path empty' OK
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got " not exist"
 prop_access - 'object null' KO
-	expected : test not exist - got null
+	Unexpected behaviour : TypeError - Cannot use 'in' operator to search for 'test' in null
 prop_access - 'path null' OK
 

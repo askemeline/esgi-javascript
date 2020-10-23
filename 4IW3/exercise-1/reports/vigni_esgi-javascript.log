@@ -1,7 +1,7 @@
 Loading script...
-Invalid script: ReferenceError: ucfirst is not defined
-ReferenceError: ucfirst is not defined
-    at Object.<anonymous> (/Users/karl/projects/2020-2021/esgi-javascript/4IW3/exercise-1/scripts/vigni_esgi-javascript.js:76:26)
+Invalid script: ReferenceError: ucFirst is not defined
+ReferenceError: ucFirst is not defined
+    at Object.<anonymous> (/Users/karl/projects/2020-2021/esgi-javascript/4IW3/exercise-1/scripts/vigni_esgi-javascript.js:67:13)
     at Module._compile (internal/modules/cjs/loader.js:1133:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1153:10)
     at Module.load (internal/modules/cjs/loader.js:977:32)
