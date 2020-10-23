@@ -6,6 +6,7 @@ function type_check_v1(value, type) {
         if (type === "null") {
             return value === null;
         }
+        return false;
     }
     return typeof value === type;
 }
