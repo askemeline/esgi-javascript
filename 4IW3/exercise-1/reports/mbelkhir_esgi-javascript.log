@@ -1,32 +1,30 @@
 Loading script...
 
-Fri Oct 23 2020 20:10:35 GMT+0200 (GMT+02:00) - Starting tests...
-Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-
-Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
 camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+camelCase - ' toggleCase' OK
+Fri Oct 23 2020 20:11:29 GMT+0200 (GMT+02:00) - Starting tests...
+Checking ucfirst
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+camelCase - 'null' OK
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+camelCase - 'Object' OK
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
 snake_case - 'toggleCase is the coolest' KO
 	expected : "togglecase_is_the_coolest" - got "toggleCase-is-the-coolest"
 snake_case - 'ToggleCase is the 3oolest' KO
@@ -39,6 +37,18 @@ snake_case - ' toggleCase' KO
 	expected : "_togglecase" - got "-toggleCase"
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+
+Checking capitalize
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
 snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - a.replace is not a function
 
@@ -91,6 +101,23 @@ prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got "animal.type.animal = [object Object]\n"
 prop_access - 'path exist - value array' KO
 	expected : {"name":"cat"} - got "animals.1.type.animals = [object Object],[object Object]\n"
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got ".animal = [object Object]\n"
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
+
+
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' OK
+capitalize - 'Object' OK
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
 camelCase - 'ToggleCase is_the coolest' KO
@@ -166,16 +193,6 @@ prop_access - 'path exist - value object' KO
 	expected : {"name":"dog"} - got "animal.type.animal = [object Object]\n"
 prop_access - 'path exist - value array' KO
 	expected : {"name":"cat"} - got "animals.1.type.animals = [object Object],[object Object]\n"
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
-prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got ".animal = [object Object]\n"
-prop_access - 'object null' KO
-	expected : test not exist - got null
-prop_access - 'path null' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
-
-
 prop_access - 'path not exist' KO
 	expected : animal.gender not exist - got null
 prop_access - 'path empty' KO
