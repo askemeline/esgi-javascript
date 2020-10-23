@@ -1,13 +1,26 @@
 Loading script...
 
-Fri Oct 23 2020 19:47:39 GMT+0200 (GMT+02:00) - Starting tests...
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+Fri Oct 23 2020 19:48:40 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
+capitalize - 'null' OK
+capitalize - 'Object' OK
+
+Checking camelCase
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 ucfirst - ' test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
 ucfirst - 'Test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
+camelCase - 'ToggleCase is the 3oolest' OK
+camelCase - 'ToggleCaseIsTheCoolest' OK
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 ucfirst - 'TEST' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 ucfirst - 'null' KO
@@ -15,27 +28,12 @@ ucfirst - 'null' KO
 ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
-Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
 
-Checking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OK
-camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
 camelCase - ' toggleCase' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
 
-Checking snake_case
+Checking snake_caseChecking capitalize
 snake_case - 'toggle case is the coolest' KO
 	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
 snake_case - 'toggleCase is the coolest' KO
@@ -50,11 +48,18 @@ snake_case - ' toggleCase' KO
 	expected : "_togglecase" - got "-toggleCase"
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+capitalize - 'test' OK
 snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - a.replace is not a function
 
 Checking leet
 leet - 'anaconda' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' OK
+capitalize - 'Object' OK
 leet - 'anacoNDa' OK
 leet - 'leet' OK
 leet - 'yoda' OK
@@ -70,6 +75,9 @@ Checking verlan
 verlan - 'anaconda' OK
 verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
 verlan - 'null' KO
@@ -112,32 +120,6 @@ prop_access - 'path null' KO
 	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
 
 
-Fri Oct 23 2020 19:47:40 GMT+0200 (GMT+02:00) - Starting tests...
-Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-
-Checking capitalize
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
-
-Checking camelCase
-camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
