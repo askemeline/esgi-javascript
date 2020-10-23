@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 16:40:48 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 16:41:27 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
@@ -19,6 +19,16 @@ Checking capitalize
 capitalize - 'test' OK
 capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got ".animal = [object Object]\n"
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
+
+
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
 capitalize - 'null' OK

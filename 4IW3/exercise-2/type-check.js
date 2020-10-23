@@ -67,7 +67,7 @@ function type_check_v2(value, conf) {
 
 
 
-// 
+// Jeu de tests pour type_check
 console.log(type_check(1, { type: "number", value: 1 }) === true);
 console.log(type_check(1, { type: "number", value: 3 }) === false);
 console.log(type_check(1, { type: "object", value: 1 }) === false);
