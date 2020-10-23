@@ -45,8 +45,8 @@ function type_check_v2(variable, conf) {
               break enum_loop;
             }
           }
+          return false;
         }
-        return false;
     }
   }
 
