@@ -1,5 +1,13 @@
 function type_check_v1(myNumber, typecheck ='number'){
-        if (!myNumber) return null;
+    if(typeof(myNumber) == "object"){
+        if(Array.isArray(myNumber) && typecheck == "array"){
+            return true;
+        }
+    }
+    else {
+        return false;
+    }
+
         return (typeof(myNumber) == typecheck);
 }
 
