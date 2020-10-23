@@ -1,32 +1,7 @@
 Loading script...
 
-Fri Oct 23 2020 14:10:44 GMT+0200 (GMT+02:00) - Starting tests...
-
-Fri Oct 23 2020 14:10:44 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 14:11:26 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
-ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - ' test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'TEST' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'null' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-ucfirst - 'Object' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
-
-Checking capitalizeChecking ucfirst
-capitalize - 'test' OK
-capitalize - ' test' OK
-capitalize - 'ipsum DOLOR' OK
-capitalize - 'sit 8met consectetur' OK
-capitalize - '_dipiscing elit' OK
-capitalize - 'null' OK
-capitalize - 'Object' OK
-
-
 ucfirst - 'test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 ucfirst - ' test' KO
@@ -95,94 +70,7 @@ Checking verlan
 verlan - 'anaconda' OK
 verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
-verlan - '70da m L(_)k3' OKChecking camelCase
-camelCase - 'toggle case is the coolest' OK
-camelCase - 'toggleCase is the coolest' OK
-camelCase - 'ToggleCase is the 3oolest' OK
-camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
-camelCase - ' toggleCase' OK
-camelCase - 'null' OK
-camelCase - 'Object' OK
-
-Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "toggleCase-is-the-coolest"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "ToggleCase-is-the-3oolest"
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase-is_the-coolest"
-snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "-toggleCase"
-snake_case - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-snake_case - 'Object' KO
-	Unexpected behaviour : TypeError - a.replace is not a function
-
-Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - a.replace is not a function
-
-Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
-verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
-verlan - ' ' OK
-verlan - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-verlan - 'Object' KO
-	Unexpected behaviour : TypeError - a.split is not a function
-
-Checking yoda
-yoda - 'anaconda' OK
-yoda - 'yoda m Luke' OK
-yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' OK
-yoda - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'split' of null
-yoda - 'Object' KO
-	Unexpected behaviour : TypeError - a.split is not a function
-
-Checking vig
-vig - 'anticonstitutionnellement - foo' OK
-vig - 'antiConstiTutioNnellement - foo' OK
-vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' OK
-vig - ' - test' OK
-vig - 'null - test' OK
-vig - 'Object - test' OK
-
-Checking prop_access
-prop_access - 'path exist - value string' KO
-	expected : "dog" - got "animal.type.name.animal = [object Object]\n"
-prop_access - 'path exist - value object' KO
-	expected : {"name":"dog"} - got "animal.type.animal = [object Object]\n"
-prop_access - 'path exist - value array' KO
-	expected : {"name":"cat"} - got "animals.1.type.animals = [object Object],[object Object]\n"
-prop_access - 'path not exist' KO
-	expected : animal.gender not exist - got null
-prop_access - 'path empty' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got ".animal = [object Object]\n"
-prop_access - 'object null' KO
-	expected : test not exist - got null
-prop_access - 'path null' KO
-	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
-
-
 verlan - ' ' OK
 verlan - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
