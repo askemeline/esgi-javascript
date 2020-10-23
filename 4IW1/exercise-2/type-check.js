@@ -18,12 +18,36 @@ function type_check_v1(variable, type) {
   }
 }
 
+//console.log(type_check_v1({}, "null"));
+//console.log(type_check_v1({}, "object"));
+//console.log(type_check_v1({}, "array"));
+//console.log(type_check_v1(null, "object"));
+//console.log(type_check_v1(null, "null"));
+//console.log(type_check_v1({}, "number"));
+//console.log(type_check_v1([], "array"));
+//console.log(type_check_v1([], "object"));
 
-console.log(type_check_v1({}, "null"))
-console.log(type_check_v1({}, "object"))
-console.log(type_check_v1({}, "array"))
-console.log(type_check_v1(null, "object"))
-console.log(type_check_v1(null, "null"))
-console.log(type_check_v1({}, "number"))
-console.log(type_check_v1([], "array"))
-console.log(type_check_v1([], "array"))
+function type_check_v2(variable, conf) {
+  for (key in conf) {
+    switch (key) {
+      case "type":
+        if (!type_check_v1(variable, conf.type)) return false;
+      case "value":
+
+      //
+      case "enum":
+      //
+    }
+  }
+
+  return true;
+}
+
+function type_check_v2_2(value, checkers) {
+  if ("type" in checkers && !type_check_v1(value, checkers.type)) return false;
+  if ("value" in checkers && value !== checkers.value) return false;
+  if ("enum" in checkers && !checkers.enum.includes(value)) return false;
+  return true;
+}
+
+console.log(type_check_v2_2({ e: 4 }, { type: "object", value: { e: 4 } }));
