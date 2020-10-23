@@ -78,6 +78,7 @@ console.log(type_check_v2("foo", {type : "string", value : "foo"}));
 console.log(type_check_v2("bar", {type : "string", value : "foo"}));
 console.log(type_check_v2(3, {enum : ["foo", "bar", 3]}));
 
+/* Vérification pour la fonction type_check */
 console.log(type_check("string", { type: "string", enum: ["test", "test2"] }));
 
 module.exports.type_check_v1 = type_check_v1;
