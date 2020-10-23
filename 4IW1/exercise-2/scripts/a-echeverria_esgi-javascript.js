@@ -1,10 +1,10 @@
 function type_check_v1(value, type) {
     if (typeof value === "object") {
         if (type === "array") {
-            return Array.isArray(value);
+            return !(Array.isArray(value));
         }
         if (type === "null") {
-            return value === null;
+            return !(value === null);
         }
     }
     return typeof value === type;

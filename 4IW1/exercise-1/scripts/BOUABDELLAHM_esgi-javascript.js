@@ -81,24 +81,17 @@ function vig(string, code) {
         .join("");
 }
 
-function prop_access(object, path) {
-    if (typeof path != "string") return object;
-
-    if (typeof object != "object" || object == null) {
-        return (path + " not exist");
-    }
-
-    if (path === "") return object;
-
-    const props = path.split(".");
-    let property = object;
-    props.forEach(function (prop) {
-        if (!property.hasOwnProperty(prop)) {
-            return (path + " not exist");
+function prop_access(obj, path){
+    if (typeof(obj) != "object" || obj == null) return path+" not exist";
+    if (typeof(path) != "string" || path === "") return obj; 
+    let pathSplitted = path.split(".");
+    for (let elem of pathSplitted) {
+        if (typeof(obj[elem]) == "undefined") {
+            return path+" not exist"; 
         }
-        property = property[prop];
-    });
-    return property;
+        obj = obj[elem];
+    }
+    return obj; 
 }
 
 module.exports.ucfirst = ucfirst;

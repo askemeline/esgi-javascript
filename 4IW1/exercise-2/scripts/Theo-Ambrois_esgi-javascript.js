@@ -1,22 +1,13 @@
-function type_check_v1(arg, type) {
-    switch (typeof arg) {
-        case "symbol":
-        case "number":
-        case "string":
-        case "boolean":
-        case "undefined":
-        case "function":
-            return type === typeof arg;
-        case "object":
-            switch (type) {
-                case "null":
-                    return arg === null;
-                case "array":
-                    return Array.isArray(arg);
-                default:
-                    return arg !== null && !Array.isArray(arg);
-            }
-    }
+function type_check_v1(val, type) {
+  switch (typeof val) {
+    case "object":
+      if (type === "array") return Array.isArray(val);
+      if (type === "null") return val === null;
+      return val != null && !Array.isArray(val);
+    default:
+      return typeof val === type;
+  }
 }
+
 
 module.exports.type_check_v1 = type_check_v1;

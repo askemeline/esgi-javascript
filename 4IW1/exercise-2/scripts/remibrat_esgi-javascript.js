@@ -18,5 +18,6 @@ function type_check_v2(arg1, conf) {
     return true;
 }
 
+
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
