@@ -1,4 +1,3 @@
-  
 function type_check_v1(val, type) {
   switch (typeof val) {
     case "object":
@@ -58,6 +57,7 @@ function type_check(arg, types) {
   }
   return isChecked;
 }
+
 
 module.exports.type_check_v1 = type_check_v1;
 module.exports.type_check_v2 = type_check_v2;
