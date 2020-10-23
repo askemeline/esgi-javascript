@@ -1,0 +1,123 @@
+Loading script...
+
+Fri Oct 23 2020 20:21:37 GMT+0200 (GMT+02:00) - Starting tests...
+Checking ucfirst
+ucfirst - 'test' OK
+ucfirst - ' test' OK
+ucfirst - 'Test' OK
+ucfirst - 'TEST' OK
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'ucfirst' of null
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+
+Checking capitalize
+capitalize - 'test' KO
+	Unexpected behaviour : ReferenceError - ucfirst is not defined
+capitalize - ' test' KO
+	Unexpected behaviour : ReferenceError - ucfirst is not defined
+capitalize - 'ipsum DOLOR' KO
+	Unexpected behaviour : ReferenceError - ucfirst is not defined
+capitalize - 'sit 8met consectetur' KO
+	Unexpected behaviour : ReferenceError - ucfirst is not defined
+capitalize - '_dipiscing elit' KO
+	Unexpected behaviour : ReferenceError - ucfirst is not defined
+capitalize - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'capitalize' of null
+capitalize - 'Object' KO
+	Unexpected behaviour : TypeError - "capitalize" not implemented
+
+Checking camelCase
+camelCase - 'toggle case is the coolest' KO
+	Unexpected behaviour : ReferenceError - capitalize is not defined
+camelCase - 'toggleCase is the coolest' KO
+	Unexpected behaviour : ReferenceError - capitalize is not defined
+camelCase - 'ToggleCase is the 3oolest' KO
+	Unexpected behaviour : ReferenceError - capitalize is not defined
+camelCase - 'ToggleCaseIsTheCoolest' KO
+	Unexpected behaviour : ReferenceError - capitalize is not defined
+camelCase - 'ToggleCase is_the coolest' KO
+	Unexpected behaviour : ReferenceError - capitalize is not defined
+camelCase - ' toggleCase' KO
+	Unexpected behaviour : ReferenceError - capitalize is not defined
+camelCase - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'camelCase' of null
+camelCase - 'Object' KO
+	Unexpected behaviour : TypeError - "camelCase" not implemented
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'snake_case' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - "snake_case" not implemented
+
+Checking leet
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'leet' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - "leet" not implemented
+
+Checking verlan
+verlan - 'anaconda' OK
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OK
+verlan - '70da m L(_)k3' OK
+verlan - ' ' OK
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'verlan' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - "verlan" not implemented
+
+Checking yoda
+yoda - 'anaconda' OK
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'yoda' of null
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - "yoda" not implemented
+
+Checking vig
+vig - 'anticonstitutionnellement - foo' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+vig - 'antiConstiTutioNnellement - foo' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+vig - ' - test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'length' of undefined
+vig - 'null - test' KO
+	Unexpected behaviour : TypeError - Cannot read property 'vig' of null
+vig - 'Object - test' KO
+	Unexpected behaviour : TypeError - "vig" not implemented
+
+Checking prop_access
+prop_access - 'path exist - value string' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value object' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value array' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path not exist' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path empty' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'object null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'prop_access' of null
+prop_access - 'path null' KO
+	Unexpected behaviour : TypeError - "prop_access" not implemented
+
