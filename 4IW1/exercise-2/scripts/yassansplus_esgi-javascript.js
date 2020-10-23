@@ -1,14 +1,17 @@
-function type_check_v1(myNumber, typecheck ='number'){
-    if(typeof(myNumber) == "object"){
-        if(Array.isArray(myNumber) && typecheck == "array"){
-            return true;
-        }
-    }
-    else {
-        return false;
-    }
+function type_check_v1(myNumber, typecheck){
+    switch (typecheck) {
+        case 'number':
+        case 'StringNotNumber':
+        case 'BooleanNotNumber':
+        case 'object':
+            return (typeof(myNumber)== typecheck);
 
-        return (typeof(myNumber) == typecheck);
+          console.log('Mangoes and papayas are $2.79 a pound.');
+          // expected output: "Mangoes and papayas are $2.79 a pound."
+          break;
+        default:
+         return false;
+      }
 }
 
 
