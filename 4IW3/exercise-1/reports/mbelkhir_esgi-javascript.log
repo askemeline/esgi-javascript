@@ -1,9 +1,7 @@
-Loading script...
-
-Fri Oct 23 2020 16:42:58 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' KO
-	Unexpected behaviour : TypeError - "ucfirst" not implemented
+	Unexpected behaviour : TypeError - "ucfirst" not implementedLoading script...
+
 ucfirst - ' test' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 ucfirst - 'Test' KO
@@ -16,7 +14,9 @@ ucfirst - 'Object' KO
 	Unexpected behaviour : TypeError - "ucfirst" not implemented
 
 Checking capitalize
-capitalize - 'test' OK
+Fri Oct 23 2020 16:45:06 GMT+0200 (GMT+02:00) - Starting tests...
+
+capitalize - 'test' OKChecking ucfirst
 capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
@@ -25,15 +25,80 @@ capitalize - 'null' OK
 capitalize - 'Object' OK
 
 Checking camelCase
+ucfirst - 'test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
+ucfirst - ' test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'Test' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+camelCase - 'ToggleCaseIsTheCoolest' OK
+ucfirst - 'TEST' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+ucfirst - 'null' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+camelCase - 'ToggleCase is_the coolest' KO
+	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+ucfirst - 'Object' KO
+	Unexpected behaviour : TypeError - "ucfirst" not implemented
+camelCase - ' toggleCase' OK
+camelCase - 'null' OK
+camelCase - 'Object' OK
+
+Checking snake_case
+snake_case - 'toggle case is the coolest' KO
+	expected : "toggle_case_is_the_coolest" - got "toggle-case-is-the-coolest"
+
+Checking capitalize
+snake_case - 'toggleCase is the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "toggleCase-is-the-coolest"
+snake_case - 'ToggleCase is the 3oolest' KO
+	expected : "togglecase_is_the_3oolest" - got "ToggleCase-is-the-3oolest"
+snake_case - 'ToggleCaseIsTheCool3st' KO
+	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
+capitalize - 'test' OK
+capitalize - ' test' OK
+capitalize - 'ipsum DOLOR' OK
+capitalize - 'sit 8met consectetur' OK
+capitalize - '_dipiscing elit' OK
+capitalize - 'null' OK
+capitalize - 'Object' OK
+
+
+snake_case - 'ToggleCase is_the coolest' KO
+	expected : "togglecase_is_the_coolest" - got "ToggleCase-is_the-coolest"
+snake_case - ' toggleCase' KO
+	expected : "_togglecase" - got "-toggleCase"
+snake_case - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+snake_case - 'Object' KO
+	Unexpected behaviour : TypeError - a.replace is not a functionChecking camelCase
+
+Checking leet
 camelCase - 'toggle case is the coolest' OK
 camelCase - 'toggleCase is the coolest' OK
 camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
+leet - 'anaconda' OK
 camelCase - 'ToggleCase is_the coolest' KO
 	expected : "TogglecaseIsTheCoolest" - got "TogglecaseIs_theCoolest"
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
 camelCase - ' toggleCase' OK
+leet - 'evaluation' OK
 camelCase - 'null' OK
 camelCase - 'Object' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - a.replace is not a function
+
+Checking verlan
 
 Checking snake_case
 snake_case - 'toggle case is the coolest' KO
@@ -46,38 +111,28 @@ snake_case - 'ToggleCaseIsTheCool3st' KO
 	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
 snake_case - 'ToggleCase is_the coolest' KO
 	expected : "togglecase_is_the_coolest" - got "ToggleCase-is_the-coolest"
+verlan - 'anaconda' OK
 snake_case - ' toggleCase' KO
 	expected : "_togglecase" - got "-toggleCase"
 snake_case - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
 snake_case - 'Object' KO
 	Unexpected behaviour : TypeError - a.replace is not a function
+verlan - 'kayak' OK
 
 Checking leet
-leet - 'anaconda' OK
-leet - 'anacoNDa' OK
-leet - 'leet' OK
-leet - 'yoda' OK
-leet - 'evaluation' OK
-leet - 'mon travail' OK
-leet - ' ' OK
-leet - 'null' KO
-	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - a.replace is not a function
-
-Checking verlan
-verlan - 'anaconda' OK
-verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
 verlan - ' ' OK
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
 verlan - 'null' KO
 	Unexpected behaviour : TypeError - Cannot read property 'split' of null
 verlan - 'Object' KO
 	Unexpected behaviour : TypeError - a.split is not a function
 
-Checking yoda
+
+leet - 'leet' OKChecking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
@@ -89,7 +144,62 @@ yoda - 'Object' KO
 
 Checking vig
 vig - 'anticonstitutionnellement - foo' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
 vig - 'antiConstiTutioNnellement - foo' OK
+leet - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'replace' of null
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' OK
+vig - ' - test' OK
+vig - 'null - test' OK
+leet - 'Object' KO
+	Unexpected behaviour : TypeError - a.replace is not a function
+
+
+vig - 'Object - test' OKChecking verlan
+verlan - 'anaconda' OK
+
+
+verlan - 'kayak' OK
+verlan - 'yoda m Luke' OKChecking prop_access
+verlan - '70da m L(_)k3' OK
+prop_access - 'path exist - value string' KO
+	expected : "dog" - got "animal.type.name.animal = [object Object]\n"
+verlan - ' ' OK
+verlan - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+verlan - 'Object' KO
+	Unexpected behaviour : TypeError - a.split is not a function
+
+Checking yoda
+prop_access - 'path exist - value object' KO
+	expected : {"name":"dog"} - got "animal.type.animal = [object Object]\n"
+yoda - 'anaconda' OK
+prop_access - 'path exist - value array' KO
+	expected : {"name":"cat"} - got "animals.1.type.animals = [object Object],[object Object]\n"
+yoda - 'yoda m Luke' OK
+yoda - 'Inverser la position des mots d’une phrase' OK
+yoda - ' ' OK
+yoda - 'null' KO
+	Unexpected behaviour : TypeError - Cannot read property 'split' of null
+yoda - 'Object' KO
+	Unexpected behaviour : TypeError - a.split is not a function
+
+Checking vig
+vig - 'anticonstitutionnellement - foo' OK
+vig - 'antiConstiTutioNnellement - foo' OK
+prop_access - 'path not exist' KO
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got ".animal = [object Object]\n"
+prop_access - 'object null' KO
+	expected : test not exist - got null
+prop_access - 'path null' KO
+	expected : {"animal":{"type":{"name":"dog"}}} - got "null.animal = [object Object]\n"
+
+
 vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' OK
 vig - ' - test' OK
 vig - 'null - test' OK
