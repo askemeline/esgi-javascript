@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 18:07:26 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 18:08:22 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -39,24 +39,15 @@ snake_case - 'null' OK
 snake_case - 'Object' OK
 
 Checking leet
-leet - 'anaconda' KO
-	Unexpected behaviour : ReferenceError - string is not defined
-leet - 'anacoNDa' KO
-	Unexpected behaviour : ReferenceError - string is not defined
-leet - 'leet' KO
-	Unexpected behaviour : ReferenceError - string is not defined
-leet - 'yoda' KO
-	Unexpected behaviour : ReferenceError - string is not defined
-leet - 'evaluation' KO
-	Unexpected behaviour : ReferenceError - string is not defined
-leet - 'mon travail' KO
-	Unexpected behaviour : ReferenceError - string is not defined
-leet - ' ' KO
-	Unexpected behaviour : ReferenceError - string is not defined
-leet - 'null' KO
-	Unexpected behaviour : ReferenceError - string is not defined
-leet - 'Object' KO
-	Unexpected behaviour : ReferenceError - string is not defined
+leet - 'anaconda' OK
+leet - 'anacoNDa' OK
+leet - 'leet' OK
+leet - 'yoda' OK
+leet - 'evaluation' OK
+leet - 'mon travail' OK
+leet - ' ' OK
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
@@ -76,18 +67,12 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'anticonstitutionnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'antiConstiTutioNnellement - foo' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - ' - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'null - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
-vig - 'Object - test' KO
-	Unexpected behaviour : TypeError - "vig" not implemented
+vig - 'anticonstitutionnellement - foo' OK
+vig - 'antiConstiTutioNnellement - foo' OK
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' OK
+vig - ' - test' OK
+vig - 'null - test' OK
+vig - 'Object - test' OK
 
 Checking prop_access
 prop_access - 'path exist - value string' OK
