@@ -34,7 +34,18 @@ function type_check(value, type) {
 }
 
 function type_check(value, type) {
-    if(typeof value != "")
+    if(typeof value != "object") {
+        return type === typeof value;
+    } else {
+        switch(type) {
+            case "null":
+          return variable === null;
+        case "array":
+          return Array.isArray(variable);
+        case "object":
+          return variable !== null && !Array.isArray(variable);
+        }
+    }
 }
 
 console.log(type_check(null, "object"));
