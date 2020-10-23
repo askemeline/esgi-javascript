@@ -1,6 +1,6 @@
 /* Exos - partie 2 */
 
-function typeCheckV1(arg1, arg2){
+function type_check_v1(arg1, arg2){
     let verifType = '';
     if(typeof(arg1) == 'number' && arg2 == 'number') {
         verifType = true;
@@ -16,5 +16,6 @@ function typeCheckV1(arg1, arg2){
     }
     console.log(verifType);
 }
-typeCheckV1('','null');
+type_check_v1('','null');
 
+module.exports.type_check_v1 = type_check_v1;

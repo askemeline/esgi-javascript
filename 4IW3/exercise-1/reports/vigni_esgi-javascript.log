@@ -1,58 +1,40 @@
 Loading script...
 
-Fri Oct 23 2020 15:16:21 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 15:17:05 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
 ucfirst - 'Test' OK
 ucfirst - 'TEST' OK
-ucfirst - 'null' KO
-	Unexpected behaviour : ReferenceError - element is not defined
-ucfirst - 'Object' KO
-	Unexpected behaviour : ReferenceError - element is not defined
+ucfirst - 'null' OK
+ucfirst - 'Object' OK
 
 Checking capitalize
 capitalize - 'test' OK
-capitalize - ' test' KO
-	Unexpected behaviour : ReferenceError - element is not defined
+capitalize - ' test' OK
 capitalize - 'ipsum DOLOR' OK
 capitalize - 'sit 8met consectetur' OK
 capitalize - '_dipiscing elit' OK
-capitalize - 'null' KO
-	Unexpected behaviour : ReferenceError - element is not defined
-capitalize - 'Object' KO
-	Unexpected behaviour : ReferenceError - element is not defined
+capitalize - 'null' OK
+capitalize - 'Object' OK
 
 Checking camelCase
-camelCase - 'toggle case is the coolest' KO
-	expected : "ToggleCaseIsTheCoolest" - got "Toggle Case Is The Coolest"
-camelCase - 'toggleCase is the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "Togglecase Is The Coolest"
-camelCase - 'ToggleCase is the 3oolest' KO
-	expected : "TogglecaseIsThe3oolest" - got "Togglecase Is The 3oolest"
+camelCase - 'toggle case is the coolest' OK
+camelCase - 'toggleCase is the coolest' OK
+camelCase - 'ToggleCase is the 3oolest' OK
 camelCase - 'ToggleCaseIsTheCoolest' OK
-camelCase - 'ToggleCase is_the coolest' KO
-	expected : "TogglecaseIsTheCoolest" - got "Togglecase Is_the Coolest"
-camelCase - ' toggleCase' KO
-	Unexpected behaviour : ReferenceError - element is not defined
-camelCase - 'null' KO
-	Unexpected behaviour : ReferenceError - element is not defined
-camelCase - 'Object' KO
-	Unexpected behaviour : ReferenceError - element is not defined
+camelCase - 'ToggleCase is_the coolest' OK
+camelCase - ' toggleCase' OK
+camelCase - 'null' OK
+camelCase - 'Object' OK
 
 Checking snake_case
-snake_case - 'toggle case is the coolest' KO
-	expected : "toggle_case_is_the_coolest" - got "toggle_case is the coolest"
-snake_case - 'toggleCase is the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "toggleCase_is the coolest"
-snake_case - 'ToggleCase is the 3oolest' KO
-	expected : "togglecase_is_the_3oolest" - got "ToggleCase_is the 3oolest"
-snake_case - 'ToggleCaseIsTheCool3st' KO
-	expected : "togglecaseisthecool3st" - got "ToggleCaseIsTheCool3st"
-snake_case - 'ToggleCase is_the coolest' KO
-	expected : "togglecase_is_the_coolest" - got "ToggleCase_is_the coolest"
-snake_case - ' toggleCase' KO
-	expected : "_togglecase" - got "_toggleCase"
+snake_case - 'toggle case is the coolest' OK
+snake_case - 'toggleCase is the coolest' OK
+snake_case - 'ToggleCase is the 3oolest' OK
+snake_case - 'ToggleCaseIsTheCool3st' OK
+snake_case - 'ToggleCase is_the coolest' OK
+snake_case - ' toggleCase' OK
 snake_case - 'null' OK
 snake_case - 'Object' OK
 
