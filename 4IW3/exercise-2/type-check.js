@@ -12,7 +12,6 @@ function type_check_v1(variable, type) {
         default:
           return false;
       }
-      break;
     default:
       return typeOfVariable === type;
   }
