@@ -65,10 +65,22 @@ function vig(string, code){
         const codeNumber = code.charCodeAt(codeIndex) - aCode;
         codeIndex++; 
 
-        return String.fromCharCode(((letterNimber + codeNumber) % 26) + aCode);
+        return String.fromCharCode(((letterNumber + codeNumber) % 26) + aCode);
     }).join(""); 
 }
 
+function prop_access(obj, path){
+    if (typeof(obj) != "object" || obj == null) return path+" not exist";
+    if (typeof(path) != "string" || path === "") return obj; 
+    let pathSplitted = path.split(".");
+    for (let elem of pathSplitted) {
+        if (typeof(obj[elem]) == "undefined") {
+            return path+" not exist"; 
+        }
+        obj = obj[elem];
+    }
+    return obj; 
+}
 
 
 module.exports.ucfirst = ucfirst;
@@ -79,3 +91,4 @@ module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
 module.exports.vig = vig;
+module.exports.prop_access = prop_access;

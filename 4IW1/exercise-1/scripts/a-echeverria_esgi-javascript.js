@@ -1,97 +1,81 @@
-function ucfirst(string) {
-    return typeof string === "string" && string !== '' ? string[0].toUpperCase()+string.slice(1) : '';
+function ucfirst(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
+    return chaine.charAt(0).toUpperCase() + chaine.slice(1);
 }
 
-function capitalize(string) {
-    let res = '';
-    if (typeof string !== "string" || string === '') {
-        return '';
-    }
-    const split = string.split(' ');
-    for (let i=0; i<split.length; i++) {
-        res += ucfirst(split[i])+' ';
-    }
-    return res.trim();
+function capitalize(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
+    return chaine
+        .split(" ")
+        .map((word) => ucfirst(word.toLowerCase()))
+        .join(" ");
 }
 
-function camelCase(string) {
-    return capitalize(string).replace(/\W/g, '');
+function camelCase(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
+    return capitalize(chaine).replace(/\W/g, "");
 }
 
-function snake_case(string) {
-    if (typeof string !== "string" || string === '') {
-        return '';
-    }
-    return string.toLowerCase().replace(/ /g, '_');
+function snake_case(chaine) {
+    if (typeof chaine !== "string" || chaine === "") return "";
+    return chaine.toLowerCase().replace(/\W/g, "_");
 }
 
-function leet(string) {
-    if (typeof string !== "string" || string === '') {
-        return '';
-    }
-    const letter = ["A", "E", "I", "O", "U", "Y", "a", "e", "i", "o", "u", "y"];
-    const crypt  = ["4", "3", "1", "0", "_", "7", "4", "3", "1", "0", "(_)", "7"];
-
-    let res = '';
-    for (let i = 0; i<string.length; i++) {
-        if (letter.includes(string[i])) {
-            res += crypt[letter.indexOf(string[i])];
-        } else res += string[i];
-    }
-    return res;
-}
-
-function verlan(string) {
-    if (typeof string !== "string" || string === '') {
-        return '';
-    }
-    let res = '';
-    const split = string.split(' ');
-    for (let word of split) {
-        for (let i = word.length; i > 0; i--) {
-            res += word[i-1]
+function leet(chaine) {
+    return chaine.replace(/[aeiouy]/gi, function (e) {
+        switch (e.toLowerCase()) {
+            case "a":
+                return 4;
+            case "e":
+                return 3;
+            case "i":
+                return 1;
+            case "o":
+                return 0;
+            case "u":
+                return "(_)";
+            case "y":
+                return 7;
         }
-        res += ' ';
-    }
-    return res.trim();
+    });
 }
 
-function yoda(string) {
-    if (typeof string !== "string" || string === '') {
-        return '';
-    }
-    let res = '';
-    const split = string.split(' ');
-    for (let i = split.length; i > 0; i--) {
-        res += split[i-1] + ' ';
-    }
-    return res.trim();
+function verlan(chaine) {
+    return chaine
+        .split(" ")
+        .map((word) => word.split("").reverse().join(""))
+        .join(" ");
 }
 
-function prop_access(object, path) {
-
+function yoda(chaine) {
+    return chaine.split(" ").reverse().join(" ");
 }
 
-function vig(string, key) {
-    if (typeof string !== "string" || string === '') {
-        return '';
-    }
-    const UpperLetters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    const LowerLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+function vig(string, code) {
+    if (typeof string !== "string") return "";
+    if (string.length === 0) return string;
 
-    let res = "";
-    for (let i = 0; i<string.length; i++) {
-        let keyNb;
-        if (UpperLetters.includes(key)) {
-            keyNb = UpperLetters.indexOf(key);
-        }else keyNb = LowerLetters.indexOf(key);
-        if (UpperLetters.includes(string[i])) {
-            res += UpperLetters[((UpperLetters.indexOf(string[i]))+keyNb)%26];
-        }else if (LowerLetters.includes(string[i])) {
-            res += LowerLetters[((LowerLetters.indexOf(string[i]))+keyNb)%26];
-        }
+    while (code.length < string.length) {
+        code += code;
     }
-    return res;
+    code = code.substr(0, string.length);
+    let codeIndex = 0;
+
+    return string
+        .split("")
+        .map((letter, index) => {
+            letter = letter.toLowerCase();
+            const aCode = "a".charCodeAt(0);
+            const letterNumber = letter.charCodeAt(0) - aCode; // [0-25]
+
+            if (letterNumber < 0 || letterNumber > 25) return letter;
+
+            const codeNumber = code.charCodeAt(codeIndex) - aCode; // [0-25]
+            codeIndex++;
+
+            return String.fromCharCode(((letterNumber + codeNumber) % 26) + aCode);
+        })
+        .join("");
 }
 
 
@@ -103,4 +87,3 @@ module.exports.leet = leet;
 module.exports.verlan = verlan;
 module.exports.yoda = yoda;
 module.exports.vig = vig;
-module.exports.prop_access = prop_access;

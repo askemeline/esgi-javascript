@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 17:24:41 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 17:52:03 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -68,12 +68,9 @@ yoda - 'null' OK
 yoda - 'Object' OK
 
 Checking vig
-vig - 'anticonstitutionnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got ["anticonstitutionnellement"]
-vig - 'antiConstiTutioNnellement - foo' KO
-	expected : "fbhnqcsghnhiywcsbsqzsrsby" - got ["antiConstiTutioNnellement"]
-vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' KO
-	expected : "hna prueul xqrs prof lknqxi ohmr due no ieqt kewqsylrnp rsrn zibh gcy g dft fucge qn dhwv" - got ["une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test"]
+vig - 'anticonstitutionnellement - foo' OK
+vig - 'antiConstiTutioNnellement - foo' OK
+vig - 'une phrase tres tres longue mais qui ne veut absolument rien dire car c est juste un test - nawakdecheznawak' OK
 vig - ' - test' OK
 vig - 'null - test' OK
 vig - 'Object - test' OK
