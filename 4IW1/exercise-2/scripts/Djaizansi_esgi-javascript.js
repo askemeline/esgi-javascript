@@ -3,9 +3,8 @@ function type_check_v1(attr, type){
         if(attr === null) return true;
         if(Array.isArray(attr)) return true;
         if(attr !== null || !(Array.isArray(attr))) return true;
-    }else{
-        return (typeof attr === type);
     }
+    return (typeof attr === type);
 }
 
 module.exports.type_check_v1 = type_check_v1;
