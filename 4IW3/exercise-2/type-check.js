@@ -20,9 +20,9 @@ function type_check_v1(variable, type) {
   }
 }
 
-function type_check(variable, type) {
-  return typeof variable === type;
-}
+//function type_check(variable, type) {
+//  return typeof variable === type;
+//}
 
 console.log(type_check(null, "object"));
 console.log(type_check_v1(null, "object"));
