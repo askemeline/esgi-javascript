@@ -33,8 +33,8 @@ function type_check_v1_2(value, type) {
 }
 
 const conf = {
-    type: "number"
-}
+  type: "number",
+};
 
 function type_check_v2(value, conf) {
   for (key in conf) {
@@ -43,8 +43,11 @@ function type_check_v2(value, conf) {
         if (!type_check_v1(value, conf.type)) return false;
         break;
       case "value":
-            if(JSON.stringify())
-          break;
+        if (JSON.stringify(value) !== JSON.stringify(conf.value)) return false;
+        break;
+      case "enum":
+          
+        break;
     }
   }
 }
