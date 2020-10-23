@@ -48,7 +48,7 @@ function leet(string) {
         e: "3",
         i: "1",
         o: "0",
-        u: "|_|",
+        u: "(_)",
         y: "5",
     }
 
