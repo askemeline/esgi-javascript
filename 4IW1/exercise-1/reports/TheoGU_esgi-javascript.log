@@ -1,6 +1,6 @@
 Loading script...
 
-Fri Oct 23 2020 16:07:23 GMT+0200 (GMT+02:00) - Starting tests...
+Fri Oct 23 2020 16:08:11 GMT+0200 (GMT+02:00) - Starting tests...
 Checking ucfirst
 ucfirst - 'test' OK
 ucfirst - ' test' OK
@@ -40,31 +40,28 @@ snake_case - 'Object' OK
 
 Checking leet
 leet - 'anaconda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "4n4c0nd4" - got [null]
 leet - 'anacoNDa' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "4n4c0ND4" - got [null]
 leet - 'leet' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "l33t" - got [null]
 leet - 'yoda' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "70d4" - got [null]
 leet - 'evaluation' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "3v4l(_)4t10n" - got [null]
 leet - 'mon travail' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : "m0n tr4v41l" - got [null,null]
 leet - ' ' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'null' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
-leet - 'Object' KO
-	Unexpected behaviour : TypeError - "leet" not implemented
+	expected : " " - got [null,null]
+leet - 'null' OK
+leet - 'Object' OK
 
 Checking verlan
 verlan - 'anaconda' OK
 verlan - 'kayak' OK
 verlan - 'yoda m Luke' OK
 verlan - '70da m L(_)k3' OK
-verlan - ' ' KO
-	expected : " " - got ""
+verlan - ' ' OK
 verlan - 'null' OK
 verlan - 'Object' OK
 
@@ -72,8 +69,7 @@ Checking yoda
 yoda - 'anaconda' OK
 yoda - 'yoda m Luke' OK
 yoda - 'Inverser la position des mots d’une phrase' OK
-yoda - ' ' KO
-	expected : " " - got ""
+yoda - ' ' OK
 yoda - 'null' OK
 yoda - 'Object' OK
 
@@ -92,18 +88,13 @@ vig - 'Object - test' KO
 	Unexpected behaviour : TypeError - "vig" not implemented
 
 Checking prop_access
-prop_access - 'path exist - value string' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value object' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path exist - value array' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+prop_access - 'path exist - value string' OK
+prop_access - 'path exist - value object' OK
+prop_access - 'path exist - value array' OK
 prop_access - 'path not exist' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path empty' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : animal.gender not exist - got null
+prop_access - 'path empty' OK
 prop_access - 'object null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
-prop_access - 'path null' KO
-	Unexpected behaviour : TypeError - "prop_access" not implemented
+	expected : test not exist - got null
+prop_access - 'path null' OK
 
