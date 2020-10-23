@@ -13,19 +13,13 @@ function capitalize(string) {
 
 
 function camelCase(string) {
-    if (typeof string !== "string" || string === "") return "";
-    return string.replace(/(?:^\w|[A-Z]|\b\w)/g, (word, index) => {
-        return index === 0 ? word.toLowerCase() : word.toUpperCase();
-    }).replace(/\s+/g, '');
+    if (typeof string !== "string" && string !== "") return "";
+    return capitalize(string).replace(/\W/g, "");
 }
 
-
 function snake_case(string) {
-    if (typeof string !== "string" || string === "") return "";
-    return string.replace(/\W+/g, " ")
-        .split(/ |\B(?=[A-Z])/)
-        .map(word => word.toLowerCase())
-        .join('_');
+    if (typeof string !== "string" && string !== "") return "";
+    return string.toLowerCase().replace(/(\W)+/g, "-");
 }
 
 function prop_access(object, path)
