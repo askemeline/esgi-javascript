@@ -47,3 +47,7 @@ console.log(type_check_v1([], "array"));
 
 console.log(type_check([], "object"));
 console.log(type_check_v1([], "object"));
+
+
+console.log(type_check([], "object"));
+console.log(type_check_v1([], "object"));
