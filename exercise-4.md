@@ -1,6 +1,6 @@
 # Mario Kart Simulator
 
-![Here we go](https://metrouk2.files.wordpress.com/2016/02/mario-kart.png?w=1200&h=630&crop=1)
+![Here we go](https://i.pinimg.com/originals/fb/b0/7b/fbb07ba21236c1e24efd8c4d71b26743.png)
 
 Rendu : ./exercice-4/mario-kart.js
 
