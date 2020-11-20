@@ -26,8 +26,9 @@ Il peut agir de 3 manières différentes:
 - receiveData(data): (_publique_) permet de recevoir des données de la voiture
     ```JSON
     {
-        state: "normal"|"happy"|"sad"|"ready",
+        state: "normal"|"happy"|"sad"|"ready"|"finish",
         origin: "Luigi"
+        position: 1
     }
     ```
 - needUpdate(): (_publique_) Vérifie selon les infos si on doit appeler la fonction _speak_
@@ -37,6 +38,7 @@ Il peut agir de 3 manières différentes:
   - state: "happy" => "Let's have some fun!"
   - state: "sad" => "Outch!!! Damn {origin}"
   - state: "normal" => ""
+  - state: "finish" => si 1 "I'm the best", si 2 "Could be the best", sinon "Will be better next time"
 
 Si le pilote reçoit 2 fois une même instruction, il ne doit rien faire.
 
@@ -77,13 +79,20 @@ Un véhicule peut agir de X manières :
     ```
 - needUpdate(): (_publique_) Vérifie selon les infos si on doit appeler la fonction _display_
 - ride(X): (_privé_) Avance le véhicule de X unités, signale au pilote le status "normal" si aucun autre status soulevé
-- getWeapon(weapon): (_privé_) Stocke l'arme récupérée grâce aux données du circuit, signale au pilote le status "happy" et avance le véhicule
+- setWeapon(weapon): (_privé_) Stocke l'arme récupérée grâce aux données du circuit, signale au pilote le status "happy" et avance le véhicule
 - fireWeapon(): (_privé_) Avance le véhicule et retourne sa victime grâce à la callback _onFire_
 - touched(data={origin, effect}): (_privé_) Agit selon la valeur de l'event "attack" puis signale le status "sad" et son origine au pilote
   - null: Le véhicule n'avance pas
   - -X: Le véhicule recule de X unités
   - si bubble, la protection est détruite et le véhicule avance
 - display(): (_publique_) Affiche l'état suivant du véhicule (distance, arme, pilote, vitesse courante)
+
+Conséquences des events:
+- start => déclenche "ready" sur le pilote
+- info => avance le véhicule de maxVelocity + si weapon d'attaque présent fireWeapon + déclenche "normal" sur le pilote
+- weapon => avance le véhicule et stocke le weapon (event.value) + déclenche "happy" sur le pilote
+- attack => lance ride(event.value.effect) + déclenche "sad" avec event.value.origin
+- finish => déclenche "finish" sur le pilote avec (event.value) correspondant à la position finale
 
 ### Les armes
 
