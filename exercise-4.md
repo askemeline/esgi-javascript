@@ -38,7 +38,7 @@ Il peut agir de 3 manières différentes:
   - state: "happy" => "Let's have some fun!"
   - state: "sad" => "Outch!!! Damn {origin}"
   - state: "normal" => ""
-  - state: "finish" => si 1 "I'm the best", si 2 "Could be the best", sinon "Will be better next time"
+  - state: "finish" => si postion == 1 "I'm the best", si position == 2 "Could be the best", sinon "Will be better next time"
 
 Si le pilote reçoit 2 fois une même instruction, il ne doit rien faire.
 
