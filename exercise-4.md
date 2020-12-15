@@ -34,7 +34,7 @@ Il peut agir de 3 manières différentes:
 - needUpdate(): (_publique_) Vérifie selon les infos si on doit appeler la fonction _speak_
 - getState(): (_privilégié_) permet de connaître l'état du pilote
 - speak(): (_publique_) permet de générer des phrases, selon les données reçues
-  - state: "ready" => "Here we go!"
+  - state: "ready" => "Here we go! I'm {name}"
   - state: "happy" => "Let's have some fun!"
   - state: "sad" => "Outch!!! Damn {origin}"
   - state: "normal" => ""
