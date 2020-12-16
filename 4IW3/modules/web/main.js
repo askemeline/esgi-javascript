@@ -1,14 +1,5 @@
-async function getStudents() {
-  const response = await fetch("http://localhost:3000/students");
-  const data = await response.json();
-  return data;
-}
-
-async function getCourses() {
-  const response = await fetch("http://localhost:3000/courses");
-  const data = await response.json();
-  return data;
-}
+import { getStudents, getCourses } from "./api.js";
+import timer from "./timer.js";
 
 var mapping = async function mapping() {
   const results = await Promise.all([getStudents(), getCourses()]);
@@ -20,12 +11,6 @@ var mapping = async function mapping() {
     );
     return student;
   });
-};
-
-var timer = async function timer() {
-  setTimeout(() => {
-    throw "Timeout";
-  }, 7000);
 };
 
 Promise.race([mapping(), timer()])
