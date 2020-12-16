@@ -14,5 +14,5 @@ const mapping = async function () {
 };
 
 Promise.race([mapping(), timerAwait()])
-  .then((results) => console.log(results) || console.log("Merge OK"))
+  .then((results) => console.log("Merge OK"))
   .catch((error) => console.error(error));
