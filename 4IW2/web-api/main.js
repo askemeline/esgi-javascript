@@ -1,6 +1,7 @@
 const root = document.getElementById("root");
 const table = document.createElement("table");
 const tbody = document.createElement("tbody");
+var test3;
 
 const data = JSON.parse(locationStorage.getItem("data") || "{}");
 

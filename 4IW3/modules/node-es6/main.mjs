@@ -1,6 +1,6 @@
-const apis = require("./api.js");
-const randomIntFromInterval = require("./utils.js").randomIntFromInterval;
-const timer = require("./timer.js");
+import * as apis from "./api.mjs";
+import { randomIntFromInterval } from "./utils.mjs";
+import timer from "./timer.mjs";
 
 var mapping = function mapping(resolve) {
   Promise.all([

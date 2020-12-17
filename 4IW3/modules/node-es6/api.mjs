@@ -1,6 +1,6 @@
-const randomIntFromInterval = require("./utils.js").randomIntFromInterval;
+import { randomIntFromInterval } from "./utils.mjs";
 
-var getStudents = function getStudents(resolve) {
+export var getStudents = function getStudents(resolve) {
   const timeout = randomIntFromInterval(1, 2);
   console.log("getStudents:" + timeout);
   setTimeout(() => {
@@ -12,7 +12,7 @@ var getStudents = function getStudents(resolve) {
   }, timeout);
 };
 
-var getCourses = function getCourses(resolve) {
+export var getCourses = function getCourses(resolve) {
   const timeout = randomIntFromInterval(2, 4);
   console.log("getCourses:" + timeout);
   setTimeout(() => {
@@ -24,9 +24,4 @@ var getCourses = function getCourses(resolve) {
       { id: 5, name: "CSS" },
     ]);
   }, timeout);
-};
-
-module.exports = {
-  getStudents: getStudents,
-  getCourses: getCourses,
 };
