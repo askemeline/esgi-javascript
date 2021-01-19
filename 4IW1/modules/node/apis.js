@@ -31,6 +31,6 @@ const getCourses = function (resolve) {
 };
 
 module.exports = {
-  getStudents: getStudents,
-  getCourses: getCourses,
+  getStudents,
+  getCourses,
 };

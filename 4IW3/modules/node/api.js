@@ -27,6 +27,6 @@ var getCourses = function getCourses(resolve) {
 };
 
 module.exports = {
-  getStudents: getStudents,
-  getCourses: getCourses,
+  getStudents,
+  getCourses,
 };

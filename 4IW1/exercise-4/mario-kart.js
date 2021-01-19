@@ -7,7 +7,7 @@ function Pilote(name) {
   };
 
   this.receiveData = (event) => {
-    prevState = Object.assign({}, state);
+    prevState = { ...state };
     state.state = event.state;
     state.origin = event.origin;
     state.position = event.position;
@@ -55,5 +55,8 @@ pilote.receiveData({ state: "sad", origin: "Luigi" });
 if (pilote.needUpdate()) console.log("Speak sad", pilote.speak());
 pilote.receiveData({ state: "finish", position: 1 });
 if (pilote.needUpdate()) console.log("Speak finish", pilote.speak());
-pilote.receiveData({ state: "finish", position: 1 });
-if (pilote.needUpdate()) console.log("Speak finish", pilote.speak());
+
+{
+  pilote.receiveData({ state: "finish", position: 1 });
+  if (pilote.needUpdate()) console.log("Speak finish", pilote.speak());
+}

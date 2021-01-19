@@ -11,14 +11,14 @@ async function getCourses() {
 }
 
 var mapping = async function mapping() {
-  const results = await Promise.all([getStudents(), getCourses()]);
-  const students = results[0],
-    courses = results[1];
+  const [students, courses] = await Promise.all([getStudents(), getCourses()]);
   return students.map((student) => {
-    student.cours = student.cours.map((id) =>
-      courses.find((cours) => cours.id === id)
-    );
-    return student;
+    return {
+      ...student,
+      cours: student.cours.map((id) =>
+        courses.find((cours) => cours.id === id)
+      ),
+    };
   });
 };
 
